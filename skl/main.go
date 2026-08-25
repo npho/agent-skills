@@ -11,6 +11,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"maps"
 	"os"
 	"os/exec"
 	"path/filepath"
@@ -203,14 +204,15 @@ func recordState(st *State, name string, mutate func(*SkillState)) error {
 	if dryRun {
 		return nil
 	}
-	s := st.Skills[name]
-	if s.Files == nil {
-		s.Files = map[string]string{}
-	}
-	s.InstalledAt = time.Now().UTC().Format(time.RFC3339)
+	s, exists := st.Skills[name]
 	files, err := hashFolder(skillDest(name))
 	if err != nil {
 		return fmt.Errorf("hashing %s: %w", name, err)
+	}
+	// installedAt records when the installed content changed, not when sync ran.
+	// Preserve it when the complete path-to-hash set is unchanged.
+	if !exists || !maps.Equal(s.Files, files) {
+		s.InstalledAt = time.Now().UTC().Format(time.RFC3339)
 	}
 	s.Files = files
 	if mutate != nil {
