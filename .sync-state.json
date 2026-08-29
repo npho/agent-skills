@@ -1,6 +1,450 @@
 {
   "version": 1,
   "skills": {
+    "address-sanitizer": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/testing-handbook-skills/skills/address-sanitizer/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "eb9ea8210fa55d50477fbe52993a704e320c88739c10d619864b6ce377ebce25",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
+      }
+    },
+    "aflpp": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/testing-handbook-skills/skills/aflpp/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "0a31023527808e68a53b81b89c7a6c10c6f84755a410df820facef44252e518d",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
+      }
+    },
+    "agentic-actions-auditor": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/agentic-actions-auditor/skills/agentic-actions-auditor/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "80e36ab06e3ee667ac45bab036ed395fc425c4d54fa72c4b4981a5b982a389aa",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/action-profiles.md": "ea75573060fe7e7a4e06d39c45487609d2ff5b583159a2b0d073d244ff5f81cb",
+        "references/cross-file-resolution.md": "c15a46bb0695ecc07512ac4007231169301001e5733a720c6ad75606ae5bee95",
+        "references/foundations.md": "9e0eb90b3bfb53e195251685b1291bdd1d75e07d6c60e634ecb28f72b1723bf3",
+        "references/vector-a-env-var-intermediary.md": "7903992f54409760aae64ddb45bb3c26032223443f746ac6e3d8fd281bda877d",
+        "references/vector-b-direct-expression-injection.md": "d074c95ee282d56e0174beae3d109ce088f6a8f032d9bd16e523ec2d1d7d94c7",
+        "references/vector-c-cli-data-fetch.md": "f11d2333f2b3800215311047c0b0ad35a1020c79dbb77614ff66a8c1fef16252",
+        "references/vector-d-pr-target-checkout.md": "fc029037bb219aed5e130708eb4911ad235e47f1394e2155b5e40175ddb2d187",
+        "references/vector-e-error-log-injection.md": "2c93623d96f49c4ab70bc2dd92e111b2cfca68ff70aaf579efd86812b0df15a9",
+        "references/vector-f-subshell-expansion.md": "a9345ace4af2dd167b4bcbeb1864c5883e6186752ded08bcefa9c0182f514dc3",
+        "references/vector-g-eval-of-ai-output.md": "b9a47a41dd1470cc469cc030cd6cd6059b35741c78ba9f494c1d18b2fd65b686",
+        "references/vector-h-dangerous-sandbox-configs.md": "278df9befc36f231dea2e4d2bf00311657056fa7b87a1a49b0e0e23a141d5935",
+        "references/vector-i-wildcard-allowlists.md": "68a4cd774ad829e535a8ec15ee492caefbae8e46f115f345b7f2bf2fecf88f86"
+      }
+    },
+    "algorand-vulnerability-scanner": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/building-secure-contracts/skills/algorand-vulnerability-scanner/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "55e5336040e0f24ac5b3d6258ac458cd7cbd9ae0f7db5541fe4ed95c10b58c58",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "resources/VULNERABILITY_PATTERNS.md": "847a801ca435c23ede46a547511598ea12fa453fe09874128ee612f21142188a"
+      }
+    },
+    "atheris": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/testing-handbook-skills/skills/atheris/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "133306875d88bb063636a9165c56141ac8b30d3b993db3740f166693dfeecbb5",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "examples.md": "e5ed1413286ca10ea238b9952a3ef19db13e2f4b24b2aaf18ec908bfaacfc815",
+        "structured-input.md": "0f33bf58db91eaabc2bbff2e4eec5c3811ab5a74866ce4698320dfa384d76f4b"
+      }
+    },
+    "audit-augmentation": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/trailmark/skills/audit-augmentation/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "164ab881bfc63e77c782cfc6b67b2bb6887695425d3654c6c4d498004392b1f7",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/formats.md": "6cd3a692beab075ecf8aff4a2f3b5bfb25372b16be2ac796eb23b9881667ab0d"
+      }
+    },
+    "audit-context-building": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/audit-context-building/skills/audit-context-building/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "222efa73743565a8fdb42e9bd08e9649c739fa0abc11129b35d267c9814b5916",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "resources/ANALYSIS_FORMAT.md": "029532945776fb0fcbc866f19cd6114fe4152cd3dea1c0f44b266ec13a2cc6e8",
+        "resources/DOMAIN_NOTES.md": "ca3090f7f8d18f7145b253b283f5d33c36b314cea231aae8466bf23f122e2ed1",
+        "resources/FUNCTION_MICRO_ANALYSIS_EXAMPLE.md": "3351010d83b61bfb34a0359498f153817fdfa6528cead54536b06e035ff2399c"
+      }
+    },
+    "audit-prep-assistant": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/building-secure-contracts/skills/audit-prep-assistant/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "d639b411a315ea9420e40afabe75bbf4b1bfed6ea5c8601a3e963343ac9924f2",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
+      }
+    },
+    "burpsuite-project-parser": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/burpsuite-project-parser/skills/burpsuite-project-parser/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "43bf45e43192229810b5dab47d1eff3380db9cc86ed89374db87f9a869f19543",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "scripts/burp-search.sh": "342adc2d2529ecd05f9e5109d4170fc7d1b6c12d68ccaf6ecb6e00148df5d37c"
+      }
+    },
+    "c-review": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/c-review/skills/c-review/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "3fc2fc7f3dba9decd2dd9e449150395cf62ee156c8dd1c48d09a233318f4dc69"
+      }
+    },
+    "cairo-vulnerability-scanner": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/building-secure-contracts/skills/cairo-vulnerability-scanner/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "3408b4d0ea2e618255e5715683626e7ebe0c10ae3c7929b19bb6af023a1d77f9",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "resources/VULNERABILITY_PATTERNS.md": "615bee673bd545579e6ce01f64e17e85417e698ac779354bb84eaf02ef82dfab"
+      }
+    },
+    "cargo-fuzz": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/testing-handbook-skills/skills/cargo-fuzz/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "8e8f882604f68c682afde3562ba1bd3828264fd226f427ff7d9ba50617268db1",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
+      }
+    },
+    "chrome-mcp-troubleshooting": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/claude-in-chrome-troubleshooting/skills/chrome-mcp-troubleshooting/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "1456ace18266e81691c6ba0e5f3ec11df4a51cfa3e50eb511a113f15ab080c68",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
+      }
+    },
+    "code-improver": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/code-improver/skills/code-improver/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "a4e33a24c853da3df13262da9bce1fd833dce694493b344e001f18df73692d2f"
+      }
+    },
+    "code-maturity-assessor": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/building-secure-contracts/skills/code-maturity-assessor/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "a5e1427ae04cb0ed32b003c332becc0c8adb8e382d8d1d489edc997148b57ab1",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "resources/ASSESSMENT_CRITERIA.md": "0ffe131842b209de7910cc2ac77fc1e2cdea1e16455bfba79505c8ba8179009f",
+        "resources/EXAMPLE_REPORT.md": "47f37a7460cf281cb4ca2aeb3abced762ce4b7dd4db21e7b12772b2202e4fc42",
+        "resources/REPORT_FORMAT.md": "28474cce17be996e839353978fc06a830ac3fbd1219efbacc914de567fcdd7dc"
+      }
+    },
+    "codeql": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/static-analysis/skills/codeql/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "1a6d919ff80f83b262daf650552af6eb6d2c32b19d0c529b70efe0c116b675cf",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/build-fixes.md": "e4af17ecbe5a6784e3c011fec1f093ce25e5c852cd92be97caaeaea0be10ca1a",
+        "references/diagnostic-query-templates.md": "c27a979094f8de6d1d341a838de52952a98385ff75c9439a7e76ba3bb3fbe662",
+        "references/extension-yaml-format.md": "c98903da4f21fd94816c520f6fdaba8d12e08b4bd55f85233c487e3baf39a1a6",
+        "references/important-only-suite.md": "9f2fbb57b0e02fe964ad268b11ad88c9598b38314fc008016caa615cf303b3a5",
+        "references/language-details.md": "f0857914eeabfb96929c2d1a8f086e92c0a3973cc2ac8460f371fedc2d023818",
+        "references/macos-arm64e-workaround.md": "72d7c9fc2be8368968516857fe4e32211473b92cc8bc3ef1d28530aaf744d1fe",
+        "references/performance-tuning.md": "536473b91e8574c18a3a943df2e4328615bbabbd899c76827d345ff7be986b7d",
+        "references/quality-assessment.md": "2acbb61d487211a0d6342ef86f774de3d4e05496185d337e09cb39810bcae08a",
+        "references/ruleset-catalog.md": "2b139ae593865548a596fb5b78694cb09d4a1959beb5225a5d8a914155a72165",
+        "references/run-all-suite.md": "bbac653d6e8ea115fa7df47307729745157bb60868939a71167c30cc18dcffb6",
+        "references/sarif-processing.md": "abde04ca479a372ed134150cd9cd1fd2b45cd7b4b45386034a2b3f4d415f6f9b",
+        "references/threat-models.md": "fd4252f0fc71734ab756ff51bead1b894397bf67382b2337cbe0b0de4672cefd",
+        "scripts/build_log.sh": "83c98d08c85a96b0b46246c14f3ffbe61370f5d184338455c6c288ddcf8df5de",
+        "scripts/check_db_quality.py": "fca99a149eb4689730b7d3a3314527a5716823fb5f19b6b79114f4949b726c36",
+        "scripts/find_databases.sh": "a56995c048b322bce45baf4482388a3cdf78dd59d562eca39e169c065f7f9b18",
+        "scripts/generate_suite.sh": "489516c52155c2061ec2a53d8190ebe474f4bdcb53ddc53b1216dc72ff7b1d9f",
+        "scripts/pyproject.toml": "c78fce8eeb7d91895dfc44296bdf547bcf77a156c8c057ae5238032883dfa41b",
+        "scripts/test_build_log.py": "3d58186d066d0ebf8117f89dfb03d49a8db8907e43cb013bd51b7669aa478f2d",
+        "scripts/test_build_mode_claims.py": "eeddedd49a2aa33790425f828c808a0504fab66a635c7902878cac2a292db89e",
+        "scripts/test_check_db_quality.py": "842c78079bb0a033f7e3ec0d2608ac5913906c87e96132e85fb38577eb170c29",
+        "scripts/test_find_databases.py": "eb9895c35f94ccb334997b296774dc36c5997ce520acb606bfd83b0934d4982a",
+        "scripts/test_generation_scripts.py": "9b092f2c0ebf630f21276214dc05b72b681a5c3e5e26816621e028d880cf2feb",
+        "scripts/test_script_flags.py": "7aa9ca403051f4bd7690ee4ce46b3d9e16050119a24b4eb2858653e489c7edeb",
+        "scripts/test_section_pointers.py": "46aa000803005d5e3328b4c028b3431f67c7105997bddd15aa361a3e2511695c",
+        "scripts/test_shell_blocks.py": "bf800714b9bee72292d74ac0c80acd47c00e6bb7e2624731e8b30a82c840358e",
+        "scripts/test_suite_templates.py": "94028929d16a3bbcdcc4b92b5f32bda396360cbbb34198c4f2405b3397957d5d",
+        "scripts/test_verify_query_suite.py": "21089b2b06407c6dcf43ff2bf44644b64ad4fd028713eadeafb92e8db8d5732d",
+        "scripts/verify_query_suite.py": "ad1bb120201c9af5ae199d3d36a727ba12d897162f817045e8a8006e691154f8",
+        "workflows/build-database.md": "06794bb67182303b0c81d30b3772531537d9f986b7b2cbe2a9ffa4b4f3e230ba",
+        "workflows/create-data-extensions.md": "f3643e4916e7586c7738c14f781e3919bce35129d75beb00812b963efbbc4673",
+        "workflows/run-analysis.md": "a85ee6df365445353e482e38c43c73e013a280268570284ac858798f47716626"
+      }
+    },
+    "constant-time-analysis": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/constant-time-analysis/skills/constant-time-analysis/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "README.md": "69353d95aac7751a89234f28c4f7a758af591e66a1eac32f07f098dc7b9b041c",
+        "SKILL.md": "4807f710a234e2520d7e163cc5a0e55785a495b2790dadcd7f0952dd6bff8d07",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/compiled.md": "7c6f69897fc9629c4f26011507685e6cb4b79f1e1881f6f3a23d8e136f1d42fb",
+        "references/javascript.md": "77cf536e1a123cf05927deb21a8da26e72308296370af314475c50f59eadd5ac",
+        "references/kotlin.md": "798bc4c6d9ba1195e93d8371780866b09bccf2e096ccfa8aeb20dcc9af0a8c9f",
+        "references/php.md": "59dcadfb56202fe6ecaeed933b968c44311adf51366e6cc2720342a880334d33",
+        "references/python.md": "6f89ca8a5e54a2aa50e1c39783d2bc0f8b1fdbd6e771700b4b8325069fdc565b",
+        "references/ruby.md": "51f08d9c9d74a1630866ed5b2867e39aa77b5f9f5a3a6153d215b98669b1b5f0",
+        "references/swift.md": "419f8a9a3fc0944a064b3d4a9e473a91bd38d907a37b234d819cd8de62441226",
+        "references/vm-compiled.md": "dc6b012f43e383ed30047642673e23d91b73cca49efdabcb940550d9edb30a0b"
+      }
+    },
+    "constant-time-testing": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/testing-handbook-skills/skills/constant-time-testing/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "d294126ee90dbb949261145fbf1fb05dbbeb1a986320ba597b746fa4068f0028",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
+      }
+    },
+    "cosmos-vulnerability-scanner": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/building-secure-contracts/skills/cosmos-vulnerability-scanner/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "CHANGELOG.md": "fd4ca29cf7a9c36c5ec22947c43974f38b44b99337b45f9b50255bead0f99b41",
+        "SKILL.md": "5f12f1ecdcf220726d32b391e5e646807d09d869d4cc92ae105236ecff4b9a42",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "resources/ADVANCED_VULNERABILITY_PATTERNS.md": "c5d8582061f30cae4c17953f8493a8c2e452a67cb3b9449664705fff9cc8e671",
+        "resources/COSMWASM_VULNERABILITY_PATTERNS.md": "9df45b35b92cb07bee7aafdd6f1a8742831dcdb9be413f9c353d21cc0c0f02a3",
+        "resources/DISCOVERY.md": "33f3d3c7ccc2816463f8bf60bbe29582ae5a10216e70bb16dae5829a775d847d",
+        "resources/EVM_VULNERABILITY_PATTERNS.md": "eb038859445add39e9b9332b38da99d4418fa249e5ca879140652fe031cfe426",
+        "resources/IBC_VULNERABILITY_PATTERNS.md": "3462dcadf15038c0e48a48d866c8db688497779f2fafbfe215abcdcd7e40f3c7",
+        "resources/STATE_VULNERABILITY_PATTERNS.md": "323863a7d6faae1a36a134d65bd000071606a719602262cca8d88e69e6b1edae",
+        "resources/VULNERABILITY_PATTERNS.md": "e8fa593eabe0ee4f7a7734dd50c67bd83ec87842c3ff87d4b735c88de4ae579c"
+      }
+    },
+    "coverage-analysis": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/testing-handbook-skills/skills/coverage-analysis/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "9f71cfaffec44f159aa333924a25cdbe3eebd221cc7c0b0175fb93794d3ecacc",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
+      }
+    },
+    "crypto-protocol-diagram": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/trailmark/skills/crypto-protocol-diagram/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "11e665a8180bfc5dcac16cb4baa01100f83d6875b2d38dcd54ad6866f9b04dbc",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "examples/simple-handshake/expected-output.md": "d1b782cf4181e6af43efa74b907a86d2cb3332842027160350518121979b06ed",
+        "examples/simple-handshake/protocol.py": "bb0cdf0534372bfb05ab078dd8d9b163dd3469c03b43caeaf96c121fc8a04318",
+        "examples/simple-proverif/expected-output.md": "1f8f409ac8c70600f771b24c58b76bd5cb80ab2458be4c08d9d2478536ed6933",
+        "examples/simple-proverif/model.pv": "ded2b83e2a6fc5b85db40f50d7932b66e397472aa3542ce24eabf6bd9be48b32",
+        "references/ascii-sequence-diagram.md": "3eebba0a3fbfe4205f7f165c5030e42b45d0277d4b33fa979469ead0565cd7b1",
+        "references/mermaid-sequence-syntax.md": "a7fad0d407bf498e5fed25fbf0e14431b3c0e178b9c788d9fd9e8cf56ed5c8d8",
+        "references/protocol-patterns.md": "73b20f76afc1f9e06028e821f1c49bc69ca279ce622a76294a9f7c438966fb96",
+        "references/spec-parsing-patterns.md": "0be275fc4015a21538985213531800827860c8a3cec8c303c60a5ec0a3a6088d"
+      }
+    },
+    "devcontainer-setup": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/devcontainer-setup/skills/devcontainer-setup/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "ef698feec8a76cf89f283c07632a2ce92378cb34e030f6c2ca13f312a7393e39",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/dockerfile-best-practices.md": "78b9bdb7a9596f849ae69fec3042d6c3e6b65e0f3aea953e7656b89b7efedb1c",
+        "references/features-vs-dockerfile.md": "999ac17d8f0172fce5fb00906190a97980b6a1c94d42b4046255992a9aa8c88d",
+        "resources/.zshrc": "0788e061b87afde6d0e7243e1aa2b93952c1fcdc82125278f5ac503142a5bec2",
+        "resources/Dockerfile": "86653908049df668d9dfaaeefc7b05b839c1df77a55166398c32d441e86c882d",
+        "resources/devcontainer.json": "0d3140742a2196b2f2eba1a756cb568c2732f9f09465dec2d9397aef7793e42f",
+        "resources/install.sh": "022c145aef7e3890203f362460d87159b04f0835866d4610f32f1627de426822",
+        "resources/post_install.py": "7d37aabd6a6421df6ab6448548e852e5b42d3b3d2b2aa39c9d17c4ea40543419"
+      }
+    },
+    "diagramming-code": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/trailmark/skills/diagramming-code/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "1d2397bd08607b686122078afe8d2742cca2a46f19c8e924e54f5886136d1053",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/diagram-types.md": "f87a59e21779510920fe3b76c1f4d17f0776a24fed0193f836e982b622394e73",
+        "references/mermaid-syntax.md": "5932e0ecb7cfa4d49e5fa54af723880eeecdf1a9419e87ff05ec7021270b53b4",
+        "scripts/diagram.py": "a619c23ecaaa73f3acf6205b088c70b22a92b065beb35ca0aa3308efa36a3682"
+      }
+    },
+    "differential-review": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/differential-review/skills/differential-review/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "f9af6a8193fc1a9f8ca3c54bb8d19095a5f20c9472ca6d014488bbde50b67da0",
+        "adversarial.md": "3cb823f38c6e551cbcf5f72325d2bb219dacdad774072519c31d50d92db19800",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "methodology.md": "16b335d24cf2145e3dc4a37f50056550d29db2efa20e6df78fec95ec1e6fb0b4",
+        "patterns.md": "52abb18abbc73502a3d3b2f36a7a035adc1db40fd812d1d5424cf065036a06e9",
+        "reporting.md": "0016876dc6f158e926448bff1b6f634796757c7afe09dff177cfe30250724fc4"
+      }
+    },
+    "dimensional-analysis": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/dimensional-analysis/skills/dimensional-analysis/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "0434b5ec95a0ae3037160e24d38d6579c3127ad86d0020e6f430d5f71c18c66b",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/annotate.md": "c7d1a0987d4da875067ee8523c1a0f40984eae4c6e6b344df59d2bbf3b7f0cd9",
+        "references/bug-patterns.md": "36818df67fc45815ce288412fac6d0bdd93da5e856d7cf8dcbe56b1d255dd526",
+        "references/common-dimensions.md": "5743496a380719fc601b592abbe357c0d2d95273ae38b019ff6da28cac77ee2d",
+        "references/dimension-algebra.md": "e60adc2108c89cb698626a8c62fe3ed65480e434c00b44a2bc9f2e43deb2bfd7"
+      }
+    },
     "docx": {
       "origin": "lock",
       "sourceUrl": "https://github.com/anthropics/skills.git",
@@ -73,6 +517,41 @@
         "scripts/templates/people.xml": "056f63aa1197fd8c9dda980c9f1b9ff016fd5fa4a462df8aec5f384f39d23e37"
       }
     },
+    "dwarf-expert": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/dwarf-expert/skills/dwarf-expert/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "c4623d2d9c5a31c7722a293a96038817631e7d511f256613b4cbfa417c24466a",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
+      }
+    },
+    "entry-point-analyzer": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/entry-point-analyzer/skills/entry-point-analyzer/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "0d0e2956bdf9bf5be7efdfcefc754cabd2c1deb015731f3341f919eae2a0e3ca",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/cosmwasm.md": "9190d53ca121d77568dffb86800157770c5f4bb7bcfb58db012d564f15b49d69",
+        "references/move-aptos.md": "1011c990e5c696f3947d470e85424bc991e15ad7dd4bb2cfdda86b4571a33957",
+        "references/move-sui.md": "d1384df236e403dc4b66a4fbec848c23a2d6425241876fe3c64fc9c3854c8c44",
+        "references/solana.md": "688de5e95dce753f99c7907566a0dc28fb7c5900156e4cc8b89417a5e7fc3d80",
+        "references/solidity.md": "831559ce437ce2b2e4c2070b4e4e0bb16e27092a4ff160832d2ee9309edde79b",
+        "references/ton.md": "d2cff4dea2757bd11b222117d7920fbcb9add6a9082027a3fcf054ba699f25c6",
+        "references/vyper.md": "add8caef0f87a4d2d5f1ad76a31ffb434a62edbc34bdaa73e6a04cf34c9a4f2d"
+      }
+    },
     "find-skills": {
       "origin": "lock",
       "sourceUrl": "https://github.com/vercel-labs/skills.git",
@@ -83,6 +562,161 @@
       "installedAt": "2026-08-25T18:24:34Z",
       "files": {
         "SKILL.md": "c00eeea0e13e74fe4a9d84ba0a8542205a1b736d65f13134fe1a6647eb14976f"
+      }
+    },
+    "firebase-apk-scanner": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/firebase-apk-scanner/skills/firebase-apk-scanner/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "fd7376ea038ea5a44a819e6fb75aa8e6e2ad38a2ec0d237cc6f71aa8ebbf95a4",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/vulnerabilities.md": "7ae89875a6e0f5a0dfc0da6172f1bdfe6d2719e66dcea6b94c62158d5e9ae1fa",
+        "scanner.sh": "4126fb09c7887af26af20df5a1ed618022b1c292b1c1926781a7817de1dcd260"
+      }
+    },
+    "fp-check": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/fp-check/skills/fp-check/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "129223b79b8cb1e7c289c90cbe4ba288d9b210e318a0d1464f319e30329481b3",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/bug-class-verification.md": "b687b0fddb945354175b653a86653087110717ffe21f0bb6b8ce95535643fdde",
+        "references/deep-verification.md": "653ee21c3ab73f8ca6aa0a7c8e51a9195c90bcfa76533cb966c41d16baa52ffa",
+        "references/evidence-templates.md": "340346b9c6b3b43aa7edc71ff09351c910bc8aefec62647d2284bdf637a59e3d",
+        "references/false-positive-patterns.md": "868c4e3f794c95a11c177ff4999c30eb71ebafcbc0e30ab826761b0d17b17a7e",
+        "references/gate-reviews.md": "de4fd3680496b6f622b25dd5d8459eee1fe95e2cf61aa533c5ff86c548d6acc9",
+        "references/standard-verification.md": "09032334d472b0fd796fc13f6d95cf6f0ae98cce34f1aa8dbd0c3fdce2854710"
+      }
+    },
+    "frontend-design": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "owner": "anthropics",
+      "repo": "skills",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "pinnedRef": "3b3fad96af16a10759d930941b4520ba0c40edae",
+      "installedAt": "2026-08-28T07:29:52Z",
+      "files": {
+        "LICENSE.txt": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+        "SKILL.md": "1608ea77fbb6fc30d13a97d12cfa8ebf31358d40f0dd97beed24829d6b3f45dd"
+      }
+    },
+    "fuzzing-dictionary": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/testing-handbook-skills/skills/fuzzing-dictionary/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "b71fa7cab36ca466647123efa07c665c1968661f6d5060d9ac0cbb7f7599f7e0",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
+      }
+    },
+    "fuzzing-obstacles": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/testing-handbook-skills/skills/fuzzing-obstacles/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "7d77500c3e0a2db1ce5fd5dbb0559b802a621c63110dd8fd4664f0bf1634a3b2",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
+      }
+    },
+    "genotoxic": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/trailmark/skills/genotoxic/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "cfbb30f69e91f2b04a14f426ef4442164edeea8c00041692067121b7baae6e09",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/graph-analysis.md": "6a4a8d1a2438ad67381a51d1da258ca3e1af37ad56158385f878ca86c746ec00",
+        "references/mutation-frameworks.md": "87b17aad65a9a9b1e337e67131c9d288239ca7f7254778b9a4890428d8cef0cd",
+        "references/triage-methodology.md": "f2e377f94794dce6e271c2c17b95cad9e3ac9cb5522654a57e1c664dab23408b"
+      }
+    },
+    "gh-cli": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/gh-cli/skills/gh-cli/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "3810c9ff56ae9a26f4c6c1e0d058a946cd97e800441630208007a0983b9cfc49",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
+      }
+    },
+    "github-triage": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/github-triage/skills/github-triage/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "b3289e800b7b5dc9c37c9de2768ca052ec7077dcf184d83d3d0c9f32a9fdd3cf",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/reviewing-prs.md": "a3666d41acecebd4c9e63b482a8c54e4f4bc9db9795a33b311da9d4c6408b829"
+      }
+    },
+    "goal-prompt": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/goal-prompt/skills/goal-prompt/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "684bd98d836f88e7b7ec552cc329e4e4cc1fd51cb0d4ef23e83036992f6ef6cc",
+        "agents/openai.yaml": "36110300ed7ff12f2659732baa73d66cee4d3b5ee12bb60620a4acecc34e4986",
+        "scripts/format_goal_prompt.py": "b0c8841a825ecb96ff3188285fe2af4c8d10756f6ea80b57f87d173bd6b2cbe9",
+        "scripts/test_format_goal_prompt.py": "d2a6a2d06656fe40c9a4d10677d4673c7dd9af82a5251229893916e31061122d"
+      }
+    },
+    "graph-evolution": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/trailmark/skills/graph-evolution/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "009055f8ad529fd9fa3bfe58c510fae79cf81d8b3d16b31b27a86ec248797618",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/evolution-metrics.md": "ec26ea932290be3490227025705296126e446743a64b604e11f7a50fd649f722",
+        "references/report-format.md": "cc44977216b7e90075c6fca845b630d7156e72d88f1234fa3f0026d367d1a0db",
+        "scripts/graph_diff.py": "4cb00ee257d45e464e7679f654261791b3b21f2c92f7887e5b306b1de62faa55"
       }
     },
     "grill-me": {
@@ -96,6 +730,274 @@
       "files": {
         "SKILL.md": "caaf8b8de1684f96e26b28f3c29189db5c89cce4b73e1c93d86164f66ef88637",
         "agents/openai.yaml": "c061e39c3e0f9d865fb1b97556d485704af2a8a58f4b8221a8917a5c2074a32b"
+      }
+    },
+    "guidelines-advisor": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/building-secure-contracts/skills/guidelines-advisor/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "5bb8ba34d363c419e1769a59d0fcc7444a04dc6d9e59032cb93019befdc2e464",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "resources/ASSESSMENT_AREAS.md": "951352a5e7c3afa717ed62770ae1b7c152c4792480e3beebefc68f9c96d2a46c",
+        "resources/DELIVERABLES.md": "5a9a6e14acb0be5dd8e15440227d5cf659931ec79cca346661f9ef22bc5f21c2",
+        "resources/EXAMPLE_REPORT.md": "4c31c1718afaece6c7ba2c3519373167ca5d81f937fb4356c8d9b45d280833f0"
+      }
+    },
+    "harness-writing": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/testing-handbook-skills/skills/harness-writing/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "8efda12f4ab61a7eef4daae88affc7649695d8db5fb2c2a33a78dab2a3fe36c0",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
+      }
+    },
+    "hf-cli": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/huggingface/skills.git",
+      "owner": "huggingface",
+      "repo": "skills",
+      "skillPath": "skills/hf-cli/SKILL.md",
+      "pinnedRef": "cead19e10754e773bad24fecef83cb64be24094e",
+      "installedAt": "2026-08-28T07:32:45Z",
+      "files": {
+        "SKILL.md": "fa5635fabb83a97f2578970898400c35c50e0a8be4e33a26ffe9c59db55abb4c"
+      }
+    },
+    "interpreting-culture-index": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/culture-index/skills/interpreting-culture-index/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "4ebafac15db6bdbeb5bc5ebd8d2bc2dc3242a26549492390e1eb868ba704a35d",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/anti-patterns.md": "1d409d2823881adcec7caac2842773b5f60afaee7efb9435340e76da739f6be8",
+        "references/archetype-administrator.md": "f445fcfb0ab566b162d0d5c13e01d6dcbca5f04085a0cba04b1863dd729832ea",
+        "references/archetype-coordinator.md": "7061a34acb1e1bf33db4e16a088c83b1c0694bc1f152288853d66afb81a8e3e9",
+        "references/archetype-craftsman.md": "c8ff07851b5635ff7df77dc4f392a9b2eb28fa4ffc34d856f8f7fbe571edd0d3",
+        "references/archetype-daredevil.md": "51a0a11cd329b81ac50a29ef1fff10e16a35fda1d4df952d59f899b8e52a4eb6",
+        "references/archetype-debater.md": "6c0bd2313b7a383e4ef999111c35ad9f1ea7f74b60bf4db4ff80952fa64b6d72",
+        "references/archetype-facilitator.md": "eca1764fd0479968ec5aa0587ef0594f5f066151ef210fca0808e3c42e12dd43",
+        "references/archetype-influencer.md": "5a239694848bdf257349e73fbc1ddd28f7b7b8bc8ce3b7436c3b62de91dd7ef2",
+        "references/archetype-operator.md": "cf648a65c9b8bebbac0aefeabde13e19e6377ef77a201433f694af7fe62471d7",
+        "references/archetype-persuader.md": "0dae3f16a10c378d271c52dd30273f2fc0b7f6d8055eeb19c583f77579764c9d",
+        "references/archetype-philosopher.md": "303c023fc1eae6668a2d5ccd5984448fcbe4cb7b45b260ed42a96c877091a95a",
+        "references/archetype-rainmaker.md": "106524ec470a7e5560ddfd28201bdf3a38f325d39fd4164fcb92395857726c5b",
+        "references/archetype-scholar.md": "2d537ecbd557e797c6d76f1a54b4da586f964b08707cbad60b75418bd288f5ec",
+        "references/archetype-socializer.md": "f7cbf91ad5c8380f735fb465da5bcef896e51bf448e30caae0505574eff3f412",
+        "references/archetype-specialist.md": "b7a8aff7c3cd25e0906af607a0510c65b46d151230ffcd75dfe43092548aeb5c",
+        "references/archetype-technical-expert.md": "631bccd9d0c2f5cba82e04e8f844ddd420a24ce36b4c654d90951b0294e8228e",
+        "references/archetype-traditionalist.md": "f8bd3686ceb19a9eb127286507dc4c1c95d40c79e61636f980612df5462f58a5",
+        "references/archetype-trailblazer.md": "e9e1f955d596f3195e26814b9ec65acf2bacaa7e36a18e8100ad40583a621447",
+        "references/conversation-starters.md": "7b4eb68a07a2b074eb2f3aad2dfb10b243d3d029f3e531305b12952da05955dc",
+        "references/interview-trait-signals.md": "36d86d19623326f30d61ea97acea0e0ce94d201fe8ced433bfcfe221244a6187",
+        "references/motivators.md": "81ac045b0ab4d4d0740b20b83150c994ef787ca91a77aeead8ba76bb26228379",
+        "references/patterns-archetypes.md": "dd580b448af3f10d83f6ecfda7ea36d205427aade07aeb641128aa71041dc18d",
+        "references/primary-traits.md": "1279a1d0902ebbad344f1fb1aaa13cfcfd5a0a428610ccad07391b0adfcee50f",
+        "references/secondary-traits.md": "d4443730129c42c0c9eb0eedfa007cdeb4507e59491d6399669daa754f538371",
+        "references/team-composition.md": "256b77ccfdb2a4988dcbefd2dd5c4bd12eb597be2e17a12e36d8af6228ca2311",
+        "scripts/check_deps.py": "db98f79ba2ae48b1957c4e22a2fb3420a4b36acf6747c4bdbfcc4acda8b1ceae",
+        "scripts/culture_index/__init__.py": "7e98c16d427c278698d7414df956bec49d75d9d2bdc79b17998268a4ea9a3844",
+        "scripts/culture_index/constants.py": "8d35e6a5d22e72ced04885ea5e3a6c830f7c3c9c4a8037e874430bc056e5a7ec",
+        "scripts/culture_index/extract.py": "7d890d69baad2622e760023e75eb291ade8414e0a0247d4d39c3a4792ebe5a4d",
+        "scripts/culture_index/models.py": "47d62adc0581facc29dba3f31328f57901d2ad6eab7e71cdc60fd79e2aeed4c0",
+        "scripts/culture_index/opencv_extractor.py": "0e1b692c919dce97684031e506dc49db5a1a05833acf0b26ee9a1c71305c498a",
+        "scripts/extract_pdf.py": "b3978d4d4d4aca8cb76474e9830771da676c14b99fb2b1a6a68da7f5388e8867",
+        "scripts/pyproject.toml": "633a8eee9b475f1d849938b8f7a94f76b5f785997e8585090d188fcea1eb9174",
+        "scripts/uv.lock": "2858f87bd286628b353b6878b4a1fd666d7c850fbac5b317b11961fabd6d3735",
+        "templates/burnout-report.md": "5eafbee230afd8a634cac6eec59467bd58edcd4c228b79cbf271a37a064dbbce",
+        "templates/comparison-report.md": "860fe1c74bcd7197e7467172eb5043f6ecf2b20453a2e582ea1229b3841632e9",
+        "templates/hiring-profile.md": "88659bedba664848f626f4f5268f12af27d0c67bbcb38c8ae7892704ba83083f",
+        "templates/individual-report.md": "9bf72414b88b8d8aa5b8a4f0f47ab382bbd2f5bf394008a5ec7fdf94fe728018",
+        "templates/predicted-profile.md": "7a41262b3f8d9a2ae78ce625abc32b4052ab11f2637715da75990205003fa9b2",
+        "templates/team-report.md": "285c3aadd95ea640bf8f05e67394fbcf08546d73306c2d1e7b00a0f2717d491a",
+        "workflows/analyze-team.md": "6c3f4197e89fe63ce952d84bbca4dd854d653611da672fe07a7479f3505848d0",
+        "workflows/coach-manager.md": "0a85d1e8313a15ab72dab1fed127eedf295c7872c2922a536b72c7d4db66413c",
+        "workflows/compare-profiles.md": "0565646cb48115b5559b1dd4ed984b932edfb64f796e87ff965091cab58e73b9",
+        "workflows/define-hiring-profile.md": "158c94c591144eeb750791793aa430d27e226f4b5f0d1d93e852d585c44d4ef1",
+        "workflows/detect-burnout.md": "057ac690ac791325c1a998d1a7a0492aac0bd9f0e6da8fb461ea40edd4cd8353",
+        "workflows/extract-from-pdf.md": "200cdb731c59ac38f31b5b66e1dd5b70406699d33754d506b401fd8187a876ec",
+        "workflows/interpret-individual.md": "73b4aac88682763f86632028dbdf770676a7e8de4b7dcd94d62b0a6afc9097f8",
+        "workflows/interview-debrief.md": "4fa70a59ee0f0014b5ed7a76c6ee4837671a6f73b6ae331c4567fea95f857d64",
+        "workflows/mediate-conflict.md": "09253a19ab9dc2bf207cc395400a84c0a977f8eb3e1794d75c846f81827d7232",
+        "workflows/plan-onboarding.md": "82869f576c2260ac0baa05463c916f9583fecbe1fda756d2c78a39dca4491b53",
+        "workflows/predict-from-interview.md": "f689863698e37244e17f2c2cceb4477b9abcf6725964d0eaf706a0989c107965"
+      }
+    },
+    "jupyter-notebook": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/openai/skills.git",
+      "owner": "openai",
+      "repo": "skills",
+      "skillPath": "skills/.curated/jupyter-notebook/SKILL.md",
+      "pinnedRef": "49f948faa9258a0c61caceaf225e179651397431",
+      "installedAt": "2026-08-29T20:23:28Z",
+      "files": {
+        "LICENSE.txt": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+        "SKILL.md": "62f102e8554b25716dccef0ffab4572d4e3eaf05ccc76562d33a065bc9c521fb",
+        "agents/openai.yaml": "3a2d6a8f9ed10e18f6caa66aeb26a02305bc61f36fc4b333c904e02f9988fb9c",
+        "assets/experiment-template.ipynb": "25f85914103cd84244e20ef378f59097479c72481cd18d3a931354d107c3f300",
+        "assets/jupyter-small.svg": "a36bd27bef3775f111309241754b386db81e7d356f07672190e2fcb24478a250",
+        "assets/jupyter.png": "852fd5468885bb176d266d547e61684792332e44a88cfbc8cd07323937040ccb",
+        "assets/tutorial-template.ipynb": "704a809c09c7c9e6e5c437860df95524412b50c58571a14204610d73e0744765",
+        "references/experiment-patterns.md": "1ff9c04281c01e8e2209bde9f1fd910b8e4b620dd1f1f040e2101f1d88513a91",
+        "references/notebook-structure.md": "a85051a2e88fd3424bbed2636e952ec5f858e7efa4e076c28d62a8cc2cc9dc06",
+        "references/quality-checklist.md": "ed01afe6ff47714d85935d11053b64c414772f02250fdc604e3fca65e5139136",
+        "references/tutorial-patterns.md": "8c194bb640de2fb7747e3db87006ecec5219252d301f53670975dbb5310ff659",
+        "scripts/new_notebook.py": "a004e2ea3115edb24313928be0be6d1dc07e571d7ca6c1b24375f0569c616d2f"
+      }
+    },
+    "let-fate-decide": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/let-fate-decide/skills/let-fate-decide/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "ef51258f594553a28c44cf0e6feef89d0c89f4d2aad2dc7ab606f4e1568c251e",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "cards/cups/ace-of-cups.md": "28d860f3fd39dac5406720bfef368290c6edcd94b7f0d1b4082ef2aae019f335",
+        "cards/cups/eight-of-cups.md": "052d9dcc01ade4751b64f030eebcd426e2b2ab70936c23a74375d6851f6e0912",
+        "cards/cups/five-of-cups.md": "01e940a53c713178583a2932b6a870095de33088a581c5d557c2aeba7ce4bf16",
+        "cards/cups/four-of-cups.md": "d62d23ecb21a6c83a8067084b78eb8381eac9f9f0a33826205f3c6d9ab8e5e61",
+        "cards/cups/king-of-cups.md": "31ac9ef71d086129ca8a10c3a01a6ed72e7ec1d2c97bf88080e000a19ec65cac",
+        "cards/cups/knight-of-cups.md": "0994326d74e1898ab15f797e83815300164117c8288f1ba146ebe8931b5705e3",
+        "cards/cups/nine-of-cups.md": "4582d5108dc8ad76279a78074f8d7cc7fb22c159c68c49dc091dbdfd118df4a7",
+        "cards/cups/page-of-cups.md": "2f5583c906d94e33848e714fbf1211c1fcf02d1e2ccb5f5e4d3ec92e4e34dc85",
+        "cards/cups/queen-of-cups.md": "40fa2d0fa5b72659caff71bf7eafa77a2428e5ecfebf69f741ade33232167c3e",
+        "cards/cups/seven-of-cups.md": "852b35c0058d6e929af96ea6a567727803bdba75578310d193c837a29df450a2",
+        "cards/cups/six-of-cups.md": "6f2ade658b7681ba77e444932deb7f909e5d3d9618d9cb73b1503305a2726ecb",
+        "cards/cups/ten-of-cups.md": "ac8dc9d3cf2a9d020c35369af76eb8874a8ef21a2911111739fb87f3cb4ea926",
+        "cards/cups/three-of-cups.md": "9c801eb74f5cf5c76e69df620f3fccbf29dd2db50351737d326735fde77d3043",
+        "cards/cups/two-of-cups.md": "b10857cbdc7cca86805bf4a06c38cd504fd2c6577b3549b8b64a00156e92b148",
+        "cards/major/00-the-fool.md": "41575fb537544bb1cf50a85e7d3d42cc198ee5f72019b2863de222e1a8ac5116",
+        "cards/major/01-the-magician.md": "860c04ab0c9b562284aec2aebbba223900545abc79cd3819713ed3bad9eb7dfd",
+        "cards/major/02-the-high-priestess.md": "26a10ab90842bb85a7890d3d9856b383fb33f8b417a70a30c0c0a054088c14c6",
+        "cards/major/03-the-empress.md": "b7be52dff834f93f38e2a2f0e69c8e036043c9119d9ac1f391601db19bcd0ddb",
+        "cards/major/04-the-emperor.md": "1b48cba12beed161b3d9337ad3591b5b2200d13f7d8559ecd22fc4f183fb603b",
+        "cards/major/05-the-hierophant.md": "cdc24f287b1eda5074053fd1ea63e8c1deae6db9bf02063713222807416d0144",
+        "cards/major/06-the-lovers.md": "9722ff4c624be5b7693b947661135c04b1a76402f7490088c04256a44f40225e",
+        "cards/major/07-the-chariot.md": "fd9f65cd6785b54e6417fe1adc49273cce0adb70c2a002fea92a25cdeb27bd6b",
+        "cards/major/08-strength.md": "cca5b9f50d8a5d54b552fbe731b43d88c6cceb3c2006b11611f0274975a21d27",
+        "cards/major/09-the-hermit.md": "9d747c35f2e2c02272917ee1e710ee51269bf8edc9e304d7c4354f354d3f8112",
+        "cards/major/10-wheel-of-fortune.md": "52f5250e71884999ab6669bf5dc0b24a0585d0ae6acefcada03300d58e3a181a",
+        "cards/major/11-justice.md": "3c9967f413166c306cde202ecec98f82ce17eb01c0ee78b70e9f2ecece59fe3d",
+        "cards/major/12-the-hanged-man.md": "2843c5b45356afe26adbcd5403af85228f167cdca2fbced6b1ad54e8d556f4ff",
+        "cards/major/13-death.md": "f52aac25b735b0f77bf5c8dac58226c88366a75ab4973ae7487498d8d6b3c6b9",
+        "cards/major/14-temperance.md": "05514fd17d45073655d6a878f0f2a70af48002669c4981433af10405478ad3c8",
+        "cards/major/15-the-devil.md": "534d78dc4904ba055060bb9d0d4bb53eb3f9a957cd247a211a2ef46d47b3d045",
+        "cards/major/16-the-tower.md": "c1ffa1d2b31353604e8171642bd86fa52700b2d9fcf88770391a4b8bcb4a9b05",
+        "cards/major/17-the-star.md": "0cc63419420005e0b67d9c6b9cc472734ae1806eb370222d258abe1257d6f303",
+        "cards/major/18-the-moon.md": "48a5ae8586a1396ca6e7669ae63ae12a96095e724d390d9ae9906c8422ab3733",
+        "cards/major/19-the-sun.md": "10321c73be2c4451404e5ded4c33b1fa6c702602dc101d40e3b31f86c07ad08e",
+        "cards/major/20-judgement.md": "c78b987db4cbc5f521628adcd166b0231dc2ec1ee3c2bdb3e80a4aedec5cec98",
+        "cards/major/21-the-world.md": "ccef15a05bcf6d3d8e6720e2f671665ac0994db99aaee64384878847d0e02062",
+        "cards/pentacles/ace-of-pentacles.md": "1caba9776a0adcc3f7d3e6daadde15a53e8d46a5297071f5bd21fbec40e65fa4",
+        "cards/pentacles/eight-of-pentacles.md": "0b3de585f8a1c61466d858ed8d9c20cfc8c9811e8bfabbe41e624bbcc21cba46",
+        "cards/pentacles/five-of-pentacles.md": "f87ad3474db7ae1941262639adf31fdf86504e7f9dd0b807b735aaf46425d130",
+        "cards/pentacles/four-of-pentacles.md": "018c3298cb17bce1bbe47beda6feb34d9095712de7ecf6f20aa35cfb7074487f",
+        "cards/pentacles/king-of-pentacles.md": "ee2168eb3a385b708bbcbb26f28ded67624a15a196c41ff58119b86a7f925576",
+        "cards/pentacles/knight-of-pentacles.md": "260d740f2176d5c8810a8a3d0713331e84816a21987f41519a36579c026585a2",
+        "cards/pentacles/nine-of-pentacles.md": "76bdee95c610950fdf777a353d5b5a675c44c6549840c3bfe80f8dea369535ce",
+        "cards/pentacles/page-of-pentacles.md": "adf518c7d4b4e10e1f2414986916339fc7990dd01ddc7ccb90986722533ecc88",
+        "cards/pentacles/queen-of-pentacles.md": "c48f3b2e0cbc6f11cd1e70eedbb694a23d0747be4166eb2a190a9e9e7b98a547",
+        "cards/pentacles/seven-of-pentacles.md": "04a5ff396864508c33021d4c47b62d1b17f4a30a5a08523402ffc9974cb841f0",
+        "cards/pentacles/six-of-pentacles.md": "bb3a9210f5d3b2d9f4b64aab0488ea828dc0644570c3af4438091e1c85bb9fc5",
+        "cards/pentacles/ten-of-pentacles.md": "04f25f877dce74a5dd1bffe356f49b8824d30165c63e01792c724f1e6423299a",
+        "cards/pentacles/three-of-pentacles.md": "462c3ac0bb6e44f1783f9324982c2fce31835dc3a341ce9a43c3f49a307ff498",
+        "cards/pentacles/two-of-pentacles.md": "b3f0d48efe23625b4a903d6c8b1eac3dabd892bf8447f25adc486e2266294464",
+        "cards/swords/ace-of-swords.md": "4b0fce4e8fb09df62ffd62cdb09150ff8c03c6e6719626ab418fdb6ea7038f2a",
+        "cards/swords/eight-of-swords.md": "24e30c870eae818039da9b8f72fb53af1335a351567a1f26c79554b176db1222",
+        "cards/swords/five-of-swords.md": "db3be74d50cdcbac72afcbffdbb5912d867a2792288b77d63a1512a962e18042",
+        "cards/swords/four-of-swords.md": "4b0482f235b8f0f9f42655b4217eb39e0a8bc39118f4e4e1a0d0054d098d0d68",
+        "cards/swords/king-of-swords.md": "f84ef817a08822df4ec1dc97dbffd0834d88ddbba0a61fdbdda0c8491ec348a1",
+        "cards/swords/knight-of-swords.md": "c09c1ee07d279e676e190172ed236f64da85fbe429fd8dc54956ff0f69f7e71a",
+        "cards/swords/nine-of-swords.md": "a8a8d683cf8c4027ba2e8cc4cafd060c7e6a20f333bba35e9eb6aa4c49243027",
+        "cards/swords/page-of-swords.md": "3aed5fc3d3f31be5ce606cbbcb8be464921abb578b5f56bd602e47caa59ce415",
+        "cards/swords/queen-of-swords.md": "0b757ae9f04cf6aa3fc3884cb6703e4db83e9998c1d79d155fec6d0208f74252",
+        "cards/swords/seven-of-swords.md": "f0bb09b5ee7ffe2c5b8c11699414d257f5b4ecf1b191ac583e4c3891e5f9ed6b",
+        "cards/swords/six-of-swords.md": "a9dae20e46b5001ab4dc79001d5c79574307b869e0915bc17cad73824227c633",
+        "cards/swords/ten-of-swords.md": "0c17b735e0688f0c0cdc27e78b257fb49ac9496b0f0cc023c08a0cbeddbd865f",
+        "cards/swords/three-of-swords.md": "2dbf184dc19636aafb143796ada0cc4dc3a5fbb3759a7ce47bb14d0ebe8894b1",
+        "cards/swords/two-of-swords.md": "a633f81bd06573f81668d1d26d9b2056b6ecce356995d71544cb96c7f268224d",
+        "cards/wands/ace-of-wands.md": "39e3e3d2a8d8b0d87451aee977bbe83a84b9c86283f0a42e0d5b24dd1e255467",
+        "cards/wands/eight-of-wands.md": "f3fa34b26e1051c78650d2bf1d78a252ce01845efb07b68a783dff3cb0b0549c",
+        "cards/wands/five-of-wands.md": "7e5d05f4b2ee9d1f70dd5bceb358ff4b2ac4445425f8ef63697af781bcd772f9",
+        "cards/wands/four-of-wands.md": "66bd9b79fbb299e68edc0c56c2907f974bdd301c1c69209a573567ae8743302b",
+        "cards/wands/king-of-wands.md": "78b9eb4077c37bffa93ee9a6fba829ad456a7d6b459c9e9131fe58b332ab27d7",
+        "cards/wands/knight-of-wands.md": "f05410f1edfff2d3645f35f41589b69b695dbe640f4c02f549b4c5ad88c97427",
+        "cards/wands/nine-of-wands.md": "32f4908e9699dc4d038a702f6104cf27bb4332144570103b0e6db2a7fa58215c",
+        "cards/wands/page-of-wands.md": "6da5cc15d95cf5d71b8dc3082d250e32d90b77358d20bf531c671c8e6c39e6f8",
+        "cards/wands/queen-of-wands.md": "de284467b8ce9520abb13b7fd3a2f4e76dfd6550940aca7d6664ea8f6fdb0644",
+        "cards/wands/seven-of-wands.md": "396b64b16a31d73094f564501e5739b6ca27155844d9edd6fd1e686b1d9181b6",
+        "cards/wands/six-of-wands.md": "d96d44e0834a8620d9f9e29e3ffaeba40ecbbbaf47647a366161a24d51715e93",
+        "cards/wands/ten-of-wands.md": "85a48ee300d19ac5891bbe0787674431cf06393cee053e056936d6a09d6e4690",
+        "cards/wands/three-of-wands.md": "b058a8184bf119f0cc10bbc7a08ca3320984e3b9cbd316eb02c3525b51245450",
+        "cards/wands/two-of-wands.md": "e91a11e478106f0bf7660dc8cc60ba970742f75dc4b64f761871ff57bdd9d84e",
+        "houses/01-first-house.md": "fbb8cd604285efddadc10441e11e7e591dccbda7d4ad400deda27537d553580e",
+        "houses/02-second-house.md": "ddad48b51cea49cd217777ab09544ade33620146954448790a4329dd0b346ce7",
+        "houses/03-third-house.md": "5548da8f7f93eb478d8863fed36d24233050a9b67b2e33e0fc17e2e5a8adb044",
+        "houses/04-fourth-house.md": "722f2dd5834a91ceef2c060e966c3caa514ec2afd7204bd6e0a0c5912d2918bc",
+        "houses/05-fifth-house.md": "b7e8a9a6d7746152072c23bae63800354744bdd082cf4c23d997a1c602ab4fe9",
+        "houses/06-sixth-house.md": "7333745972dbff4f31cad1b42afcd4a2f577c2fdd260a6fcd096b2b706f9f7bf",
+        "houses/07-seventh-house.md": "57ef2f8000be792ce33be64677cc5267a8c83203e3837a20d53ef46908c79472",
+        "houses/08-eighth-house.md": "445639105eaf4d2a54106cfd04e263122e8eb2a8d1bf0f8bed4eff161497a446",
+        "houses/09-ninth-house.md": "3f5544ab31da28a839ea4ddd1c16ca3f62ca060c1b4b1da3244547ea8e665d7f",
+        "houses/10-tenth-house.md": "b391bc246ab26ebf2361d925db4c9edbb07e96bae2a559fc169c36f60fe3c6d4",
+        "houses/11-eleventh-house.md": "4670d0b6442da70fb3b87277a72b23f2b086af87af54fd2c1aa945cab47f2797",
+        "houses/12-twelfth-house.md": "56fa05fd28f82eb9c7be0868618b5031b605d03f0a7a06935ea7792c1463ccf0",
+        "references/INTERPRETATION_GUIDE.md": "2c359d9ef3c8f7014500b25b57e2f420ae38b93bab6006185c01bbf2afbef548",
+        "references/TECHNICAL_CONTEXT_LENSES.md": "6a2cef145a769eecf30e907d50c53c0445e091c4f3be02fdf73f5d340893fd17",
+        "scripts/draw_cards.py": "4dff224dd219ab0ebbee8453d512c52562df306e5ffd0ec040befc47f7f1f5d9",
+        "scripts/pyproject.toml": "072f982ebfc4397f58891d7c2361e9d3dd8e790c0b6d96bda8b3f472193ddd2f",
+        "scripts/test_draw_cards.py": "0fa1854521682215a16240831dac4d84ac1909040f3bbdd198601703d1c9cb24"
+      }
+    },
+    "libafl": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/testing-handbook-skills/skills/libafl/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "2f7f261439c2d87a15ddbb8a04a387fb8c211b9f20b00baf28b1466e036fc0d5",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
+      }
+    },
+    "libfuzzer": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/testing-handbook-skills/skills/libfuzzer/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "56b2c68b193f7fed4ae00ade6c6395196d44612d140ad51de43d150404dde2eb",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
       }
     },
     "mcp-builder": {
@@ -119,27 +1021,133 @@
         "scripts/requirements.txt": "d5d7558b2368ecea9dfeed7d1fbc71ee9e0750bebd1282faa527d528a344c3c7"
       }
     },
+    "mermaid-to-proverif": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/trailmark/skills/mermaid-to-proverif/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "2f096151ad7fb5de2d74556bfa85322510a6e71710f4aa0ff963e5ce6ec3fa25",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "examples/simple-handshake/diagram.md": "04fc49508ead6b829bddfacd28e97f5f0fdb39b94992180874af36760871b6eb",
+        "examples/simple-handshake/sample-output.pv": "207b1d6eb4562b0e31fdb6052e5b09b3f8d59ed33c9ff39eeff6f3829d9ccce6",
+        "references/crypto-to-proverif-mapping.md": "6a74edc1b644d51de628b2f324ed10176b9697155a267f46f203a2c2b9014707",
+        "references/proverif-syntax.md": "79934d0cb92280e37fd896193e0bc75912ec147b560e41b97a0b4cf1e86ed841",
+        "references/security-properties.md": "eb21e2f9be16a2ceaade726f7bd2c5ab6a096c4a33f3e5d6d27996eb4d435f8b"
+      }
+    },
+    "modern-cpp": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/modern-cpp/skills/modern-cpp/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "a3a886fc425c591202b18165aa587111fafdd9250c37a71bbc48f7285fcd3c3e",
+        "references/anti-patterns.md": "b0c4cdfbcaf90653b603aece91d1695b61592851acd39e93a79c40c92f54b35c",
+        "references/compiler-hardening.md": "7965180ea742a1c59db75f4c8df8fa1f5a8cdf67d8d1a30f6b8b9705cdcb3902",
+        "references/cpp20-features.md": "5498d853cdfb0be5e29c3c1bd55121cc166a0e0cb972d7733e8cbd5aa94a99b7",
+        "references/cpp23-features.md": "feb1b1b5d80eecdbbde5396c3e0675ddba2c13c4c5d187b3b36d9b716e648015",
+        "references/cpp26-features.md": "9984022424fedfe5ba97b2f17f83007ec14f394d8e7054d559951c7dd04118cb",
+        "references/safe-idioms.md": "9c46fd20cfc0ea24ce49dfec13cd9f463528a4b4c691b78eb90df84c1682ed9a"
+      }
+    },
+    "modern-python": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/modern-python/skills/modern-python/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "ef774b925eb1d1fc12e4f5ddc3f5ad925ecd795315827447228c70cc44c6170c",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/dependabot.md": "d3678e32472305c0ef136bca99b26c3f75554d63675930e396f26a91a97451ad",
+        "references/migration-checklist.md": "58c947e6200a91f350c9adc898af7fc6263fda41d36ae81ffd4dd923b3a1015e",
+        "references/pep723-scripts.md": "c348b136613a4fed8f623d6013c0c6413d2c24f2973b2e5f85b80ecc68646045",
+        "references/prek.md": "4be1c181c71aab64ba58573242a1c451d576a5c61ceeb400bb5827f4e1f9532a",
+        "references/pyproject.md": "aec906835ec687024700d31e5c146baaabc9524129384304857b3aa81809401b",
+        "references/ruff-config.md": "8d247862f1beaf76816ed6775f5a0c8dc96d74c7f2b71bbf1aaedc4937373b17",
+        "references/security-setup.md": "32d6754a87d5006f923706d10446cc617cb22d36cfc30b55d39bd7f4c61d864c",
+        "references/testing.md": "82e36068fbf28a9615d3c96e5d946e304ce8f89ae1ba7475d20934501d55b0d9",
+        "references/uv-commands.md": "348cd69e8c780a0c7d54a2fac3c2956c7efe5630229782753da1685416672cdc",
+        "templates/dependabot.yml": "a85ede8ff9cc3a2f63cb1fba24e65c36a5885ecc95722af15157dc5258f28a12",
+        "templates/pre-commit-config.yaml": "18efd067e75cba5fc71705c2f90c548a03c3cded4cd2a7f9b4a1d617e115db0d"
+      }
+    },
+    "mutation-testing": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/mutation-testing/skills/mutation-testing/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "1bb6b5ddaf79d489047b2c3b8b319df4897c06221c12209dd1dfa7bce4b87f04",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/optimization-strategies.md": "b356e8f2a4ae8630e949d8a62caf5aa5875fcaf4c8bfc32b8bc48dc64a5dee4f",
+        "workflows/configuration.md": "28b44999e50d08b4bd6cc0382a970b088ecb40ae065388620ab441c11d1f4e19"
+      }
+    },
+    "open-sourcing": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/open-sourcing/skills/open-sourcing/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "da8d876edfc13f234cb88a2531da86a5e37d417d63d5c4b174ad18b6a20e0c53",
+        "references/c-cpp.md": "5ed6e8fbd5cb84e8fef35fd796b86dd9dfc7b237de682a9d99270a8861bac2e5",
+        "references/go.md": "ebbf308893bdf4630b63b96abc4351f879aeeeacb68c0e838564f8ccd0f34a38",
+        "references/javascript.md": "690f9317588cd3613af31df4e7d01f37ef1dede015cdfe3d9296cbbe083da2b6",
+        "references/licensing.md": "c520acae25b07eec233af5a7f8c799a5b7755c102c6e5f2d8fbb5538807647d5",
+        "references/python.md": "464a91db0a02d1bb9ec731b6e6a7deebc54a3ad7ea0432bb81e82ec381fa9b03",
+        "references/ruby.md": "da9744fed9bcfaae5bff7a3bd33889053224120392c0443d868e199b27c2a03b",
+        "references/rust.md": "6bc26b2a6d3f201ee39b05f9b0292d06345b51dd3eab424247bf14e58e8dd9c0",
+        "references/trailofbits.md": "5e2aeb7382f0dad52d94a67f0f0a13a998cc5502190bc8a2207554ab3b0c6b7b",
+        "scripts/check_readiness.sh": "19c3eab5f1f158a06ef9a9f56d2dd53e26443b79f64665a865a494baa4174ff4",
+        "scripts/detect_org.sh": "79d4de769a6f6422be017b7978d95c274fff131d929d74ec0524f2bd971e9bcf"
+      }
+    },
+    "ossfuzz": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/testing-handbook-skills/skills/ossfuzz/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "aeb1abbcac5ae5e4a73be4bb923fc9cca20d8d1073630c2e0a1ff37fccbec598",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
+      }
+    },
     "pdf": {
       "origin": "lock",
-      "sourceUrl": "https://github.com/anthropics/skills.git",
-      "owner": "anthropics",
+      "sourceUrl": "https://github.com/openai/skills.git",
+      "owner": "openai",
       "repo": "skills",
-      "skillPath": "skills/pdf/SKILL.md",
+      "skillPath": "skills/.curated/pdf/SKILL.md",
       "pinnedRef": "3b3fad96af16a10759d930941b4520ba0c40edae",
-      "installedAt": "2026-08-25T18:24:34Z",
+      "installedAt": "2026-08-28T07:49:42Z",
       "files": {
-        "LICENSE.txt": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
-        "SKILL.md": "9f78b8359fbd4943ad260a7a1e436e5a96503406d6c34e99f69223d647d85b9c",
-        "forms.md": "9530b3f57034792e0242a3abfe8b3c296466329551916f2ff6c5a70db78f7e44",
-        "reference.md": "03a5f964f8abecbbe156f363356e927e864d7ee964f1012c84ee1bfc8acbeb95",
-        "scripts/check_bounding_boxes.py": "0ced522402dd7b3c82a0be9518cf4e485fa9cc0467d7beab6ddb04cb36fcc3e1",
-        "scripts/check_fillable_fields.py": "1fe10b9980a5493c9bbec8c20630c603eaa475b45403751c08f26738736647b8",
-        "scripts/convert_pdf_to_images.py": "7f58e292a67e18a8ff000d30bad2469389546731f7e8a698cc1d0aed001ea15d",
-        "scripts/create_validation_image.py": "8fa9fd7962c9f940045b81cf6b991e7c1057c1838e3f9cc6d305007a222ffebf",
-        "scripts/extract_form_field_info.py": "bb235b36f497bbb1c7c6821cecf527bbba7213520de11219da99f7b13a38c109",
-        "scripts/extract_form_structure.py": "6814e3fe8f78c2b16d766c132b5a727ff7a31b71d76a7d46bd6e40fe50bc97c5",
-        "scripts/fill_fillable_fields.py": "d140872c2e92e41b1e05370ae8d270c5b7f5ebdf55d9905f03bc974a9c708ff5",
-        "scripts/fill_pdf_form_with_annotations.py": "8a56e063a49ed53c0b0e1d312ecf8023af76816ed139486ec3b539873de202fd"
+        "LICENSE.txt": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+        "SKILL.md": "d108cf2b36355ab37eb5962933f4d09785ec002f3105c506129320209306b9d2",
+        "agents/openai.yaml": "f8b223e25343559f57e1839ccd849fd1494a9729da33da04bb5074b7f80f4887",
+        "assets/pdf.png": "17da356d195d4e3fa24f9becbee6b8d9e60e13005762b5ab0809c520c76da6ee"
       }
     },
     "pptx": {
@@ -209,6 +1217,223 @@
         "scripts/thumbnail.py": "94ef83a84346aa2d63913de0d42bb2fe902ccdc17bfac6130096ca758381793c"
       }
     },
+    "pr-improver": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/code-improver/skills/pr-improver/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "8bb6055905f95d4e0bbd6dbbab2be930a3d3e09cd22a18afbd306abcf9e0828f"
+      }
+    },
+    "property-based-testing": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/property-based-testing/skills/property-based-testing/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "README.md": "ffbe30eec09cc64fb1eae836b07ca1d82939bda3f1e6f0dceadcdd78793a3112",
+        "SKILL.md": "9448cacb65c6237a7c22dc59602667177ecae405524079ae9ff92240590b995a",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/generating.md": "c0e72dfc89babe3c32de718b81b94044362c85e776d7475e950dfeaab78bb58e",
+        "references/interpreting-failures.md": "dbae7db8773712ba03268a3d56ea5aa6720af0650a5189580bfd88aa2edc3f9a",
+        "references/libraries.md": "f7218acf8e668130ef3048983472579d04e12030c5401926f666363e5f69c686",
+        "references/refactoring.md": "6eb5c206f575704791f089608bb06e41d6eed91b9d3c7fb27912f969aed07a18",
+        "references/reviewing.md": "110b08118a1e7b1a2566def6e9d2a0bf43fc2deefce857d2ce3b4382b07bc774"
+      }
+    },
+    "rust-review": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/rust-review/skills/rust-review/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "52ee8b08876b0ad90ecdf4a58de8d41fb2d8627f1e4d259a806a35a6e187ae91"
+      }
+    },
+    "ruzzy": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/testing-handbook-skills/skills/ruzzy/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "46374463b7ff99b028692ed8d30f1c9f488597597e5a2af4ad3919e2a47d6ce9",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
+      }
+    },
+    "sarif-parsing": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/static-analysis/skills/sarif-parsing/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "cc5f008f40ffb8a1ae03ebd32d7234de43e828293955a0bc251b76ba249554fa",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "resources/fixtures/codeql-no-level.sarif": "edc92b09e4d8b1247ec87f081c68caa1843d8407063508ad33aab13327ba386a",
+        "resources/fixtures/levels-on-results.sarif": "625e8175a3c68d0d11f7e4c14095dddff5056d52a539e3153180cdb37ce50c6b",
+        "resources/jq-queries.md": "f44ec4e219c93504ec69fdeb2c60668ee3934585e5565fffdaa43f6b224b5d6a",
+        "resources/sarif_helpers.py": "06d8e63849bd2b93baf31b23a33550447eed2ac457c2687f173933039e5ad247",
+        "resources/test_sarif_helpers.py": "5efc4e50f3dbd81ea223049b1892653a46bce0c273904d0b04e43e449343fe17"
+      }
+    },
+    "second-opinion": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/second-opinion/skills/second-opinion/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "cdab9c8269c5198bfbde3f2db96a91af5a78ede8ab63a9c37778e9591090c0fc",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/codex-invocation.md": "dc47d9d0cf64548bc76390f8f8d651d4315bc6c57ca6f6fd5cdf18e34ed56faa",
+        "references/codex-review-schema.json": "4f5414f169b0027082cff6727ce7fdde47349d21b135904850492e182a67157f",
+        "references/gemini-invocation.md": "e9fd259e1d3ce6a7bbc1ec71cabb77636ccf00b99d112787025991d522c7dc9c"
+      }
+    },
+    "secure-workflow-guide": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/building-secure-contracts/skills/secure-workflow-guide/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "7c0e7fb45f97c073ec9599cbe0b2acf44f31bbece38636bc5c3fcc9bc7703015",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "resources/EXAMPLE_REPORT.md": "c55fb9e549a38c9bebc9b23f5f16fb498bd20a8f867868232623a4bd721df340",
+        "resources/WORKFLOW_STEPS.md": "8b048011407a9a123a01ba4548b62a944f8cd5f271e4e0cdfe58b09583bd9291"
+      }
+    },
+    "security-best-practices": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/openai/skills.git",
+      "owner": "openai",
+      "repo": "skills",
+      "skillPath": "skills/.curated/security-best-practices/SKILL.md",
+      "pinnedRef": "49f948faa9258a0c61caceaf225e179651397431",
+      "installedAt": "2026-08-28T07:50:33Z",
+      "files": {
+        "LICENSE.txt": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+        "SKILL.md": "7b3dae1ffc5434d890f3c65c8f552af52d0307fab3b35dec13013c9ca3844c4f",
+        "agents/openai.yaml": "6e9c6f2edce448eb2b589f81ad6e3f722665021785513bcbfd0bf7b86b529171",
+        "references/golang-general-backend-security.md": "a73c47c34497b120672d48411fe51dc90d426a571801a0b3f649e2ce4ec658b4",
+        "references/javascript-express-web-server-security.md": "427835cbb5be7ba96172ea6ca9af80ddd4419c833e9ebf870996740c80d8406c",
+        "references/javascript-general-web-frontend-security.md": "3a7bc7b3f6e7ff043db9dbaa8933894d7a19d987d0607e4ddae5d70184a63d63",
+        "references/javascript-jquery-web-frontend-security.md": "bcbad2fa6c2a02709e47e889e70102c76886bf36bc798624d27db570eccf40da",
+        "references/javascript-typescript-nextjs-web-server-security.md": "71c773f7a97ce60c853adfa100b3d88b3b7bc4c6b8acaef1432ffabd923ee182",
+        "references/javascript-typescript-react-web-frontend-security.md": "d3030c0f24bddb56b9bbb91bbec1ee49eb7778bce4d3e0297b2641b2fc6b0d9c",
+        "references/javascript-typescript-vue-web-frontend-security.md": "77c6a747f9f17e3df03aad0fcb20d99ac7898001b81aef8b80908e45ac14a688",
+        "references/python-django-web-server-security.md": "4fb69b5d45f10e588d1a8c35cdc5f59e18910f6b46a93e2d342d90f286f8dfd2",
+        "references/python-fastapi-web-server-security.md": "7383c7f4fc271190b05e562ada7e825982a2c76b6c79a9f95a1da7687b65a616",
+        "references/python-flask-web-server-security.md": "9606d69190c04c167fdeac57e61297547a57b0542fd89dede36f355970446929"
+      }
+    },
+    "semgrep": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/static-analysis/skills/semgrep/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "8a7215f55d14eaffd4022a6b14331950c1af40d31e0d45845e046c28458fc1b6",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/rulesets.md": "e641bf7b2f32cd81b2623759f72a560dd96f6747f1295157f2984fe8ebac3f74",
+        "references/scan-modes.md": "6450b636217ae7aff577828c9e4b570737291b09e3cd25f3678c8bf6e48deeab",
+        "scripts/merge_sarif.py": "8b6094e18a0e4d36250c72c81903edac914552df7eb2a7eebd1ac449d105f7ba",
+        "scripts/run-scans.sh": "781d34105269c13e80cf8dfa09bd96420af2fe98796f77f13a457ffdd8ca5410",
+        "scripts/test_merge_sarif.py": "8f235bface6ff37f813c1a44b2a6c2edf273cd548b95b770c362f0a443473c75",
+        "workflows/scan-workflow.md": "09acbc5b4b0c24881662eff1256bc57dd7ad0dc8b7ebe1e7f94cee93010e32a1"
+      }
+    },
+    "semgrep-rule-creator": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/semgrep-rule-creator/skills/semgrep-rule-creator/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "6ca2e3b8520ed20af1b0879b7cab318832fcbe89c19c17a9fa347a45a9f28913",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/quick-reference.md": "3e87f6e87b7cab07578037c6db1fb7d7cb57be03bbccc793c043720a8c3a435e",
+        "references/workflow.md": "3dab347aa2e2c78b5a7a94ebb0d73d92dcb5c7df87d60ea9ee8f2671eba1c7b9"
+      }
+    },
+    "semgrep-rule-variant-creator": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/semgrep-rule-variant-creator/skills/semgrep-rule-variant-creator/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "a456a7897a8042b1e2be81e10a7ac78f85cedeb22358b3ef9166a4faa058d0de",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/applicability-analysis.md": "6908d64fe2e2d84a19ee838a2764b14473ab843d073af3d68961c22e2ecfc7ac",
+        "references/language-syntax-guide.md": "ea5d36318718caf999e3f259878b821e2a2722d178751ac5e584a26e5a66a31d",
+        "references/workflow.md": "dcf5cf90e3d4a31e6f83c0f07871d08777b64c17533f30307361577813b30071"
+      }
+    },
+    "sharp-edges": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/sharp-edges/skills/sharp-edges/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "3b69a709c2f8f0cfcf57d40a3186e166f307865cc8ed924be4098e549a121e9c",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/auth-patterns.md": "1fbf526ca1db7204f9ebb1bf4eb3c48c544676623d23e5d28e01f6f63c355be2",
+        "references/case-studies.md": "2e81a320728b4597bf84c490176d5bf212f1e6ba6f87aafba61ad1734de35332",
+        "references/config-patterns.md": "1d99f2716f7bef18efe71015ce0c56e0f4961c042faa503d796d6d4d1626fdc6",
+        "references/crypto-apis.md": "8baddc83a1f964d6d8b15678d60a37c93029c18dc162bd7c00895e585ff1a825",
+        "references/lang-c.md": "d077d711c73749c924eae81c06018b14bbf1ec9b93d71723c472b43df5d7d5ae",
+        "references/lang-csharp.md": "8fa9e93d36c0e1397b7ca81307163370fc43cf700215b7c6d7aa1b09fdb91fb4",
+        "references/lang-go.md": "839c0e7b4e3fa2f3b37c651e926aa59d69d20bfef5e67f569eedacf11354844d",
+        "references/lang-java.md": "3b93b6049f7e0e356a1ffebc0b4642f3cef315d90be45b63e15c8c4814f9ebeb",
+        "references/lang-javascript.md": "cf72f55d31318666942a8d1d64340befc3c4e7223afc2ca196e6a776ffa4c895",
+        "references/lang-kotlin.md": "c891148c10a4941c3396416a10ac64512eb3a9e13ea5eeaec3902da4b51501dd",
+        "references/lang-php.md": "7960d9773874cf06c5b470a5ca3ab406d896e66b71e713d809bc1ecfcab63485",
+        "references/lang-python.md": "36543becc25b4e3f41eaedcab62e9b204657e6742b8ac95e405bcd040d33bf03",
+        "references/lang-ruby.md": "d9ba749caaccb8a3bb39e2199b2062c0957cf48739218ba8022d49be5cba2088",
+        "references/lang-rust.md": "3d14993ea70b2b2df3fc0f388cbd1631470895c27ccbd9d764296d1da8f5b6ee",
+        "references/lang-swift.md": "a64ab8692db0f3e43526088c63c7fdcb7354d1b24e6fe7ca759aea3260890e04",
+        "references/language-specific.md": "4522b4a37cfd7d3aa689209dfd4569f3b39074bd1f5987a36a6e819f501141b6"
+      }
+    },
     "skill-creator": {
       "origin": "lock",
       "sourceUrl": "https://github.com/anthropics/skills.git",
@@ -238,6 +1463,317 @@
         "scripts/utils.py": "3af8ae62c40c73ab712207436a0d9a981e845f25c5a7040229eb189cc8e45bb1"
       }
     },
+    "skill-improver": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/code-improver/skills/skill-improver/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "5764d6f51c5cd2e9dccb650b2a8f04282e44aa6d118abbfd051c0eebfaa86fe3"
+      }
+    },
+    "slicing-code-context": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/trailmark/skills/slicing-code-context/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "72ea4b2adc22f0c9d64b1f7846517fb285d8601e30a693126a4d3e133d0e97fe",
+        "agents/openai.yaml": "1be7b8d4175cd04bafdd84fa6257621b8c521736d9c2715a6f05fcf74f9cfd7b",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/slice-packet.md": "43be7a29cc733b3e8fa643356cb9ff46c07b68f6d5f92e37b67134edef353ae7",
+        "scripts/build_slice_packet.py": "16f29d4dc4b2623e33cde9ecccc66528a15764acf8de3c8f321a84df3fe7a204",
+        "scripts/pyproject.toml": "3744af306eee39b86b63bbd034de577a6d21afe4b73136c6877cdf8299a3c35e",
+        "scripts/test_build_slice_packet.py": "4a29d1002e18bdf1c6b340947e8b3bb2c1be807adcadc17ba906cad8425709e7",
+        "scripts/uv.lock": "0bf8deb22fbae512087dd6a1f6a03ae253b698ad6fb16ac4e46bc47e9def8194"
+      }
+    },
+    "solana-vulnerability-scanner": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/building-secure-contracts/skills/solana-vulnerability-scanner/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "81c6882b9c369ca4a5ce9cffaa55aaae28f2b41fc3c0198c750cc46026232363",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "resources/VULNERABILITY_PATTERNS.md": "15e16aaf36eb2d8edad7586dd59968723327798848ee966baa6fef5edb2abb7e"
+      }
+    },
+    "spec-to-code-compliance": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/spec-to-code-compliance/skills/spec-to-code-compliance/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "eb0d91b50a9c06f50baf8763d1e23566897b9fa3e7ffcf13134eee4e1ccaefe5",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "resources/ANALYSIS_FORMAT.md": "802674d5a0622fba7c32d1e480fd236f4bddcd2435841fcf48b17044d5d4d273",
+        "resources/DIVERGENCE_RUBRIC.md": "c7192803ae5c489501788ae5be56a5dd36b3f0b64f88982bf41f69a4245303f1",
+        "resources/DOMAIN_NOTES.md": "435459c75d21208ea73a6cda7dfc6910efc468a903f62e20f4837d5bd8b92c4a",
+        "resources/WORKED_EXAMPLE.md": "7b9ff43b20ba83e1ce934bc9161b14ce58617b65a9ae9c4583026dbf0299e927"
+      }
+    },
+    "substrate-vulnerability-scanner": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/building-secure-contracts/skills/substrate-vulnerability-scanner/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "611f69b419740b8f972eabc03b5cd88a38f0b07aeed755eae413629cabebb178",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "resources/VULNERABILITY_PATTERNS.md": "680d9d93f9cc11731469489ca3579b844e0d0d1ffec6f73520dffdc1c3a8a9b7"
+      }
+    },
+    "supply-chain-risk-auditor": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/supply-chain-risk-auditor/skills/supply-chain-risk-auditor/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "a1254b7f8d3a1731a9a7e1f9cd6c67b59cf84ed6ef7c7fb455db9a14c528ceb4",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "scripts/collect.py": "fd75cffad628980a6da521b5d3a40fb5dd16c5bb9ad63a25245e5208d08abff7",
+        "scripts/model.py": "78a20954b76e81216991b57453ceddbdb867035a0d6993b98cfa05a7f8d008d3",
+        "scripts/pyproject.toml": "a79ec30039ce3bc90544b9d833f7edc128232821575736f659d2b2ca0a601f3b",
+        "scripts/render.py": "9d6091645c8a8edf5c50d24bd70ff881efa30b920d93b46ea1775ee2dd328bc7",
+        "scripts/sources.py": "9060b4ec642f948c8a886012f89eb4135c31580fe1a42bcc8c8fdb7ad5ee05f7",
+        "scripts/test_collect.py": "ea4f25bdab0add75d500b22ba5eb9f993d3695d974cd3f92b418f5cff07e00da",
+        "scripts/test_model.py": "92059fe937c50f1502d71df2ddc4f123e8e2647fc0f4f7b270727ef9a2004f5c",
+        "scripts/test_render.py": "319970fd010d6bf5fbf79b595e8fc918c5e74645b718f495f2479aef3ea8cc16",
+        "scripts/test_sources.py": "9da9a1f6eeac5faeece57d24879f14b08eff76fc9faa8922c598a2e84fdaffbd",
+        "scripts/uv.lock": "99598cc397a42c945abbc9d839d1c61f1852f414660ce41e2e68bd9cdf664100"
+      }
+    },
+    "testing-handbook-generator": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/testing-handbook-skills/skills/testing-handbook-generator/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "84d2022bff1675f77f71a219aa3999b01dc3fcfeff1666965177195ecf808aaa",
+        "agent-prompt.md": "504b2f1ff37f118184085c35029b25d7934e85ec445982a9af12586f526e90e4",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "discovery.md": "2bc2412af856e91ffacefb85a9f98811fe7238c99b485c03cf206969fee9dfa1",
+        "templates/domain-skill.md": "da2c65ad7d1795f67846d6c5d844c77727b7da7c82ce82bbd387c2d288eb201f",
+        "templates/fuzzer-skill.md": "d83c4f95b97376a5f146e943fbd981cfbb6a9b786c5342edd2c63c4ca2ea5f78",
+        "templates/technique-skill.md": "565e05f3419c088c852595a918595b844cf2e4db91b9783c3047e431c0802121",
+        "templates/tool-skill.md": "4d36ed99022e09df35a948b45d19251ea44089618eef2da24ca01998cff2ebc2",
+        "testing.md": "3f7b53df6bb98679a7da30420d9e85b1f5fbb728faa425d1b176753870935c64"
+      }
+    },
+    "token-integration-analyzer": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/building-secure-contracts/skills/token-integration-analyzer/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "4b7f5cb3c52f9b45e2216963a49458e1f23f5a279a0296e702fd9d8df268b301",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "resources/ASSESSMENT_CATEGORIES.md": "bf1313e59c960688cc73bda5b7a98579336a277c521b9b37937aa1cda3a122a7",
+        "resources/REPORT_TEMPLATES.md": "77dc2195901cbca8f0a04687e6ac51347520b6320cfe2ca7c39d9725ffae1177"
+      }
+    },
+    "ton-vulnerability-scanner": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/building-secure-contracts/skills/ton-vulnerability-scanner/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "568286188e4d1c193f560ea08ba48def46bf9ddb3f415185bbc054436b47537e",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "resources/VULNERABILITY_PATTERNS.md": "98e03c8c86113058c4f56bee0b661fe8345b3dcaf583ba4247774e8301f30936"
+      }
+    },
+    "trailmark": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/trailmark/skills/trailmark/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "113af24db2830394ca7a42078a3172d3a693c1080acdc9e3f66209eaeaa36876",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/preanalysis-passes.md": "939cb7f9d0cd9d2d6d899b4c1e26625221b2f1c28a11b397844c338972fae5e5",
+        "references/query-patterns.md": "e8e651e753960804e1426b1bc73c0680e594a9905561eca5436e05d609cd4050"
+      }
+    },
+    "trailmark-finding-triage": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/trailmark/skills/trailmark-finding-triage/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "9f76e25b1ef98076e462dcac78afb488825bdab4d4d9fd5ffb74decc419c6989",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/input-normalization.md": "12ff637d5817f93db5c1b29f2ae6e0789cbf720e3c537576f4be035a02bca99c",
+        "references/output-format.md": "69deec7c2510445db418ec9f05a8c29eaee35d6bb94041167814b13b1c85a35d",
+        "references/query-recipes.md": "d0c948a22af7015f6716f853b9be8e7b38c13b31ae3f3a2813ae8d86b032f9cc"
+      }
+    },
+    "trailmark-review-gate": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/trailmark/skills/trailmark-review-gate/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "fad45861eca1e8fe7c44d20a178816e5fcfc2c00f01835ca8a1991dbd7241a9f",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/gate-rules.md": "dff93b5606f6c2bbae013299925f2f8a48d0349fdb3d7b6dae838241f6d6e9d2",
+        "references/output-format.md": "2d98fcb94cca3a73db481d123262653870a150e139ff29eec9d7905a94d9778f",
+        "references/review-integration.md": "13d13913029ec06fa489b294a932ba4e9900929ed4455649756a82e6ed80e146"
+      }
+    },
+    "trailmark-structural": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/trailmark/skills/trailmark-structural/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "7716c9069a3f216f26c69d2324953824b9578b59e0f746accd66c236ebd0b50a",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
+      }
+    },
+    "trailmark-summary": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/trailmark/skills/trailmark-summary/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "c6a6b5feb7bc3eda3b45140be8aa01f5a5c5c8cc2454918ad1da98080815bf48",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
+      }
+    },
+    "trailmark-variant-neighborhood": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/trailmark/skills/trailmark-variant-neighborhood/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "e49b232b46dce59ea2fd68a1c1dda25d83cee6717cb2921346184665bf7ecb4c",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/neighborhood-patterns.md": "2640412ab02ef354b0cbc1da08798f57e016b77a394a249f982df9f14a53f448",
+        "references/output-format.md": "f2381c0728c7273fafaaac1882c601491e9850c238e44b60d5106fb3459bf614",
+        "references/ranking.md": "ed0a957618e25cb77e6003a44351884ba73351b9eb2bab2b0ff5ff6b1661a57f"
+      }
+    },
+    "variant-analysis": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/variant-analysis/skills/variant-analysis/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "7b6b78e499bcb88d05c68254ffc91ebc28edabf4e9808adcc40e2628ebb9407e",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/reporting.md": "07a1d8f25537ec3da44b7c6e484bf922ab2eeaee733ced6df423df7bea517906",
+        "references/root-cause.md": "b4556f22adadc894b22c8df01d98bb94596d4e035386c780fbca73594014660c",
+        "references/searching.md": "22834e63e7412220feec9bd1d4cfd9298c17679489ad66d13be450928bf5d158",
+        "references/triage.md": "f1f0277096ae41641be311c783f2f7a1c677c2c6b6e8a485986d8d5ed7fa3653",
+        "resources/codeql/cpp.ql": "efd574081969d2bdd19e1756302d843fdbf936968a72de62eb24d66db43efc0c",
+        "resources/codeql/go.ql": "d3fa419af29bb15bf81510c54bc1ce0cf55f5b7adbdbf79cc2c8cd922d2365fb",
+        "resources/codeql/java.ql": "ee4a92a5cbde67304d17a2c5fb739fe9acf1d39ebac9406e3d3a2c1cbbbb19c1",
+        "resources/codeql/javascript.ql": "b6ceaa3acb6ba6fa89903c14c8fd3aa7cf48316e6b2588dcacae51bb423b3526",
+        "resources/codeql/python.ql": "135ec55760e1e827065e34b002c6d954b4c4293d07233a93d7ff31d9d97528a9",
+        "resources/semgrep/cpp.yaml": "41f034c9a5967cc3b87bf5880243ed21f633017111489ee843dd5d002271b10a",
+        "resources/semgrep/go.yaml": "8a8257eb8e0a7150cb7dffa2b64813691fd560de24b0f85fa6640ec2bfc6595f",
+        "resources/semgrep/java.yaml": "5be3990b052bc9ce5e1aa203d1f3c93cb3cde7d46eba463c24c661fc6b342902",
+        "resources/semgrep/javascript.yaml": "2f97e3545fcac449820c2d058bcb9cc36822e238b6249efa3a5dcb4f5f576912",
+        "resources/semgrep/python.yaml": "c1ce15574569d45555d582707db030b226763d81b2d521d9e61d6067440948f2",
+        "resources/variant-report-template.md": "03333c762318a89dd819784a62695f7660713479a5009a15189314400836202f"
+      }
+    },
+    "vector-forge": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/trailmark/skills/vector-forge/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "aca07e846ce5615031e9df0faca3537f4796f72997dcece53c9e389cf9d9d132",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/fault-simulation.md": "2e39c262e4cb1f7c8f9737e6ed02d45c3c69c556c7003b077a1aae24d06ea308",
+        "references/lessons-learned.md": "bb92f8744839a60afb2d3c8a5ba3704f0db48fc2dbac019e00946e7f7359026f",
+        "references/mutation-frameworks.md": "ae781ebc35637c0c46cdee448bc8bad98a7e3676007039c7ed1eca7f612e82d9",
+        "references/report-template.md": "9fb727aa0f8f6dde0b4f533a0de0641848cdb0cffff2d47eba9c4335b6da9727",
+        "references/vector-patterns.md": "641edba466cfdf0ae8cd93b5009b6861b1f6aaa593b84fd5abcd5b468a8b91b1"
+      }
+    },
+    "vulnerability-triage-brocards": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/vulnerability-triage-brocards/skills/vulnerability-triage-brocards/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "32c1a8fc233435f04ded12c3c9d4fcf0fa586b000b19b0ea71f72485f63c80ee",
+        "references/brocards-detail.md": "f7684195c04041cad159cc0cc0bc9520c81ff23e0ec8b5fb33db3d2aa15cb116"
+      }
+    },
     "web-artifacts-builder": {
       "origin": "lock",
       "sourceUrl": "https://github.com/anthropics/skills.git",
@@ -252,6 +1788,40 @@
         "scripts/bundle-artifact.sh": "abf0e480bf6585b56fab8526a407dfb7dc740812bddd70c636e1e8f3df5f9618",
         "scripts/init-artifact.sh": "355e5dd4382aaaee91f01f1627eaeab30b2676ffa8d9b3ec328a1ae450ebccaa",
         "scripts/shadcn-components.tar.gz": "1296f069e825de7933de7e8ac63672495cacce3f88f2dc45554dbcddbcbca60f"
+      }
+    },
+    "writing-lean-proofs": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/writing-lean-proofs/skills/writing-lean-proofs/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "fb2ad9c463ac5185a014892ce33202460b3423d64405024b95b534f0d3b4d3e0",
+        "references/anti-patterns.md": "58f1bc88b4882db7a606f606e61adf44b4cb08466e17687619561728e5e91ed3",
+        "references/library-design.md": "23310d7a0f1d7aef86d1c4e333ec97b5569b344bf9f26c61e958ca00d0f23f99",
+        "references/linting.md": "0ec7a48f8ffba4de4fe06d3eeb2202ca4c9a3be1bb738a33ada869afade48818",
+        "references/llm-techniques.md": "65e4b40ebb78075cc7d383716687983fbb99f2d44933af6f70797e3d3935e112",
+        "references/naming-conventions.md": "0b32766eff8f3ca2c4c72b20337be9ece046aad8e267f2d27b815412eadd7c6d",
+        "references/performance.md": "f108a3e8dc1882684759ddbbad0ca5a521c84a80493246256acc82d8250e395b",
+        "references/proof-style.md": "d631ddb9dc607229e025a53807e8dca63a9865f59e2f67b265d36888a0c39424",
+        "references/tactics.md": "68786c8dc7dc4ad0f0743717c72472efb6179d3f78cbbfc16a980e96a6d8db0e"
+      }
+    },
+    "wycheproof": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/testing-handbook-skills/skills/wycheproof/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "d092dc70fbd0f86d1f755857bf57172a6593cae0bff5d052443fc60b8d675a33",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
       }
     },
     "xlsx": {
@@ -316,6 +1886,99 @@
         "scripts/office/validators/pptx.py": "17eadad2b7a8374ccbe4cda45693bcd6a36f9d61a7d60f9c9ceef9464dec8299",
         "scripts/office/validators/redlining.py": "ed50d0885eee4b9c387f546b059bcaed64086815880a5167336244f93e305123",
         "scripts/recalc.py": "66f6e726d5a53cfabea0b6471d6669deb95e54e96cb7913b687e4388da1bb3d9"
+      }
+    },
+    "yara-rule-authoring": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/yara-authoring/skills/yara-rule-authoring/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "c23ee1aeabf26318e25e00903ef8f31c2de294d796c230081ce8bcf95a668f7c",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "examples/MAL_Mac_ProtonRAT_Jan25.yar": "fcae97587e0ac700628dc936e908bdaa1e2d474ff9b06b4c14857f0a2d3bbbb7",
+        "examples/MAL_NPM_SupplyChain_Jan25.yar": "4e4acf43d90c1e8b69035c2a1a28392334bcaa99a035b410c8843ba714e1de73",
+        "examples/MAL_Win_Remcos_Jan25.yar": "3a649dd20d76bf77186333d13a7fcc8e44aa5f4fbf564eef7672406bfa5177cc",
+        "examples/SUSP_CRX_SuspiciousPermissions.yar": "a07e02ad6a35c1d86dd31b6938d4b25b65fc483afe7d700d6caa363fd2cb6121",
+        "examples/SUSP_JS_Obfuscation_Jan25.yar": "8512799047396d0fc243264e5242034025ce170c3c1253a585a6a9b6384a8c0b",
+        "references/crx-module.md": "ed75d8d5942f3d4ac23b172f52af59ff85ddaec167c5df16dfdd6aad653ee8ad",
+        "references/dex-module.md": "1fa7fb3f3d66155fd5f07f0a8f2c4d53d67c6cbd9202ad16a15e89965c9c3568",
+        "references/performance.md": "346c90c12c1f882b110a155e646c550012792ac922d7baedc673b71599f31fa2",
+        "references/strings.md": "1a631faa2c8902182cd061818632e670b9a64c3182ea778b6f2870b7393fc5d5",
+        "references/style-guide.md": "8bbd5f52d7a66c44c78a7e941f6c8d9ebc2b3605abcdbc394b9080764f542811",
+        "references/testing.md": "00355d8dd53c6c55ab9ee0ab462bdfd2f5ae441121883775fcb3bdbaef8f97e5",
+        "scripts/atom_analyzer.py": "324529a55119ba8b652e298b97ea208e65079a7aa25dc89a478c1e9ea4c29610",
+        "scripts/pyproject.toml": "086b6b265a2eed185c30b7e068b67b4cb1afc8f49f2d5770e21093bdb44b2245",
+        "scripts/test_yara_rules.py": "05ba6635b7eae8ce415faf829fd9143091565e4d0458ef46acdf84994deb9191",
+        "scripts/uv.lock": "09856d8f492843d1e23209a0069f89e809d13983c69453b1993df5958bd4758c",
+        "scripts/yara_lint.py": "aab811af7d690ed4a39117a2520b414a4958752fc82b7719dd951ac5a40586c3",
+        "scripts/yara_rules.py": "59eca803ddecc9f12ce4f7bdeef40af8568e566604c93319df8630279f84f38c",
+        "workflows/rule-development.md": "190c221ff1349dca1afca095020cba5d4a98436b4a337fb87e8be01ab6c12be1"
+      }
+    },
+    "zeroize-audit": {
+      "origin": "lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/zeroize-audit/skills/zeroize-audit/SKILL.md",
+      "pinnedRef": "HEAD",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "b0a6c227817f9702d5168105c85977bb32ec077c6e90fd1ae094aa07b69a47cc",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "configs/c.yaml": "64c1bf6e6dcb0639e6d66178a741b5fd7f7c79266b91b3dbccfb9e9271e5c956",
+        "configs/default.yaml": "bf694a729a8b3cfa5bfe778f60ddba3a393162caf2bcf56e84ff69ed915d4d72",
+        "configs/rust.yaml": "3d52fe38092491aea4f3e4745393a61dd08a129c76a34a295dee8c8c614ab1f3",
+        "prompts/report_template.md": "d1b29b835d401ffb9fab2b3e63c35313525007ab5909c91168188c7e39760140",
+        "prompts/system.md": "3665eb931acb2714036276ab19c3819c1e4fc9f289dbd86d3257c5a9429b6732",
+        "prompts/task.md": "dd739ef5210841bc3bceacd32bba523dc80ceedf2a534b25b9aba6226e62d4b1",
+        "references/compile-commands.md": "ec353fc404fe2aea30e35fd10ae381f35f178c5121b12761b92c658bfe60024d",
+        "references/detection-strategy.md": "42f5342e35f065eafcba5547aa0845498f406087cf0bacfa298ea7d86c489067",
+        "references/ir-analysis.md": "15aa18ce8592cd969cf4343e36cb2bfafa4971ea9ca5acb3d760cee0ace9e55f",
+        "references/mcp-analysis.md": "018b4247ead8e058a27f17b6680f0bfa31c26331818dde699d32c8eec436f7c1",
+        "references/poc-generation.md": "61fb008ce7bab1a19b56b25a934d2586d3a6e43bfdbb0327f33f36b9505f5f5c",
+        "references/rust-zeroization-patterns.md": "5a86f5accad96827da494e08fef557de845df643c02685e26530403e43e707f2",
+        "schemas/input.json": "0a93fd1ec9e9a4f85355bf40600fd29c76c3f98089d9b6ac76795d1aa0a02421",
+        "schemas/output.json": "642b4f77d447167d2887d9b5d2ae41d67ac80ba35d7d0be26498adcfbdc02e53",
+        "tools/analyze_asm.sh": "f072d58e5874b28c9b53ed26a2c7118a3cd994cb75504d56c4dc83ff5fd9de43",
+        "tools/analyze_cfg.py": "1a5bede45f21383c3377a5e639fa676bfe204154303b80c98cd59feaebec2c32",
+        "tools/analyze_heap.sh": "ad7d83bd10fa9968d76922c63cbd41256fcbb93f18e3d4d6cf8e8310aa8ad5d9",
+        "tools/analyze_ir_semantic.py": "202a002ce09f5d0e1cccbf3a7791231a61795b6e2f4dcf2d384151278a0d788a",
+        "tools/diff_ir.sh": "2fa82d280acbab6aeffad7cd11fe88dd5388c2ad9df50b4a22cc0529e1687ec7",
+        "tools/diff_rust_mir.sh": "2d383e50a3ccca17f5a8e5af26f08241cd5811e330f9e5d2ce9e5a249778cbdd",
+        "tools/emit_asm.sh": "af4db5b52071eb52f1f5579438c199142453e9fb6e6dd775c31a3edd9ea5f34e",
+        "tools/emit_ir.sh": "82a3c91291ff5bc4b0ca78c3b1587aae88c1752774e0b6837c455dec5475ebf4",
+        "tools/emit_rust_asm.sh": "d23f859b9f4871a625d2b1fffd8857625c5b49a1a8b5e8f4878d0e800fb05847",
+        "tools/emit_rust_ir.sh": "3117475bba0a1fe350a938403597dec7a86d032a6d51494d708ae0037747dd17",
+        "tools/emit_rust_mir.sh": "95e3588f4484c6a872363a44e16587a51f5ba47cb05e6047edd7c598c6aa192d",
+        "tools/extract_compile_flags.py": "96bd2e753db421e0b86d9cadb37a61dc562e3dc84cde567a6018834565da658b",
+        "tools/generate_poc.py": "5c9f504ba3d421d0dcce4c1e2aea19b8366eb321eb256959f797c2ec6e084677",
+        "tools/mcp/apply_confidence_gates.py": "e4b9f1e2df523614ca61c0c1a89cafad05f487056cfe40aafa6fef4546d5e2f8",
+        "tools/mcp/check_mcp.sh": "68c9291036b42551f926bb2bd0adeeb11e920232f2d09d4a22712575f1a9a3ae",
+        "tools/mcp/normalize_mcp_evidence.py": "5c7132a27f7ca1ac88728115273a78d6b11a8f87050d8262fa1c9dd47483b7eb",
+        "tools/scripts/check_llvm_patterns.py": "0a17e661233fa48feab2b84fa08b685632bef51c8a479c0504e2de6369e73b5c",
+        "tools/scripts/check_mir_patterns.py": "6591eac1ea39b5e2e4cab93fcc01a3f9db6ea421676583bb31e6677140ff6cef",
+        "tools/scripts/check_rust_asm.py": "3c82bdb8db9c4393949cc437ff3ade8da3a610c27ebbfb54501132f58ad6d675",
+        "tools/scripts/check_rust_asm_aarch64.py": "0d63782b2b2f1a0e632451823d6001e4c8b240844a23c45c1e646602698e8db4",
+        "tools/scripts/check_rust_asm_x86.py": "6edcdc741d1f202566c5914b5d577c879d11ba61a841ba42398e05579b919cea",
+        "tools/scripts/find_dangerous_apis.py": "5a7b873e17a64bdbe0743a0301f1abd0aba4bbe79e552eccdf7dc39e80563469",
+        "tools/scripts/semantic_audit.py": "b84e3e885e07f88dce17da03d067c1bf7a7ade0305209bdc2e9be28ecad757d9",
+        "tools/track_dataflow.sh": "c60641893a664589d43c837b2ea4c7999ca51dcf61896455e97df4af0a9c12d0",
+        "tools/validate_rust_toolchain.sh": "4f294646864874bb93ef0aaceecfcaa3f81743278ffe9c48540f53a70004f49f",
+        "workflows/phase-0-preflight.md": "61f1c2630969b7bbf6df47e5f8cef1bb04e49894c90e8c579d2a964b923d93fa",
+        "workflows/phase-1-source-analysis.md": "fe153fc2e84fed752b17a8e3310bdf536b93a202b12164ad5312e118cdd203c5",
+        "workflows/phase-2-compiler-analysis.md": "8f1b8818a0e75bd3af102aaeed03a335012bf70e4bcb5bcadd9d6765519afe53",
+        "workflows/phase-3-interim-report.md": "594cf840fceb63f3d93c310eb1c34f04441fe25de56f320e66c0c57f042ab92e",
+        "workflows/phase-4-poc-generation.md": "37c521bd8f7bcfcb11d29a43140161d6833ba2164016c6623f713652ca410c94",
+        "workflows/phase-5-poc-validation.md": "6a2d030c1dc25b8317fa173c6ef855b7145ae8148f3c86e9691f8b7b669a4c44",
+        "workflows/phase-6-final-report.md": "44b7d099223839bf8016692cd6ec6b86f203e0a34d91861db9218cce4dfa06df",
+        "workflows/phase-7-test-generation.md": "3f1476672e8a301c7b125c81f2b4332ff97ff2a8cb65c6749b2cbe367598173b"
       }
     }
   }

@@ -51,14 +51,14 @@
       "updatedAt": "2026-08-25T08:13:54.803Z"
     },
     "pdf": {
-      "source": "anthropics/skills",
+      "source": "openai/skills",
       "sourceType": "github",
-      "sourceUrl": "https://github.com/anthropics/skills.git",
-      "skillPath": "skills/pdf/SKILL.md",
-      "skillFolderHash": "6369f4649de69bd6857c9bc3b058a77206009238",
-      "pluginName": "document-skills",
+      "sourceUrl": "https://github.com/openai/skills.git",
+      "ref": "main",
+      "skillPath": "skills/.curated/pdf/SKILL.md",
+      "skillFolderHash": "4cffaac4541278a5b142f9773e8a83ccbabc9231",
       "installedAt": "2026-08-25T08:17:32.066Z",
-      "updatedAt": "2026-08-25T08:17:32.066Z"
+      "updatedAt": "2026-08-29T20:23:04.141Z"
     },
     "web-artifacts-builder": {
       "source": "anthropics/skills",
@@ -89,9 +89,794 @@
       "pluginName": "document-skills",
       "installedAt": "2026-08-25T08:20:54.956Z",
       "updatedAt": "2026-08-25T08:20:54.956Z"
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "ref": "main",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "skillFolderHash": "0d5b74a14bdf3ebcd64f352d06376a2ef05ed296",
+      "installedAt": "2026-08-28T07:29:51.926Z",
+      "updatedAt": "2026-08-28T07:29:51.926Z"
+    },
+    "hf-cli": {
+      "source": "huggingface/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/huggingface/skills.git",
+      "ref": "main",
+      "skillPath": "skills/hf-cli/SKILL.md",
+      "skillFolderHash": "7cb41fcbbf44f101dca2fc79560651e3cdff07c9",
+      "installedAt": "2026-08-28T07:32:45.033Z",
+      "updatedAt": "2026-08-28T07:32:45.033Z"
+    },
+    "address-sanitizer": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/testing-handbook-skills/skills/address-sanitizer/SKILL.md",
+      "skillFolderHash": "71ea2d74507ece40cc6fa880e6de05edd3cbd0dc",
+      "installedAt": "2026-08-28T07:35:34.745Z",
+      "updatedAt": "2026-08-28T07:35:34.745Z"
+    },
+    "aflpp": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/testing-handbook-skills/skills/aflpp/SKILL.md",
+      "skillFolderHash": "1ab2e02fb768e01c4cb2412c8c80604e4908d89a",
+      "installedAt": "2026-08-28T07:35:34.748Z",
+      "updatedAt": "2026-08-28T07:35:34.748Z"
+    },
+    "agentic-actions-auditor": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/agentic-actions-auditor/skills/agentic-actions-auditor/SKILL.md",
+      "skillFolderHash": "53f866be2ff23bbd628cc34ca8d3651664c11d0d",
+      "installedAt": "2026-08-28T07:35:34.749Z",
+      "updatedAt": "2026-08-28T07:35:34.749Z"
+    },
+    "algorand-vulnerability-scanner": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/building-secure-contracts/skills/algorand-vulnerability-scanner/SKILL.md",
+      "skillFolderHash": "03434dd6578bc1c3e26c1360c3126c432c0fe6ca",
+      "installedAt": "2026-08-28T07:35:34.749Z",
+      "updatedAt": "2026-08-28T07:35:34.749Z"
+    },
+    "atheris": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/testing-handbook-skills/skills/atheris/SKILL.md",
+      "skillFolderHash": "0ed858bc70d4afa56b81ebd690b48e2461fe7729",
+      "installedAt": "2026-08-28T07:35:34.750Z",
+      "updatedAt": "2026-08-28T07:35:34.750Z"
+    },
+    "audit-augmentation": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/trailmark/skills/audit-augmentation/SKILL.md",
+      "skillFolderHash": "a9e58b9315ea6b2bab95e9e94f206d11aa031a05",
+      "installedAt": "2026-08-28T07:35:34.751Z",
+      "updatedAt": "2026-08-28T07:35:34.751Z"
+    },
+    "audit-context-building": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/audit-context-building/skills/audit-context-building/SKILL.md",
+      "skillFolderHash": "2fee1a2e10b9c861e97013d192a81379d070a60e",
+      "installedAt": "2026-08-28T07:35:34.752Z",
+      "updatedAt": "2026-08-28T07:35:34.752Z"
+    },
+    "audit-prep-assistant": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/building-secure-contracts/skills/audit-prep-assistant/SKILL.md",
+      "skillFolderHash": "906cb6d32e9928953b9129f1208289153e663b75",
+      "installedAt": "2026-08-28T07:35:34.752Z",
+      "updatedAt": "2026-08-28T07:35:34.752Z"
+    },
+    "burpsuite-project-parser": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/burpsuite-project-parser/skills/burpsuite-project-parser/SKILL.md",
+      "skillFolderHash": "588623bb2c3965cc48fb2415eeabf5199d3d4604",
+      "installedAt": "2026-08-28T07:35:34.753Z",
+      "updatedAt": "2026-08-28T07:35:34.753Z"
+    },
+    "c-review": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/c-review/skills/c-review/SKILL.md",
+      "skillFolderHash": "da34aa873114b198e24dd3fd821bcb720414e74f",
+      "installedAt": "2026-08-28T07:35:34.754Z",
+      "updatedAt": "2026-08-28T07:35:34.754Z"
+    },
+    "cairo-vulnerability-scanner": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/building-secure-contracts/skills/cairo-vulnerability-scanner/SKILL.md",
+      "skillFolderHash": "ef05f0f69f20be71f616940d53aa204a7db5aba1",
+      "installedAt": "2026-08-28T07:35:34.755Z",
+      "updatedAt": "2026-08-28T07:35:34.755Z"
+    },
+    "cargo-fuzz": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/testing-handbook-skills/skills/cargo-fuzz/SKILL.md",
+      "skillFolderHash": "8f01ed2e3de2d23a82af0679618313a002d33f7a",
+      "installedAt": "2026-08-28T07:35:34.755Z",
+      "updatedAt": "2026-08-28T07:35:34.755Z"
+    },
+    "chrome-mcp-troubleshooting": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/claude-in-chrome-troubleshooting/skills/chrome-mcp-troubleshooting/SKILL.md",
+      "skillFolderHash": "702b0d0e7870a2ef78046efc6235c3cf7c29a46f",
+      "installedAt": "2026-08-28T07:35:34.756Z",
+      "updatedAt": "2026-08-28T07:35:34.756Z"
+    },
+    "code-improver": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/code-improver/skills/code-improver/SKILL.md",
+      "skillFolderHash": "2a9060316f094a7493012d5fe83788dab9a9bf96",
+      "installedAt": "2026-08-28T07:35:34.757Z",
+      "updatedAt": "2026-08-28T07:35:34.757Z"
+    },
+    "code-maturity-assessor": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/building-secure-contracts/skills/code-maturity-assessor/SKILL.md",
+      "skillFolderHash": "c45f50b2a0dea0f123f936674ac6f8d6b71c69cb",
+      "installedAt": "2026-08-28T07:35:34.758Z",
+      "updatedAt": "2026-08-28T07:35:34.758Z"
+    },
+    "codeql": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/static-analysis/skills/codeql/SKILL.md",
+      "skillFolderHash": "4396400639261e5c30e3a57382de7eadd3697a9d",
+      "installedAt": "2026-08-28T07:35:34.759Z",
+      "updatedAt": "2026-08-28T07:35:34.759Z"
+    },
+    "constant-time-analysis": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/constant-time-analysis/skills/constant-time-analysis/SKILL.md",
+      "skillFolderHash": "a6736da51d730e4bc0f3fae1b405dad4f1d82f31",
+      "installedAt": "2026-08-28T07:35:34.759Z",
+      "updatedAt": "2026-08-28T07:35:34.759Z"
+    },
+    "constant-time-testing": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/testing-handbook-skills/skills/constant-time-testing/SKILL.md",
+      "skillFolderHash": "384906457dcffc5ad90583ba9db9bfcac537f718",
+      "installedAt": "2026-08-28T07:35:34.760Z",
+      "updatedAt": "2026-08-28T07:35:34.760Z"
+    },
+    "cosmos-vulnerability-scanner": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/building-secure-contracts/skills/cosmos-vulnerability-scanner/SKILL.md",
+      "skillFolderHash": "e4280286bdbb2047f8dbdacc32d2f47de81eb997",
+      "installedAt": "2026-08-28T07:35:34.760Z",
+      "updatedAt": "2026-08-28T07:35:34.760Z"
+    },
+    "coverage-analysis": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/testing-handbook-skills/skills/coverage-analysis/SKILL.md",
+      "skillFolderHash": "1d31010baeb2042b415b98c131893e4c27cc2e76",
+      "installedAt": "2026-08-28T07:35:34.761Z",
+      "updatedAt": "2026-08-28T07:35:34.761Z"
+    },
+    "crypto-protocol-diagram": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/trailmark/skills/crypto-protocol-diagram/SKILL.md",
+      "skillFolderHash": "c2e8aface759721d0e7a2d0c775f42aff792c3b3",
+      "installedAt": "2026-08-28T07:35:34.761Z",
+      "updatedAt": "2026-08-28T07:35:34.761Z"
+    },
+    "devcontainer-setup": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/devcontainer-setup/skills/devcontainer-setup/SKILL.md",
+      "skillFolderHash": "67728c77999fec1be4b327beac877d6efea16d41",
+      "installedAt": "2026-08-28T07:35:34.761Z",
+      "updatedAt": "2026-08-28T07:35:34.761Z"
+    },
+    "diagramming-code": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/trailmark/skills/diagramming-code/SKILL.md",
+      "skillFolderHash": "7cd8587747d406a9525f03624deba8cfb2a4ea1d",
+      "installedAt": "2026-08-28T07:35:34.762Z",
+      "updatedAt": "2026-08-28T07:35:34.762Z"
+    },
+    "differential-review": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/differential-review/skills/differential-review/SKILL.md",
+      "skillFolderHash": "b1050d8d483a49a2a63aea7002b064469fb97fb9",
+      "installedAt": "2026-08-28T07:35:34.762Z",
+      "updatedAt": "2026-08-28T07:35:34.762Z"
+    },
+    "dimensional-analysis": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/dimensional-analysis/skills/dimensional-analysis/SKILL.md",
+      "skillFolderHash": "20888fb93248a6ee53aae670dd469711dafdc114",
+      "installedAt": "2026-08-28T07:35:34.762Z",
+      "updatedAt": "2026-08-28T07:35:34.762Z"
+    },
+    "dwarf-expert": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/dwarf-expert/skills/dwarf-expert/SKILL.md",
+      "skillFolderHash": "6474643beee43b48557603d8de507befda9f4521",
+      "installedAt": "2026-08-28T07:35:34.763Z",
+      "updatedAt": "2026-08-28T07:35:34.763Z"
+    },
+    "entry-point-analyzer": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/entry-point-analyzer/skills/entry-point-analyzer/SKILL.md",
+      "skillFolderHash": "9080cf22789571e22fe21353c64b86cd8e035e7b",
+      "installedAt": "2026-08-28T07:35:34.763Z",
+      "updatedAt": "2026-08-28T07:35:34.763Z"
+    },
+    "firebase-apk-scanner": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/firebase-apk-scanner/skills/firebase-apk-scanner/SKILL.md",
+      "skillFolderHash": "e30fa5958c8d06281a569a5501da48f21a69664d",
+      "installedAt": "2026-08-28T07:35:34.764Z",
+      "updatedAt": "2026-08-28T07:35:34.764Z"
+    },
+    "fp-check": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/fp-check/skills/fp-check/SKILL.md",
+      "skillFolderHash": "9f74aca5c287b23ce09287765b20deb4690b4354",
+      "installedAt": "2026-08-28T07:35:34.764Z",
+      "updatedAt": "2026-08-28T07:35:34.764Z"
+    },
+    "fuzzing-dictionary": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/testing-handbook-skills/skills/fuzzing-dictionary/SKILL.md",
+      "skillFolderHash": "edb015e8786e8f25ca61d86749702f75c03e9bc6",
+      "installedAt": "2026-08-28T07:35:34.765Z",
+      "updatedAt": "2026-08-28T07:35:34.765Z"
+    },
+    "fuzzing-obstacles": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/testing-handbook-skills/skills/fuzzing-obstacles/SKILL.md",
+      "skillFolderHash": "34a68da8e5b8e4cea61c6c9adcec136a6bdf0e7d",
+      "installedAt": "2026-08-28T07:35:34.765Z",
+      "updatedAt": "2026-08-28T07:35:34.765Z"
+    },
+    "genotoxic": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/trailmark/skills/genotoxic/SKILL.md",
+      "skillFolderHash": "e87e2af286d2241ee666ed248a279aa93212e982",
+      "installedAt": "2026-08-28T07:35:34.765Z",
+      "updatedAt": "2026-08-28T07:35:34.765Z"
+    },
+    "gh-cli": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/gh-cli/skills/gh-cli/SKILL.md",
+      "skillFolderHash": "c3c3162e1ddd5c2dfa4a491bee94dc83a4c903e1",
+      "installedAt": "2026-08-28T07:35:34.765Z",
+      "updatedAt": "2026-08-28T07:35:34.765Z"
+    },
+    "github-triage": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/github-triage/skills/github-triage/SKILL.md",
+      "skillFolderHash": "cff62b5ad325908657e9613fbedc71d06bff44ef",
+      "installedAt": "2026-08-28T07:35:34.766Z",
+      "updatedAt": "2026-08-28T07:35:34.766Z"
+    },
+    "goal-prompt": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/goal-prompt/skills/goal-prompt/SKILL.md",
+      "skillFolderHash": "863c6a21f6492931e384895b2c81710b688c6b7d",
+      "installedAt": "2026-08-28T07:35:34.766Z",
+      "updatedAt": "2026-08-28T07:35:34.766Z"
+    },
+    "graph-evolution": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/trailmark/skills/graph-evolution/SKILL.md",
+      "skillFolderHash": "9395afe139caded86a4ff57c9fdb0ac166883be7",
+      "installedAt": "2026-08-28T07:35:34.766Z",
+      "updatedAt": "2026-08-28T07:35:34.766Z"
+    },
+    "guidelines-advisor": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/building-secure-contracts/skills/guidelines-advisor/SKILL.md",
+      "skillFolderHash": "bf9a8debdcd27d96d0801204209c6a8db28edfe6",
+      "installedAt": "2026-08-28T07:35:34.766Z",
+      "updatedAt": "2026-08-28T07:35:34.766Z"
+    },
+    "harness-writing": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/testing-handbook-skills/skills/harness-writing/SKILL.md",
+      "skillFolderHash": "e049a78d352073701e2cc92d50cdd75860a13bbc",
+      "installedAt": "2026-08-28T07:35:34.766Z",
+      "updatedAt": "2026-08-28T07:35:34.766Z"
+    },
+    "interpreting-culture-index": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/culture-index/skills/interpreting-culture-index/SKILL.md",
+      "skillFolderHash": "038e1c7bf7925dd74d73a6837fc909dfd87861b1",
+      "installedAt": "2026-08-28T07:35:34.766Z",
+      "updatedAt": "2026-08-28T07:35:34.766Z"
+    },
+    "let-fate-decide": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/let-fate-decide/skills/let-fate-decide/SKILL.md",
+      "skillFolderHash": "d73d0709bab8fbbb490488976d29fbb3eb55135a",
+      "installedAt": "2026-08-28T07:35:34.767Z",
+      "updatedAt": "2026-08-28T07:35:34.767Z"
+    },
+    "libafl": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/testing-handbook-skills/skills/libafl/SKILL.md",
+      "skillFolderHash": "78e3bf3fbc3b39692da2117221c4e9d4af89472a",
+      "installedAt": "2026-08-28T07:35:34.767Z",
+      "updatedAt": "2026-08-28T07:35:34.767Z"
+    },
+    "libfuzzer": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/testing-handbook-skills/skills/libfuzzer/SKILL.md",
+      "skillFolderHash": "39f2e50d1dc9632044668207bd871314807b040d",
+      "installedAt": "2026-08-28T07:35:34.767Z",
+      "updatedAt": "2026-08-28T07:35:34.767Z"
+    },
+    "mermaid-to-proverif": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/trailmark/skills/mermaid-to-proverif/SKILL.md",
+      "skillFolderHash": "c59eb4dd8e276d2e54cd35bcbdf11ee37b8d6011",
+      "installedAt": "2026-08-28T07:35:34.767Z",
+      "updatedAt": "2026-08-28T07:35:34.767Z"
+    },
+    "modern-cpp": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/modern-cpp/skills/modern-cpp/SKILL.md",
+      "skillFolderHash": "063302050264f5799ffcfb3c6c224fe4a1afd096",
+      "installedAt": "2026-08-28T07:35:34.767Z",
+      "updatedAt": "2026-08-28T07:35:34.767Z"
+    },
+    "modern-python": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "ref": "main",
+      "skillPath": "plugins/modern-python/skills/modern-python/SKILL.md",
+      "skillFolderHash": "66286b6bf2ff7866f31fd76829ca51083d864ff4",
+      "installedAt": "2026-08-28T07:35:34.768Z",
+      "updatedAt": "2026-08-28T07:46:27.985Z"
+    },
+    "mutation-testing": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/mutation-testing/skills/mutation-testing/SKILL.md",
+      "skillFolderHash": "89c6dda27d200bd2ff586b15b333557747a17589",
+      "installedAt": "2026-08-28T07:35:34.768Z",
+      "updatedAt": "2026-08-28T07:35:34.768Z"
+    },
+    "open-sourcing": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/open-sourcing/skills/open-sourcing/SKILL.md",
+      "skillFolderHash": "a9b94b8337d44c6ab0b269f1feeaeaf752c10e22",
+      "installedAt": "2026-08-28T07:35:34.768Z",
+      "updatedAt": "2026-08-28T07:35:34.768Z"
+    },
+    "ossfuzz": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/testing-handbook-skills/skills/ossfuzz/SKILL.md",
+      "skillFolderHash": "ef5d0d32878816d1696cbd646b152a45b48607ae",
+      "installedAt": "2026-08-28T07:35:34.768Z",
+      "updatedAt": "2026-08-28T07:35:34.768Z"
+    },
+    "pr-improver": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/code-improver/skills/pr-improver/SKILL.md",
+      "skillFolderHash": "2221a5f01a7cfa0d58433c3233899b0cd69540a1",
+      "installedAt": "2026-08-28T07:35:34.769Z",
+      "updatedAt": "2026-08-28T07:35:34.769Z"
+    },
+    "property-based-testing": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/property-based-testing/skills/property-based-testing/SKILL.md",
+      "skillFolderHash": "cba63e1f5f8ed793b6c682a7e3075e1ef1b4ad63",
+      "installedAt": "2026-08-28T07:35:34.769Z",
+      "updatedAt": "2026-08-28T07:35:34.769Z"
+    },
+    "rust-review": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/rust-review/skills/rust-review/SKILL.md",
+      "skillFolderHash": "82a542f8fa857cc1202560a09bdbf829e1af8172",
+      "installedAt": "2026-08-28T07:35:34.769Z",
+      "updatedAt": "2026-08-28T07:35:34.769Z"
+    },
+    "ruzzy": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/testing-handbook-skills/skills/ruzzy/SKILL.md",
+      "skillFolderHash": "30a9a78f7694b74471d64523e6ec243cdfd6cfd5",
+      "installedAt": "2026-08-28T07:35:34.770Z",
+      "updatedAt": "2026-08-28T07:35:34.770Z"
+    },
+    "sarif-parsing": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/static-analysis/skills/sarif-parsing/SKILL.md",
+      "skillFolderHash": "c6f2785d98fa5a97b1ecce3892a0f1b72da402bd",
+      "installedAt": "2026-08-28T07:35:34.770Z",
+      "updatedAt": "2026-08-28T07:35:34.770Z"
+    },
+    "second-opinion": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/second-opinion/skills/second-opinion/SKILL.md",
+      "skillFolderHash": "3356c5e994b845e368d267d416393fb55905926f",
+      "installedAt": "2026-08-28T07:35:34.770Z",
+      "updatedAt": "2026-08-28T07:35:34.770Z"
+    },
+    "secure-workflow-guide": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/building-secure-contracts/skills/secure-workflow-guide/SKILL.md",
+      "skillFolderHash": "08613a3b02b1d8cf50d6d7b35c3117bc5cb7f620",
+      "installedAt": "2026-08-28T07:35:34.771Z",
+      "updatedAt": "2026-08-28T07:35:34.771Z"
+    },
+    "semgrep": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/static-analysis/skills/semgrep/SKILL.md",
+      "skillFolderHash": "0e7c10270d2689d4b76feb32223bb9af5e946731",
+      "installedAt": "2026-08-28T07:35:34.771Z",
+      "updatedAt": "2026-08-28T07:35:34.771Z"
+    },
+    "semgrep-rule-creator": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/semgrep-rule-creator/skills/semgrep-rule-creator/SKILL.md",
+      "skillFolderHash": "bcf995235debdae24f74eb329dfac14cfcae6700",
+      "installedAt": "2026-08-28T07:35:34.771Z",
+      "updatedAt": "2026-08-28T07:35:34.771Z"
+    },
+    "semgrep-rule-variant-creator": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/semgrep-rule-variant-creator/skills/semgrep-rule-variant-creator/SKILL.md",
+      "skillFolderHash": "cdea1cc09034c645c8956f3384a578d4d8bb6c31",
+      "installedAt": "2026-08-28T07:35:34.771Z",
+      "updatedAt": "2026-08-28T07:35:34.771Z"
+    },
+    "sharp-edges": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/sharp-edges/skills/sharp-edges/SKILL.md",
+      "skillFolderHash": "bdea50dfccb17c36e5f220ce810caccbb108d2c5",
+      "installedAt": "2026-08-28T07:35:34.772Z",
+      "updatedAt": "2026-08-28T07:35:34.772Z"
+    },
+    "skill-improver": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/code-improver/skills/skill-improver/SKILL.md",
+      "skillFolderHash": "acd885801f60738d41fb230461ff1aad431dd141",
+      "installedAt": "2026-08-28T07:35:34.772Z",
+      "updatedAt": "2026-08-28T07:35:34.772Z"
+    },
+    "slicing-code-context": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/trailmark/skills/slicing-code-context/SKILL.md",
+      "skillFolderHash": "e6dbc97064872779dae2f272ca6cc2ededa172fe",
+      "installedAt": "2026-08-28T07:35:34.772Z",
+      "updatedAt": "2026-08-28T07:35:34.772Z"
+    },
+    "solana-vulnerability-scanner": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/building-secure-contracts/skills/solana-vulnerability-scanner/SKILL.md",
+      "skillFolderHash": "d2523966e380068a461ba286f9b60348d9a39c93",
+      "installedAt": "2026-08-28T07:35:34.773Z",
+      "updatedAt": "2026-08-28T07:35:34.773Z"
+    },
+    "spec-to-code-compliance": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/spec-to-code-compliance/skills/spec-to-code-compliance/SKILL.md",
+      "skillFolderHash": "46b94817e78aa3140cc589d4bbd876a1b0d274c4",
+      "installedAt": "2026-08-28T07:35:34.773Z",
+      "updatedAt": "2026-08-28T07:35:34.773Z"
+    },
+    "substrate-vulnerability-scanner": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/building-secure-contracts/skills/substrate-vulnerability-scanner/SKILL.md",
+      "skillFolderHash": "b928eaa3e36d378369ccca5adb8218cfb6ed4325",
+      "installedAt": "2026-08-28T07:35:34.773Z",
+      "updatedAt": "2026-08-28T07:35:34.773Z"
+    },
+    "supply-chain-risk-auditor": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/supply-chain-risk-auditor/skills/supply-chain-risk-auditor/SKILL.md",
+      "skillFolderHash": "402f9cd20c760ffa898d5f1de6175d6a92e48e85",
+      "installedAt": "2026-08-28T07:35:34.774Z",
+      "updatedAt": "2026-08-28T07:35:34.774Z"
+    },
+    "testing-handbook-generator": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/testing-handbook-skills/skills/testing-handbook-generator/SKILL.md",
+      "skillFolderHash": "2582ecd78f4fdcc738976dd85d162b8cd06bba8a",
+      "installedAt": "2026-08-28T07:35:34.774Z",
+      "updatedAt": "2026-08-28T07:35:34.774Z"
+    },
+    "token-integration-analyzer": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/building-secure-contracts/skills/token-integration-analyzer/SKILL.md",
+      "skillFolderHash": "6c9e486abe9f731fcd1cb50e3e769c9604ce7ad7",
+      "installedAt": "2026-08-28T07:35:34.774Z",
+      "updatedAt": "2026-08-28T07:35:34.774Z"
+    },
+    "ton-vulnerability-scanner": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/building-secure-contracts/skills/ton-vulnerability-scanner/SKILL.md",
+      "skillFolderHash": "bd98895a83db2860601a77abd0d18763dc4746ac",
+      "installedAt": "2026-08-28T07:35:34.775Z",
+      "updatedAt": "2026-08-28T07:35:34.775Z"
+    },
+    "trailmark": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/trailmark/skills/trailmark/SKILL.md",
+      "skillFolderHash": "d27a4f1b9627740522788765a6133c13b727e189",
+      "installedAt": "2026-08-28T07:35:34.775Z",
+      "updatedAt": "2026-08-28T07:35:34.775Z"
+    },
+    "trailmark-finding-triage": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/trailmark/skills/trailmark-finding-triage/SKILL.md",
+      "skillFolderHash": "f34e122b5cc925dc9d57f2fe09a3a75df3fc4d8d",
+      "installedAt": "2026-08-28T07:35:34.775Z",
+      "updatedAt": "2026-08-28T07:35:34.775Z"
+    },
+    "trailmark-review-gate": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/trailmark/skills/trailmark-review-gate/SKILL.md",
+      "skillFolderHash": "ce15978b24f42f7de165337bfc5eab8185b5e2ce",
+      "installedAt": "2026-08-28T07:35:34.775Z",
+      "updatedAt": "2026-08-28T07:35:34.775Z"
+    },
+    "trailmark-structural": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/trailmark/skills/trailmark-structural/SKILL.md",
+      "skillFolderHash": "8fe589e35044bc7b0b409b66318a28331d88d003",
+      "installedAt": "2026-08-28T07:35:34.776Z",
+      "updatedAt": "2026-08-28T07:35:34.776Z"
+    },
+    "trailmark-summary": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/trailmark/skills/trailmark-summary/SKILL.md",
+      "skillFolderHash": "509cffde2fcb9b7e9f153d76161c8249285738f1",
+      "installedAt": "2026-08-28T07:35:34.776Z",
+      "updatedAt": "2026-08-28T07:35:34.776Z"
+    },
+    "trailmark-variant-neighborhood": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/trailmark/skills/trailmark-variant-neighborhood/SKILL.md",
+      "skillFolderHash": "2b2565a515c909775adb2fdfefde17a8edf3989a",
+      "installedAt": "2026-08-28T07:35:34.776Z",
+      "updatedAt": "2026-08-28T07:35:34.776Z"
+    },
+    "variant-analysis": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/variant-analysis/skills/variant-analysis/SKILL.md",
+      "skillFolderHash": "30e3e125f907fb265e0cddecf2616e0a7a43d6dd",
+      "installedAt": "2026-08-28T07:35:34.776Z",
+      "updatedAt": "2026-08-28T07:35:34.776Z"
+    },
+    "vector-forge": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/trailmark/skills/vector-forge/SKILL.md",
+      "skillFolderHash": "44e2494f408da1857bac71dd54bf28af1dede108",
+      "installedAt": "2026-08-28T07:35:34.777Z",
+      "updatedAt": "2026-08-28T07:35:34.777Z"
+    },
+    "vulnerability-triage-brocards": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/vulnerability-triage-brocards/skills/vulnerability-triage-brocards/SKILL.md",
+      "skillFolderHash": "d7bb84ba652643b0cac54a5dae8c33f50fb69be7",
+      "installedAt": "2026-08-28T07:35:34.777Z",
+      "updatedAt": "2026-08-28T07:35:34.777Z"
+    },
+    "writing-lean-proofs": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/writing-lean-proofs/skills/writing-lean-proofs/SKILL.md",
+      "skillFolderHash": "8e366e9ce6ca575b0b803db28472efcf6507b335",
+      "installedAt": "2026-08-28T07:35:34.777Z",
+      "updatedAt": "2026-08-28T07:35:34.777Z"
+    },
+    "wycheproof": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/testing-handbook-skills/skills/wycheproof/SKILL.md",
+      "skillFolderHash": "09fc6a48fdc330d6fd0c98bf4a1c09c391e20bad",
+      "installedAt": "2026-08-28T07:35:34.777Z",
+      "updatedAt": "2026-08-28T07:35:34.777Z"
+    },
+    "yara-rule-authoring": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/yara-authoring/skills/yara-rule-authoring/SKILL.md",
+      "skillFolderHash": "17cfc3d8ca2cbbae5ac1885a485259b2afc148ea",
+      "installedAt": "2026-08-28T07:35:34.778Z",
+      "updatedAt": "2026-08-28T07:35:34.778Z"
+    },
+    "zeroize-audit": {
+      "source": "trailofbits/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "skillPath": "plugins/zeroize-audit/skills/zeroize-audit/SKILL.md",
+      "skillFolderHash": "8ed0190c90f175907203ae7e7791fe712ffb8a8a",
+      "installedAt": "2026-08-28T07:35:34.778Z",
+      "updatedAt": "2026-08-28T07:35:34.778Z"
+    },
+    "security-best-practices": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/openai/skills.git",
+      "ref": "main",
+      "skillPath": "skills/.curated/security-best-practices/SKILL.md",
+      "skillFolderHash": "349d45885fd3e432e7d0e5c6e21a2a712db158ef",
+      "installedAt": "2026-08-28T07:50:32.744Z",
+      "updatedAt": "2026-08-28T07:50:32.744Z"
+    },
+    "jupyter-notebook": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/openai/skills.git",
+      "ref": "main",
+      "skillPath": "skills/.curated/jupyter-notebook/SKILL.md",
+      "skillFolderHash": "ed23a98404260af659ef6bae9cb734bcfb0ca6c2",
+      "installedAt": "2026-08-29T20:22:51.240Z",
+      "updatedAt": "2026-08-29T20:22:51.240Z"
     }
   },
   "dismissed": {
     "findSkillsPrompt": true
-  }
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "antigravity",
+    "antigravity-cli",
+    "cline",
+    "codex",
+    "cursor",
+    "deepagents",
+    "gemini-cli",
+    "github-copilot",
+    "kimi-code-cli",
+    "opencode",
+    "warp",
+    "zed"
+  ]
 }
