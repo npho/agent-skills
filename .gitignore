@@ -1,3 +1,11 @@
-skills/
-bin/
-skl/skl
+# Generated user-library payloads and harness exposure
+/lib/
+/skills/
+
+# Built binaries
+/bin/
+/skl/skl
+
+# Atomic staging/backup artifacts
+/.skl-stage-*
+/lib/**/*.skl-backup

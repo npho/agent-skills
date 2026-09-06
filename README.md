@@ -1,130 +1,110 @@
-# ~/.agents — managed agent skills
+# `~/.agents` skill library
 
-This directory is the single source of truth for your installed agent skills.
-It is a git repository. On any new machine, cloning this repo and running
-`skl sync` reproduces your exact skill setup.
+This repository is an FHS-inspired, harness-agnostic skill library. `skl` keeps
+canonical payloads separate from the small directory a harness scans, and can
+materialize reproducible real copies inside projects.
 
 ## Layout
 
-| Path | Tracked? | Owner | Purpose |
-|---|---|---|---|
-| `.skill-lock.json` | yes | `npx skills` (skl only reads it) | Manifest of skills installed via the `skills` CLI: source repo, path within it |
-| `.sync-state.json` | yes | `skl` (never hand-edit) | Per-skill commit pins, file hashes, override flags |
-| `overrides/<skill>/` | yes | you (via `skl promote`) | Your promoted modifications, applied on top of pristine upstream |
-| `skl/` | yes (source only) | you | The `skl` Go tool source + Makefile |
-| `bin/` | **no** (git-ignored) | `make` | Built `skl` binary |
-| `skills/<skill>/` | **no** (git-ignored) | `skl sync` | Disposable cache: pristine upstream + overrides. Rebuildable at any time |
+| Path | Tracked | Purpose |
+|---|---:|---|
+| `lib/<namespace>/<skill>/` | no | Canonical installed payload. GitHub uses the owner as namespace; filesystem installs use `local`. |
+| `skills/` | no | Harness-visible global exposure. Empty by default; enabled entries are relative symlinks into `lib/`. |
+| `etc/profiles/*.toml` | yes | Named, composable skill selections. |
+| `var/state.json` | yes | `skl` v2 state: canonical path, provenance, revision, timestamps, hashes, and global exposure. |
+| `.skill-lock.json` | yes | Metadata owned by `npx skills`; `skl` reads it but never writes it. |
+| `skl/` | yes | Go source and tests. |
+| `bin/skl` | no | Built executable. |
 
-**Invariant:** `skills/` is always `upstream @ pinned commit + overrides applied`.
-It can be deleted and rebuilt from this repo alone. Never commit anything under
-`skills/` — `skl check` enforces this (guard error) if it ever sees a git-tracked path there.
+`SKL_ROOT` overrides the default root (`~/.agents`), including in tests and
+automation. No command commits or pushes.
 
-## Building the binary
-
-Requires a Go toolchain (only at build time — the binary itself is dependency-free):
+## Build and migrate
 
 ```sh
-cd ~/.agents/skl && make      # builds ~/.agents/bin/skl
+cd ~/.agents/skl
+gofmt -w *.go
+go test ./...
+go vet ./...
+make                         # writes ~/.agents/bin/skl
+~/.agents/bin/skl migrate    # safe and idempotent legacy migration
+~/.agents/bin/skl check
 ```
 
-Optionally put it on your PATH (e.g. `ln -s ~/.agents/bin/skl ~/bin/skl`).
+Migration reads legacy `.sync-state.json`, verifies each legacy payload against
+its recorded hashes, moves it to `lib/<owner>/<skill>`, writes versioned
+`var/state.json`, and removes the old state file. It removes only old Pi symlinks
+whose resolved target is that known skill's former `~/.agents/skills/<name>`;
+real directories and unrelated links are untouched. It can be previewed with
+`--dry-run`. The resulting `skills/` is empty unless exposure is subsequently
+enabled.
 
-Every command accepts `-n` / `--dry-run` (anywhere on the command line) to preview
-actions without changing anything. `skl` **never commits to git** — you commit manually.
-
-## Commands
-
-```
-skl add <owner/repo | github-url | /local/dir>   install a skill, then track it
-skl sync                                         install missing skills, apply overrides,
-                                                 fix ~/.pi symlinks, refresh state
-skl check                                        verify everything (exit 1 on problems)
-skl update [skills...]                           update skills, re-pin commits, re-hash
-skl promote <skill>                              move local edits into overrides/
-skl help
-```
-
-## Workflow
-
-### Adding a new skill
+## User-library commands
 
 ```sh
-skl add mattpocock/skills          # or: skl add https://github.com/owner/repo
-                                   # or: skl add /path/to/local/skill-dir
-skl check                          # verify the install
-git add .skill-lock.json .sync-state.json && git commit -m "skill: add <name>"
-```
-
-`skl add` runs `npx skills add` (the `skills` CLI remains the sole writer of
-`.skill-lock.json`), then records the skill in `.sync-state.json` with its current
-upstream commit pinned. Local directories are installed directly and recorded as
-"external" skills in `.sync-state.json` (they do not appear in the npx lock).
-
-### Checking for drift
-
-```sh
+skl add owner/repo                  # npx discovers skills; skl adopts into lib
+skl add /path/to/a/skill            # installs as lib/local/<skill>
+skl add --global owner/repo         # also explicitly expose newly added skills
+skl list
+skl global list
+skl global enable owner/skill
+skl global disable owner/skill
+skl sync                            # restore missing copies at recorded pins
+skl update [owner/skill ...]        # advance directly from original sources
 skl check
 ```
 
-Reports, per skill: `OK`, `DRIFTED` (with the exact files modified/added/removed),
-`MISSING`, `UNTRACKED` (in lock, not in state), orphaned overrides, broken pi
-symlinks, and the git-guard. Exit code 0/1 makes it usable in scripts/CI.
+Unqualified names are accepted only when unique. `sync` and `update` refuse to
+overwrite library drift; use `--force` deliberately. `--dry-run`/`-n` can appear
+anywhere and does not write state, payloads, links, manifests, or locks. Output
+that `npx skills` temporarily places under `skills/` is adopted into `lib/` and
+never interpreted as global exposure.
 
-### Modifying a skill
+## Profiles
 
-1. Edit it in place under `~/.agents/skills/<name>/` — drift shows up in `skl check`.
-2. When the edit becomes *official*: `skl promote <name>`.
-   This snapshots the modified skill into `overrides/<name>/`, reinstalls pristine
-   upstream from the pinned commit, and re-applies your overlay.
-3. Commit: `git add overrides/<name> .sync-state.json && git commit`.
+A profile is `etc/profiles/<name>.toml`:
 
-From then on, upstream updates and reinstalls always preserve your overlay.
-A drift you never promote is always visible in `skl check`, so edits can't be
-silently lost.
-
-### Updating skills
-
-```sh
-skl update                 # everything
-skl update docx xlsx       # specific skills
-skl check
-git add .sync-state.json && git commit
+```toml
+extends = ["base", "review"]
+skills = ["trailofbits/codeql", "local/team-conventions"]
 ```
 
-Lock-based skills update via `npx skills update` (Node required); external
-GitHub skills are re-fetched directly. Overrides are re-applied automatically;
-upstream changes to files you overrode will be masked by your override — review
-upstream diffs periodically for promoted skills.
-
-### Bootstrapping a new machine
+Profiles may extend profiles. Resolution rejects cycles, missing profiles or
+skills, ambiguous unqualified names, and two selected canonical skills that
+would collide at the same destination name.
 
 ```sh
-git clone <this-repo> ~/.agents
-cd ~/.agents/skl && make
-~/.agents/bin/skl sync        # -n first if you want to preview
-~/.agents/bin/skl check       # expect "all clean"
+skl profile list
+skl profile show security
 ```
 
-Skills pinned in state install at their pinned commits (reproducible). Skills in
-the lock but not yet in state install at upstream HEAD and get pinned on first
-sync. Node is **not** required for sync — only for `add`/`update` of lock-based
-skills.
+## Projects
 
-## Design rules (why it's built this way)
+A project contains committed, human-authored intent and generated exact state:
 
-- **One writer per file.** `npx skills` owns `.skill-lock.json`; `skl` owns
-  `.sync-state.json`; you own `overrides/`. skl reads the lock, never writes it,
-  so the two tools can't corrupt each other's state.
-- **The lock pins paths, not commits.** `.sync-state.json` adds the missing
-  reproducibility layer (commit SHA per skill).
-- **`skills/` is a cache, not state.** Git tracks intent (lock + state +
-  overrides), not upstream payloads — the repo stays small forever.
+- `.agents/skills.toml`: manifest with `version`, `profiles`, and `skills`.
+- `.agents/skills.lock.json`: exact source metadata, revision, and file hashes.
+- `.agents/skills/<skill>/`: real copied directories, never symlinks.
 
-## Known limitations
+```sh
+cd /path/to/project
+skl project init --profile security local/team-conventions
+skl project add trailofbits/codeql
+skl project refresh                 # explicit profile re-resolution
+skl project sync                    # reproduce the existing lock exactly
+skl project update [skill ...]      # advance directly from original sources
+```
 
-- GitHub sources only (plus local directories via `skl add`).
-- Overrides are file-level overlays: they replace/add files but cannot delete
-  upstream files (delete them directly in `skills/` and promote if needed).
-- Unauthenticated GitHub API use for commit resolution (60 req/hr — fine at this
-  scale; set `GITHUB_TOKEN` support if it ever becomes an issue).
-- `skl add` for npx packages requires Node/npx available.
+`init`, `add`, and `refresh` seed from a clean canonical library copy when it is
+available. Profile changes do not affect an existing project until `refresh`.
+`project sync` does not resolve profiles or depend on `lib`; when restoration is
+needed it fetches the source and revision recorded in the project lock directly.
+`project update` likewise fetches the recorded original source, advances GitHub
+revisions, and rewrites copies and hashes. Both refuse to overwrite local edits
+unless `--force` is explicit. Local filesystem provenance remains local in the
+lock; GitHub records retain owner, repository, in-repository skill path, and
+revision.
+
+Use `--project DIR` to target a project without changing directory. Commit a
+project's manifest, lock, and copied `.agents/skills/` according to that
+project's own policy.

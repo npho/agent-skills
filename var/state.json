@@ -1,452 +1,11 @@
 {
-  "version": 1,
+  "version": 2,
   "skills": {
-    "address-sanitizer": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/trailofbits/skills.git",
-      "owner": "trailofbits",
-      "repo": "skills",
-      "skillPath": "plugins/testing-handbook-skills/skills/address-sanitizer/SKILL.md",
-      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
-      "installedAt": "2026-08-28T07:35:37Z",
-      "files": {
-        "SKILL.md": "eb9ea8210fa55d50477fbe52993a704e320c88739c10d619864b6ce377ebce25",
-        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
-        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
-      }
-    },
-    "aflpp": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/trailofbits/skills.git",
-      "owner": "trailofbits",
-      "repo": "skills",
-      "skillPath": "plugins/testing-handbook-skills/skills/aflpp/SKILL.md",
-      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
-      "installedAt": "2026-08-28T07:35:37Z",
-      "files": {
-        "SKILL.md": "0a31023527808e68a53b81b89c7a6c10c6f84755a410df820facef44252e518d",
-        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
-        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
-      }
-    },
-    "agentic-actions-auditor": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/trailofbits/skills.git",
-      "owner": "trailofbits",
-      "repo": "skills",
-      "skillPath": "plugins/agentic-actions-auditor/skills/agentic-actions-auditor/SKILL.md",
-      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
-      "installedAt": "2026-08-28T07:35:37Z",
-      "files": {
-        "SKILL.md": "80e36ab06e3ee667ac45bab036ed395fc425c4d54fa72c4b4981a5b982a389aa",
-        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
-        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
-        "references/action-profiles.md": "ea75573060fe7e7a4e06d39c45487609d2ff5b583159a2b0d073d244ff5f81cb",
-        "references/cross-file-resolution.md": "c15a46bb0695ecc07512ac4007231169301001e5733a720c6ad75606ae5bee95",
-        "references/foundations.md": "9e0eb90b3bfb53e195251685b1291bdd1d75e07d6c60e634ecb28f72b1723bf3",
-        "references/vector-a-env-var-intermediary.md": "7903992f54409760aae64ddb45bb3c26032223443f746ac6e3d8fd281bda877d",
-        "references/vector-b-direct-expression-injection.md": "d074c95ee282d56e0174beae3d109ce088f6a8f032d9bd16e523ec2d1d7d94c7",
-        "references/vector-c-cli-data-fetch.md": "f11d2333f2b3800215311047c0b0ad35a1020c79dbb77614ff66a8c1fef16252",
-        "references/vector-d-pr-target-checkout.md": "fc029037bb219aed5e130708eb4911ad235e47f1394e2155b5e40175ddb2d187",
-        "references/vector-e-error-log-injection.md": "2c93623d96f49c4ab70bc2dd92e111b2cfca68ff70aaf579efd86812b0df15a9",
-        "references/vector-f-subshell-expansion.md": "a9345ace4af2dd167b4bcbeb1864c5883e6186752ded08bcefa9c0182f514dc3",
-        "references/vector-g-eval-of-ai-output.md": "b9a47a41dd1470cc469cc030cd6cd6059b35741c78ba9f494c1d18b2fd65b686",
-        "references/vector-h-dangerous-sandbox-configs.md": "278df9befc36f231dea2e4d2bf00311657056fa7b87a1a49b0e0e23a141d5935",
-        "references/vector-i-wildcard-allowlists.md": "68a4cd774ad829e535a8ec15ee492caefbae8e46f115f345b7f2bf2fecf88f86"
-      }
-    },
-    "algorand-vulnerability-scanner": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/trailofbits/skills.git",
-      "owner": "trailofbits",
-      "repo": "skills",
-      "skillPath": "plugins/building-secure-contracts/skills/algorand-vulnerability-scanner/SKILL.md",
-      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
-      "installedAt": "2026-08-28T07:35:37Z",
-      "files": {
-        "SKILL.md": "55e5336040e0f24ac5b3d6258ac458cd7cbd9ae0f7db5541fe4ed95c10b58c58",
-        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
-        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
-        "resources/VULNERABILITY_PATTERNS.md": "847a801ca435c23ede46a547511598ea12fa453fe09874128ee612f21142188a"
-      }
-    },
-    "atheris": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/trailofbits/skills.git",
-      "owner": "trailofbits",
-      "repo": "skills",
-      "skillPath": "plugins/testing-handbook-skills/skills/atheris/SKILL.md",
-      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
-      "installedAt": "2026-08-28T07:35:37Z",
-      "files": {
-        "SKILL.md": "133306875d88bb063636a9165c56141ac8b30d3b993db3740f166693dfeecbb5",
-        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
-        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
-        "examples.md": "e5ed1413286ca10ea238b9952a3ef19db13e2f4b24b2aaf18ec908bfaacfc815",
-        "structured-input.md": "0f33bf58db91eaabc2bbff2e4eec5c3811ab5a74866ce4698320dfa384d76f4b"
-      }
-    },
-    "audit-augmentation": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/trailofbits/skills.git",
-      "owner": "trailofbits",
-      "repo": "skills",
-      "skillPath": "plugins/trailmark/skills/audit-augmentation/SKILL.md",
-      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
-      "installedAt": "2026-08-28T07:35:37Z",
-      "files": {
-        "SKILL.md": "164ab881bfc63e77c782cfc6b67b2bb6887695425d3654c6c4d498004392b1f7",
-        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
-        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
-        "references/formats.md": "6cd3a692beab075ecf8aff4a2f3b5bfb25372b16be2ac796eb23b9881667ab0d"
-      }
-    },
-    "audit-context-building": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/trailofbits/skills.git",
-      "owner": "trailofbits",
-      "repo": "skills",
-      "skillPath": "plugins/audit-context-building/skills/audit-context-building/SKILL.md",
-      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
-      "installedAt": "2026-08-28T07:35:37Z",
-      "files": {
-        "SKILL.md": "222efa73743565a8fdb42e9bd08e9649c739fa0abc11129b35d267c9814b5916",
-        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
-        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
-        "resources/ANALYSIS_FORMAT.md": "029532945776fb0fcbc866f19cd6114fe4152cd3dea1c0f44b266ec13a2cc6e8",
-        "resources/DOMAIN_NOTES.md": "ca3090f7f8d18f7145b253b283f5d33c36b314cea231aae8466bf23f122e2ed1",
-        "resources/FUNCTION_MICRO_ANALYSIS_EXAMPLE.md": "3351010d83b61bfb34a0359498f153817fdfa6528cead54536b06e035ff2399c"
-      }
-    },
-    "audit-prep-assistant": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/trailofbits/skills.git",
-      "owner": "trailofbits",
-      "repo": "skills",
-      "skillPath": "plugins/building-secure-contracts/skills/audit-prep-assistant/SKILL.md",
-      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
-      "installedAt": "2026-08-28T07:35:37Z",
-      "files": {
-        "SKILL.md": "d639b411a315ea9420e40afabe75bbf4b1bfed6ea5c8601a3e963343ac9924f2",
-        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
-        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
-      }
-    },
-    "burpsuite-project-parser": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/trailofbits/skills.git",
-      "owner": "trailofbits",
-      "repo": "skills",
-      "skillPath": "plugins/burpsuite-project-parser/skills/burpsuite-project-parser/SKILL.md",
-      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
-      "installedAt": "2026-08-28T07:35:37Z",
-      "files": {
-        "SKILL.md": "43bf45e43192229810b5dab47d1eff3380db9cc86ed89374db87f9a869f19543",
-        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
-        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
-        "scripts/burp-search.sh": "342adc2d2529ecd05f9e5109d4170fc7d1b6c12d68ccaf6ecb6e00148df5d37c"
-      }
-    },
-    "c-review": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/trailofbits/skills.git",
-      "owner": "trailofbits",
-      "repo": "skills",
-      "skillPath": "plugins/c-review/skills/c-review/SKILL.md",
-      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
-      "installedAt": "2026-08-28T07:35:37Z",
-      "files": {
-        "SKILL.md": "3fc2fc7f3dba9decd2dd9e449150395cf62ee156c8dd1c48d09a233318f4dc69"
-      }
-    },
-    "cairo-vulnerability-scanner": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/trailofbits/skills.git",
-      "owner": "trailofbits",
-      "repo": "skills",
-      "skillPath": "plugins/building-secure-contracts/skills/cairo-vulnerability-scanner/SKILL.md",
-      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
-      "installedAt": "2026-08-28T07:35:37Z",
-      "files": {
-        "SKILL.md": "3408b4d0ea2e618255e5715683626e7ebe0c10ae3c7929b19bb6af023a1d77f9",
-        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
-        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
-        "resources/VULNERABILITY_PATTERNS.md": "615bee673bd545579e6ce01f64e17e85417e698ac779354bb84eaf02ef82dfab"
-      }
-    },
-    "cargo-fuzz": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/trailofbits/skills.git",
-      "owner": "trailofbits",
-      "repo": "skills",
-      "skillPath": "plugins/testing-handbook-skills/skills/cargo-fuzz/SKILL.md",
-      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
-      "installedAt": "2026-08-28T07:35:37Z",
-      "files": {
-        "SKILL.md": "8e8f882604f68c682afde3562ba1bd3828264fd226f427ff7d9ba50617268db1",
-        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
-        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
-      }
-    },
-    "chrome-mcp-troubleshooting": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/trailofbits/skills.git",
-      "owner": "trailofbits",
-      "repo": "skills",
-      "skillPath": "plugins/claude-in-chrome-troubleshooting/skills/chrome-mcp-troubleshooting/SKILL.md",
-      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
-      "installedAt": "2026-08-28T07:35:37Z",
-      "files": {
-        "SKILL.md": "1456ace18266e81691c6ba0e5f3ec11df4a51cfa3e50eb511a113f15ab080c68",
-        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
-        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
-      }
-    },
-    "code-improver": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/trailofbits/skills.git",
-      "owner": "trailofbits",
-      "repo": "skills",
-      "skillPath": "plugins/code-improver/skills/code-improver/SKILL.md",
-      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
-      "installedAt": "2026-08-28T07:35:37Z",
-      "files": {
-        "SKILL.md": "a4e33a24c853da3df13262da9bce1fd833dce694493b344e001f18df73692d2f"
-      }
-    },
-    "code-maturity-assessor": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/trailofbits/skills.git",
-      "owner": "trailofbits",
-      "repo": "skills",
-      "skillPath": "plugins/building-secure-contracts/skills/code-maturity-assessor/SKILL.md",
-      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
-      "installedAt": "2026-08-28T07:35:37Z",
-      "files": {
-        "SKILL.md": "a5e1427ae04cb0ed32b003c332becc0c8adb8e382d8d1d489edc997148b57ab1",
-        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
-        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
-        "resources/ASSESSMENT_CRITERIA.md": "0ffe131842b209de7910cc2ac77fc1e2cdea1e16455bfba79505c8ba8179009f",
-        "resources/EXAMPLE_REPORT.md": "47f37a7460cf281cb4ca2aeb3abced762ce4b7dd4db21e7b12772b2202e4fc42",
-        "resources/REPORT_FORMAT.md": "28474cce17be996e839353978fc06a830ac3fbd1219efbacc914de567fcdd7dc"
-      }
-    },
-    "codeql": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/trailofbits/skills.git",
-      "owner": "trailofbits",
-      "repo": "skills",
-      "skillPath": "plugins/static-analysis/skills/codeql/SKILL.md",
-      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
-      "installedAt": "2026-08-28T07:35:37Z",
-      "files": {
-        "SKILL.md": "1a6d919ff80f83b262daf650552af6eb6d2c32b19d0c529b70efe0c116b675cf",
-        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
-        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
-        "references/build-fixes.md": "e4af17ecbe5a6784e3c011fec1f093ce25e5c852cd92be97caaeaea0be10ca1a",
-        "references/diagnostic-query-templates.md": "c27a979094f8de6d1d341a838de52952a98385ff75c9439a7e76ba3bb3fbe662",
-        "references/extension-yaml-format.md": "c98903da4f21fd94816c520f6fdaba8d12e08b4bd55f85233c487e3baf39a1a6",
-        "references/important-only-suite.md": "9f2fbb57b0e02fe964ad268b11ad88c9598b38314fc008016caa615cf303b3a5",
-        "references/language-details.md": "f0857914eeabfb96929c2d1a8f086e92c0a3973cc2ac8460f371fedc2d023818",
-        "references/macos-arm64e-workaround.md": "72d7c9fc2be8368968516857fe4e32211473b92cc8bc3ef1d28530aaf744d1fe",
-        "references/performance-tuning.md": "536473b91e8574c18a3a943df2e4328615bbabbd899c76827d345ff7be986b7d",
-        "references/quality-assessment.md": "2acbb61d487211a0d6342ef86f774de3d4e05496185d337e09cb39810bcae08a",
-        "references/ruleset-catalog.md": "2b139ae593865548a596fb5b78694cb09d4a1959beb5225a5d8a914155a72165",
-        "references/run-all-suite.md": "bbac653d6e8ea115fa7df47307729745157bb60868939a71167c30cc18dcffb6",
-        "references/sarif-processing.md": "abde04ca479a372ed134150cd9cd1fd2b45cd7b4b45386034a2b3f4d415f6f9b",
-        "references/threat-models.md": "fd4252f0fc71734ab756ff51bead1b894397bf67382b2337cbe0b0de4672cefd",
-        "scripts/build_log.sh": "83c98d08c85a96b0b46246c14f3ffbe61370f5d184338455c6c288ddcf8df5de",
-        "scripts/check_db_quality.py": "fca99a149eb4689730b7d3a3314527a5716823fb5f19b6b79114f4949b726c36",
-        "scripts/find_databases.sh": "a56995c048b322bce45baf4482388a3cdf78dd59d562eca39e169c065f7f9b18",
-        "scripts/generate_suite.sh": "489516c52155c2061ec2a53d8190ebe474f4bdcb53ddc53b1216dc72ff7b1d9f",
-        "scripts/pyproject.toml": "c78fce8eeb7d91895dfc44296bdf547bcf77a156c8c057ae5238032883dfa41b",
-        "scripts/test_build_log.py": "3d58186d066d0ebf8117f89dfb03d49a8db8907e43cb013bd51b7669aa478f2d",
-        "scripts/test_build_mode_claims.py": "eeddedd49a2aa33790425f828c808a0504fab66a635c7902878cac2a292db89e",
-        "scripts/test_check_db_quality.py": "842c78079bb0a033f7e3ec0d2608ac5913906c87e96132e85fb38577eb170c29",
-        "scripts/test_find_databases.py": "eb9895c35f94ccb334997b296774dc36c5997ce520acb606bfd83b0934d4982a",
-        "scripts/test_generation_scripts.py": "9b092f2c0ebf630f21276214dc05b72b681a5c3e5e26816621e028d880cf2feb",
-        "scripts/test_script_flags.py": "7aa9ca403051f4bd7690ee4ce46b3d9e16050119a24b4eb2858653e489c7edeb",
-        "scripts/test_section_pointers.py": "46aa000803005d5e3328b4c028b3431f67c7105997bddd15aa361a3e2511695c",
-        "scripts/test_shell_blocks.py": "bf800714b9bee72292d74ac0c80acd47c00e6bb7e2624731e8b30a82c840358e",
-        "scripts/test_suite_templates.py": "94028929d16a3bbcdcc4b92b5f32bda396360cbbb34198c4f2405b3397957d5d",
-        "scripts/test_verify_query_suite.py": "21089b2b06407c6dcf43ff2bf44644b64ad4fd028713eadeafb92e8db8d5732d",
-        "scripts/verify_query_suite.py": "ad1bb120201c9af5ae199d3d36a727ba12d897162f817045e8a8006e691154f8",
-        "workflows/build-database.md": "06794bb67182303b0c81d30b3772531537d9f986b7b2cbe2a9ffa4b4f3e230ba",
-        "workflows/create-data-extensions.md": "f3643e4916e7586c7738c14f781e3919bce35129d75beb00812b963efbbc4673",
-        "workflows/run-analysis.md": "a85ee6df365445353e482e38c43c73e013a280268570284ac858798f47716626"
-      }
-    },
-    "constant-time-analysis": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/trailofbits/skills.git",
-      "owner": "trailofbits",
-      "repo": "skills",
-      "skillPath": "plugins/constant-time-analysis/skills/constant-time-analysis/SKILL.md",
-      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
-      "installedAt": "2026-08-28T07:35:37Z",
-      "files": {
-        "README.md": "69353d95aac7751a89234f28c4f7a758af591e66a1eac32f07f098dc7b9b041c",
-        "SKILL.md": "4807f710a234e2520d7e163cc5a0e55785a495b2790dadcd7f0952dd6bff8d07",
-        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
-        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
-        "references/compiled.md": "7c6f69897fc9629c4f26011507685e6cb4b79f1e1881f6f3a23d8e136f1d42fb",
-        "references/javascript.md": "77cf536e1a123cf05927deb21a8da26e72308296370af314475c50f59eadd5ac",
-        "references/kotlin.md": "798bc4c6d9ba1195e93d8371780866b09bccf2e096ccfa8aeb20dcc9af0a8c9f",
-        "references/php.md": "59dcadfb56202fe6ecaeed933b968c44311adf51366e6cc2720342a880334d33",
-        "references/python.md": "6f89ca8a5e54a2aa50e1c39783d2bc0f8b1fdbd6e771700b4b8325069fdc565b",
-        "references/ruby.md": "51f08d9c9d74a1630866ed5b2867e39aa77b5f9f5a3a6153d215b98669b1b5f0",
-        "references/swift.md": "419f8a9a3fc0944a064b3d4a9e473a91bd38d907a37b234d819cd8de62441226",
-        "references/vm-compiled.md": "dc6b012f43e383ed30047642673e23d91b73cca49efdabcb940550d9edb30a0b"
-      }
-    },
-    "constant-time-testing": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/trailofbits/skills.git",
-      "owner": "trailofbits",
-      "repo": "skills",
-      "skillPath": "plugins/testing-handbook-skills/skills/constant-time-testing/SKILL.md",
-      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
-      "installedAt": "2026-08-28T07:35:37Z",
-      "files": {
-        "SKILL.md": "d294126ee90dbb949261145fbf1fb05dbbeb1a986320ba597b746fa4068f0028",
-        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
-        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
-      }
-    },
-    "cosmos-vulnerability-scanner": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/trailofbits/skills.git",
-      "owner": "trailofbits",
-      "repo": "skills",
-      "skillPath": "plugins/building-secure-contracts/skills/cosmos-vulnerability-scanner/SKILL.md",
-      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
-      "installedAt": "2026-08-28T07:35:37Z",
-      "files": {
-        "CHANGELOG.md": "fd4ca29cf7a9c36c5ec22947c43974f38b44b99337b45f9b50255bead0f99b41",
-        "SKILL.md": "5f12f1ecdcf220726d32b391e5e646807d09d869d4cc92ae105236ecff4b9a42",
-        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
-        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
-        "resources/ADVANCED_VULNERABILITY_PATTERNS.md": "c5d8582061f30cae4c17953f8493a8c2e452a67cb3b9449664705fff9cc8e671",
-        "resources/COSMWASM_VULNERABILITY_PATTERNS.md": "9df45b35b92cb07bee7aafdd6f1a8742831dcdb9be413f9c353d21cc0c0f02a3",
-        "resources/DISCOVERY.md": "33f3d3c7ccc2816463f8bf60bbe29582ae5a10216e70bb16dae5829a775d847d",
-        "resources/EVM_VULNERABILITY_PATTERNS.md": "eb038859445add39e9b9332b38da99d4418fa249e5ca879140652fe031cfe426",
-        "resources/IBC_VULNERABILITY_PATTERNS.md": "3462dcadf15038c0e48a48d866c8db688497779f2fafbfe215abcdcd7e40f3c7",
-        "resources/STATE_VULNERABILITY_PATTERNS.md": "323863a7d6faae1a36a134d65bd000071606a719602262cca8d88e69e6b1edae",
-        "resources/VULNERABILITY_PATTERNS.md": "e8fa593eabe0ee4f7a7734dd50c67bd83ec87842c3ff87d4b735c88de4ae579c"
-      }
-    },
-    "coverage-analysis": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/trailofbits/skills.git",
-      "owner": "trailofbits",
-      "repo": "skills",
-      "skillPath": "plugins/testing-handbook-skills/skills/coverage-analysis/SKILL.md",
-      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
-      "installedAt": "2026-08-28T07:35:37Z",
-      "files": {
-        "SKILL.md": "9f71cfaffec44f159aa333924a25cdbe3eebd221cc7c0b0175fb93794d3ecacc",
-        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
-        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
-      }
-    },
-    "crypto-protocol-diagram": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/trailofbits/skills.git",
-      "owner": "trailofbits",
-      "repo": "skills",
-      "skillPath": "plugins/trailmark/skills/crypto-protocol-diagram/SKILL.md",
-      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
-      "installedAt": "2026-08-28T07:35:37Z",
-      "files": {
-        "SKILL.md": "11e665a8180bfc5dcac16cb4baa01100f83d6875b2d38dcd54ad6866f9b04dbc",
-        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
-        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
-        "examples/simple-handshake/expected-output.md": "d1b782cf4181e6af43efa74b907a86d2cb3332842027160350518121979b06ed",
-        "examples/simple-handshake/protocol.py": "bb0cdf0534372bfb05ab078dd8d9b163dd3469c03b43caeaf96c121fc8a04318",
-        "examples/simple-proverif/expected-output.md": "1f8f409ac8c70600f771b24c58b76bd5cb80ab2458be4c08d9d2478536ed6933",
-        "examples/simple-proverif/model.pv": "ded2b83e2a6fc5b85db40f50d7932b66e397472aa3542ce24eabf6bd9be48b32",
-        "references/ascii-sequence-diagram.md": "3eebba0a3fbfe4205f7f165c5030e42b45d0277d4b33fa979469ead0565cd7b1",
-        "references/mermaid-sequence-syntax.md": "a7fad0d407bf498e5fed25fbf0e14431b3c0e178b9c788d9fd9e8cf56ed5c8d8",
-        "references/protocol-patterns.md": "73b20f76afc1f9e06028e821f1c49bc69ca279ce622a76294a9f7c438966fb96",
-        "references/spec-parsing-patterns.md": "0be275fc4015a21538985213531800827860c8a3cec8c303c60a5ec0a3a6088d"
-      }
-    },
-    "devcontainer-setup": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/trailofbits/skills.git",
-      "owner": "trailofbits",
-      "repo": "skills",
-      "skillPath": "plugins/devcontainer-setup/skills/devcontainer-setup/SKILL.md",
-      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
-      "installedAt": "2026-08-28T07:35:37Z",
-      "files": {
-        "SKILL.md": "ef698feec8a76cf89f283c07632a2ce92378cb34e030f6c2ca13f312a7393e39",
-        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
-        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
-        "references/dockerfile-best-practices.md": "78b9bdb7a9596f849ae69fec3042d6c3e6b65e0f3aea953e7656b89b7efedb1c",
-        "references/features-vs-dockerfile.md": "999ac17d8f0172fce5fb00906190a97980b6a1c94d42b4046255992a9aa8c88d",
-        "resources/.zshrc": "0788e061b87afde6d0e7243e1aa2b93952c1fcdc82125278f5ac503142a5bec2",
-        "resources/Dockerfile": "86653908049df668d9dfaaeefc7b05b839c1df77a55166398c32d441e86c882d",
-        "resources/devcontainer.json": "0d3140742a2196b2f2eba1a756cb568c2732f9f09465dec2d9397aef7793e42f",
-        "resources/install.sh": "022c145aef7e3890203f362460d87159b04f0835866d4610f32f1627de426822",
-        "resources/post_install.py": "7d37aabd6a6421df6ab6448548e852e5b42d3b3d2b2aa39c9d17c4ea40543419"
-      }
-    },
-    "diagramming-code": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/trailofbits/skills.git",
-      "owner": "trailofbits",
-      "repo": "skills",
-      "skillPath": "plugins/trailmark/skills/diagramming-code/SKILL.md",
-      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
-      "installedAt": "2026-08-28T07:35:37Z",
-      "files": {
-        "SKILL.md": "1d2397bd08607b686122078afe8d2742cca2a46f19c8e924e54f5886136d1053",
-        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
-        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
-        "references/diagram-types.md": "f87a59e21779510920fe3b76c1f4d17f0776a24fed0193f836e982b622394e73",
-        "references/mermaid-syntax.md": "5932e0ecb7cfa4d49e5fa54af723880eeecdf1a9419e87ff05ec7021270b53b4",
-        "scripts/diagram.py": "a619c23ecaaa73f3acf6205b088c70b22a92b065beb35ca0aa3308efa36a3682"
-      }
-    },
-    "differential-review": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/trailofbits/skills.git",
-      "owner": "trailofbits",
-      "repo": "skills",
-      "skillPath": "plugins/differential-review/skills/differential-review/SKILL.md",
-      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
-      "installedAt": "2026-08-28T07:35:37Z",
-      "files": {
-        "SKILL.md": "f9af6a8193fc1a9f8ca3c54bb8d19095a5f20c9472ca6d014488bbde50b67da0",
-        "adversarial.md": "3cb823f38c6e551cbcf5f72325d2bb219dacdad774072519c31d50d92db19800",
-        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
-        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
-        "methodology.md": "16b335d24cf2145e3dc4a37f50056550d29db2efa20e6df78fec95ec1e6fb0b4",
-        "patterns.md": "52abb18abbc73502a3d3b2f36a7a035adc1db40fd812d1d5424cf065036a06e9",
-        "reporting.md": "0016876dc6f158e926448bff1b6f634796757c7afe09dff177cfe30250724fc4"
-      }
-    },
-    "dimensional-analysis": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/trailofbits/skills.git",
-      "owner": "trailofbits",
-      "repo": "skills",
-      "skillPath": "plugins/dimensional-analysis/skills/dimensional-analysis/SKILL.md",
-      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
-      "installedAt": "2026-08-28T07:35:37Z",
-      "files": {
-        "SKILL.md": "0434b5ec95a0ae3037160e24d38d6579c3127ad86d0020e6f430d5f71c18c66b",
-        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
-        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
-        "references/annotate.md": "c7d1a0987d4da875067ee8523c1a0f40984eae4c6e6b344df59d2bbf3b7f0cd9",
-        "references/bug-patterns.md": "36818df67fc45815ce288412fac6d0bdd93da5e856d7cf8dcbe56b1d255dd526",
-        "references/common-dimensions.md": "5743496a380719fc601b592abbe357c0d2d95273ae38b019ff6da28cac77ee2d",
-        "references/dimension-algebra.md": "e60adc2108c89cb698626a8c62fe3ed65480e434c00b44a2bc9f2e43deb2bfd7"
-      }
-    },
-    "docx": {
-      "origin": "lock",
+    "anthropics/docx": {
+      "name": "docx",
+      "namespace": "anthropics",
+      "path": "lib/anthropics/docx",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/anthropics/skills.git",
       "owner": "anthropics",
       "repo": "skills",
@@ -517,8 +76,860 @@
         "scripts/templates/people.xml": "056f63aa1197fd8c9dda980c9f1b9ff016fd5fa4a462df8aec5f384f39d23e37"
       }
     },
-    "dwarf-expert": {
-      "origin": "lock",
+    "anthropics/frontend-design": {
+      "name": "frontend-design",
+      "namespace": "anthropics",
+      "path": "lib/anthropics/frontend-design",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "owner": "anthropics",
+      "repo": "skills",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "pinnedRef": "3b3fad96af16a10759d930941b4520ba0c40edae",
+      "installedAt": "2026-08-28T07:29:52Z",
+      "files": {
+        "LICENSE.txt": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+        "SKILL.md": "1608ea77fbb6fc30d13a97d12cfa8ebf31358d40f0dd97beed24829d6b3f45dd"
+      }
+    },
+    "anthropics/mcp-builder": {
+      "name": "mcp-builder",
+      "namespace": "anthropics",
+      "path": "lib/anthropics/mcp-builder",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "owner": "anthropics",
+      "repo": "skills",
+      "skillPath": "skills/mcp-builder/SKILL.md",
+      "pinnedRef": "3b3fad96af16a10759d930941b4520ba0c40edae",
+      "installedAt": "2026-08-25T18:24:34Z",
+      "files": {
+        "LICENSE.txt": "bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362",
+        "SKILL.md": "0f4592dcb53cf2b5d6b7febee6b4152018b565551a1c29e3c612f57b218ab295",
+        "reference/evaluation.md": "8c99479f8a2d22a636c38e274537aac3610879e26f34e0709825077c4576f427",
+        "reference/mcp_best_practices.md": "80fb4369a349447cf18ecdd7494fe7938b6065377e9f08c077cec411093a3007",
+        "reference/node_mcp_server.md": "c3ba35a4f599dd53be9c6555ae72c19a7bf412cd5426576c2c08d42755482c66",
+        "reference/python_mcp_server.md": "2da52f77e675191014ca2e146a4b95aa04d0ca7dd7e2b100322df15ade685e80",
+        "scripts/connections.py": "9403668a2041568772082a8b334122c1f88daf0541fb393af4522d0094a47a6e",
+        "scripts/evaluation.py": "49ed1d17cdce5da101b210197740713f49b935c29d4f339542a14b132658e6f7",
+        "scripts/example_evaluation.xml": "9272b348ddcc4b06ba562367ccd0770e018158c0068ac5116d5e34aaeff8777a",
+        "scripts/requirements.txt": "d5d7558b2368ecea9dfeed7d1fbc71ee9e0750bebd1282faa527d528a344c3c7"
+      }
+    },
+    "anthropics/pptx": {
+      "name": "pptx",
+      "namespace": "anthropics",
+      "path": "lib/anthropics/pptx",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "owner": "anthropics",
+      "repo": "skills",
+      "skillPath": "skills/pptx/SKILL.md",
+      "pinnedRef": "3b3fad96af16a10759d930941b4520ba0c40edae",
+      "installedAt": "2026-08-25T18:24:34Z",
+      "files": {
+        "LICENSE.txt": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+        "SKILL.md": "a7ff03e2c85b636f55232a6b1555f5dd90216b7a1a359ab289d8364e6acbc6a0",
+        "scripts/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scripts/add_slide.py": "3922f819ee1f6b8bdc6aa146d1a86de70640f5f919321fe3f01a764482ff69c9",
+        "scripts/clean.py": "5c808cd4dff7e02661ef3c68b5917f4e25097cc6610c92a3a7df4a6366a5c3c1",
+        "scripts/office/helpers/__init__.py": "678e42456d9e10923c8b9a93691cdd993de3433448a184fa72a0c31f4ae086d5",
+        "scripts/office/helpers/pptx_chart.py": "47ac266f7d39d11ede6bb0d1f3a19d801394fd2964636f1b48beb701f1832964",
+        "scripts/office/helpers/pptx_slide.py": "7b9f69b4a5bd6a2d9eabf9e0e3e796d7a421373145f6a8cd11f60b7ba2d6a5d0",
+        "scripts/office/helpers/pptx_theme.py": "ebb54c56e9c13807f5f98f0cae22d47cdd0162da8525eaa664e3f2c8c8d6bb03",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/dml-chart.xsd": "41b93bd8857cc68b1e43be2806a872d736a9bdd6566900062d8fdb57d7bbb354",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/dml-chartDrawing.xsd": "3fd0586f2637b98bb9886f0e0b67d89e1cc987c2d158cc7deb5f5b9890ced412",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/dml-diagram.xsd": "29b254ee0d10414a8504b5a08149c7baec35a60d5ff607d6b3f492aa36815f40",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/dml-lockedCanvas.xsd": "5cb76dabd8b97d1e9308a1700b90c20139be4d50792d21a7f09789f5cccd6026",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/dml-main.xsd": "5375417f0f5394b8dd1a7035b9679151f19a6b65df309dec10cfb4a420cb00e9",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/dml-picture.xsd": "5d389d42befbebd91945d620242347caecd3367f9a3a7cf8d97949507ae1f53c",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/dml-spreadsheetDrawing.xsd": "b4532b6d258832953fbb3ee4c711f4fe25d3faf46a10644b2505f17010d01e88",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/dml-wordprocessingDrawing.xsd": "bdad416b096b61d37b71603b2c949484f9070c830bdaeba93bf35e15c8900614",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/pml.xsd": "d173c3e5d61e42e2e3a97226c632fd2ab7cc481fc4e492365b87024ab546daff",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-additionalCharacteristics.xsd": "3c6709101c6aaa82888df5d8795c33f9e857196790eb320d9194e64be2b6bdd8",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-bibliography.xsd": "0b364451dc36a48dd6dae0f3b6ada05fd9b71e5208211f8ee5537d7e51a587e2",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-commonSimpleTypes.xsd": "e2abacbb9a55ce1365f8961bc1b1395bbc811e512b111000d8c333f98458dece",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlDataProperties.xsd": "0ef4bb354ff44b923564c4ddbdda5987919d220225129ec94614a618ceafc281",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlSchemaProperties.xsd": "0d103b99a4a8652f8871552a69d42d2a3760ac6a5e3ef02d979c4273257ff6a4",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesCustom.xsd": "9c085407751b9061c1f996f6c39ce58451be22a8d334f09175f0e89e42736285",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesExtended.xsd": "bc92e36ccd233722d4c5869bec71ddc7b12e2df56059942cce5a39065cc9c368",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesVariantTypes.xsd": "7b5b7413e2c895b1e148e82e292a117d53c7ec65b0696c992edca57b61b4a74b",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-math.xsd": "3213ef1631606250f5010b42cad7ef716f7c59426367798e33c374c0ec391d3a",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-relationshipReference.xsd": "12264f3c03d738311cd9237d212f1c07479e70f0cbe1ae725d29b36539aef637",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/sml.xsd": "beffeed56945c22a77440122c8bdc426f3fcbe7f3b12ea0976c770d1f8d54578",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/vml-main.xsd": "f5ee623b08b6a66935e5aced2f5d8ad0fc71bf9e8e833cd490150c0fa94b8763",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/vml-officeDrawing.xsd": "585bedc1313b40888dcc544cb74cd939a105ee674f3b1d3aa1cc6d34f70ff155",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/vml-presentationDrawing.xsd": "133c9f64a5c5d573b78d0a474122b22506d8eadb5e063f67cdbbb8fa2f161d0e",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/vml-spreadsheetDrawing.xsd": "6bdeb169c3717eb01108853bd9fc5a3750fb1fa5b82abbdd854d49855a40f519",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/vml-wordprocessingDrawing.xsd": "475dcae1e7d1ea46232db6f8481040c15e53a52a3c256831d3df204212b0e831",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/wml.xsd": "c2dd9f61f892deae6acd8d20771ea79b12018af25f3bf8d06639c8542d218cfd",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/xml.xsd": "a539aa2fb154fa50e0f5cc97e6ad7cbc66f8ec3e3746f61ec6a8b0d5d15ecdf2",
+        "scripts/office/schemas/ecma/fouth-edition/opc-contentTypes.xsd": "9e0b7209fc69ab11987900404540969976000c5ebe4d4f58c43dc3842886bf3a",
+        "scripts/office/schemas/ecma/fouth-edition/opc-coreProperties.xsd": "451958454e8588dfc7cd945981ada142ca06ff3307937f5700df059c2b307fa8",
+        "scripts/office/schemas/ecma/fouth-edition/opc-digSig.xsd": "6de111e11403f7cd49027400755bae0ea1cabef2815f09bd40a24f0017613b24",
+        "scripts/office/schemas/ecma/fouth-edition/opc-relationships.xsd": "f565adfef5a502044abc3a9153e157edc25af78304d335994afb958874b15e26",
+        "scripts/office/schemas/mce/mc.xsd": "3a37e461ecf5a8670fdec34029703401f8728ab9c96ec1739a6ae58d55212413",
+        "scripts/office/schemas/microsoft/wml-2010.xsd": "568b26ee156cb9549aa439ca2158965f77b7c1602b7e0316f40ac6cf586e35f2",
+        "scripts/office/schemas/microsoft/wml-2012.xsd": "0fa75578a000439a7988ba0c59fdc69f774bbd416cbacc14d07125b3f686cb74",
+        "scripts/office/schemas/microsoft/wml-2018.xsd": "be0ff793a22dd31384650c3a4da14c2fa8062751c2e97b0e5ee852bda13c60ad",
+        "scripts/office/schemas/microsoft/wml-cex-2018.xsd": "fddc2b880cabb9005aebbc7e783e53c19fec1c03df7d0e2f2076a33a0fdfd081",
+        "scripts/office/schemas/microsoft/wml-cid-2016.xsd": "127ca209fa73d7cb708449cb355c871867948a96e4a74f7bf5811ef62d17991d",
+        "scripts/office/schemas/microsoft/wml-sdtdatahash-2020.xsd": "842e7163409c8d74f4d7088a8bc99500d80bc75332681a0980055b08f374a604",
+        "scripts/office/schemas/microsoft/wml-symex-2015.xsd": "16f6f8072249f431370723c2cd8974672e0d9c897e00e97dd918079df934871b",
+        "scripts/office/soffice.py": "df2c8d7249c132a4512d744482e4b5ed0ecbe885f0bcfb1295e7e6a7ced0432c",
+        "scripts/office/validate.py": "346a4c89d92fff55e610f11efda48c30228815b29bdb10b987e48f7af70acf1e",
+        "scripts/office/validators/__init__.py": "83e0f035c5abea238d3f2c3968afbd511ed022b527b7c9cb60a9434cc34ff987",
+        "scripts/office/validators/base.py": "f818ea28c793ba42960fa4498265e2632a62c86f7b5d6aff6fa89dacc02d59ea",
+        "scripts/office/validators/docx.py": "93d3444c0ef3f043d21a2285c46d2cda478426b930dc33dcf3b11265935517b5",
+        "scripts/office/validators/pptx.py": "17eadad2b7a8374ccbe4cda45693bcd6a36f9d61a7d60f9c9ceef9464dec8299",
+        "scripts/office/validators/redlining.py": "ed50d0885eee4b9c387f546b059bcaed64086815880a5167336244f93e305123",
+        "scripts/thumbnail.py": "94ef83a84346aa2d63913de0d42bb2fe902ccdc17bfac6130096ca758381793c"
+      }
+    },
+    "anthropics/skill-creator": {
+      "name": "skill-creator",
+      "namespace": "anthropics",
+      "path": "lib/anthropics/skill-creator",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "owner": "anthropics",
+      "repo": "skills",
+      "skillPath": "skills/skill-creator/SKILL.md",
+      "pinnedRef": "3b3fad96af16a10759d930941b4520ba0c40edae",
+      "installedAt": "2026-08-25T18:24:34Z",
+      "files": {
+        "LICENSE.txt": "bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362",
+        "SKILL.md": "dcd4803e61e913e6fc27294184cd3a71f09f5e924ff20c8a9a20173e7b3c2bcf",
+        "agents/analyzer.md": "bf68f4cac5a56c673a928c2e6d619586c5b93ea364026ab37547772cb45a663a",
+        "agents/comparator.md": "fe1fc9787c495d864c5d6eada47396478572325fde1b33a96d78bf4b849b7a3e",
+        "agents/grader.md": "57134da0c1a4eea33fbd74a1c9c44aa814f07d6bc64de303edb586f941e5d21a",
+        "assets/eval_review.html": "ce477dcc74dc1c0d1d3352646a79167b5a63634e936b1019160025065974e452",
+        "eval-viewer/generate_review.py": "fc9d1b9243fe5ab6012ebd579bd76d0035de1b79fd3b969de114defab26478fb",
+        "eval-viewer/viewer.html": "a53213426ee1100441d701a3a0d49cda7a842f992d2c36463f4d3cc0258575fa",
+        "references/schemas.md": "8e8876180a8989b406a4d3edddf875b04cdfd5805cc8616686d552b11ce4455f",
+        "scripts/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "scripts/aggregate_benchmark.py": "123ef128ea5ccc01a4b1ac212ef5567f21e9c13d3d240609780beeb3200c49aa",
+        "scripts/generate_report.py": "13df7118a3c50c83c4c3250a606d5f2b20b25a3d44cbc392b3d669ec75281453",
+        "scripts/improve_description.py": "87d864570220b699fac52da309d2d6efdb060647bfebc74f768128e646accf80",
+        "scripts/package_skill.py": "1a33059b0db1ef73375d46d513e5ea81369d2e8838c970597b0d52ddef8d1c0f",
+        "scripts/quick_validate.py": "67cf5703402013936c8fb75ad6a1afecd8841d45cc5e606b634eb05825fde365",
+        "scripts/run_eval.py": "43e3b8f80dbf69c343967ba77e268fae991d9fa3ed68b32a0ff02532cd48657f",
+        "scripts/run_loop.py": "7bd6f674203168520517eec94c55f493c0d154339b061b4d7c0f0dad187d0f21",
+        "scripts/utils.py": "3af8ae62c40c73ab712207436a0d9a981e845f25c5a7040229eb189cc8e45bb1"
+      }
+    },
+    "anthropics/web-artifacts-builder": {
+      "name": "web-artifacts-builder",
+      "namespace": "anthropics",
+      "path": "lib/anthropics/web-artifacts-builder",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "owner": "anthropics",
+      "repo": "skills",
+      "skillPath": "skills/web-artifacts-builder/SKILL.md",
+      "pinnedRef": "3b3fad96af16a10759d930941b4520ba0c40edae",
+      "installedAt": "2026-08-25T18:24:34Z",
+      "files": {
+        "LICENSE.txt": "bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362",
+        "SKILL.md": "81c5002c6643b0de7b8710b00e7a9038daa6fb9b68d59870ee6adb12da8d10f8",
+        "scripts/bundle-artifact.sh": "abf0e480bf6585b56fab8526a407dfb7dc740812bddd70c636e1e8f3df5f9618",
+        "scripts/init-artifact.sh": "355e5dd4382aaaee91f01f1627eaeab30b2676ffa8d9b3ec328a1ae450ebccaa",
+        "scripts/shadcn-components.tar.gz": "1296f069e825de7933de7e8ac63672495cacce3f88f2dc45554dbcddbcbca60f"
+      }
+    },
+    "anthropics/xlsx": {
+      "name": "xlsx",
+      "namespace": "anthropics",
+      "path": "lib/anthropics/xlsx",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "owner": "anthropics",
+      "repo": "skills",
+      "skillPath": "skills/xlsx/SKILL.md",
+      "pinnedRef": "3b3fad96af16a10759d930941b4520ba0c40edae",
+      "installedAt": "2026-08-25T18:24:34Z",
+      "files": {
+        "LICENSE.txt": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+        "SKILL.md": "6712b39718fe815054abca9c3ee72f989613e6f771c8a5c58f30a65a6c905622",
+        "scripts/office/helpers/__init__.py": "678e42456d9e10923c8b9a93691cdd993de3433448a184fa72a0c31f4ae086d5",
+        "scripts/office/helpers/pptx_chart.py": "47ac266f7d39d11ede6bb0d1f3a19d801394fd2964636f1b48beb701f1832964",
+        "scripts/office/helpers/pptx_slide.py": "7b9f69b4a5bd6a2d9eabf9e0e3e796d7a421373145f6a8cd11f60b7ba2d6a5d0",
+        "scripts/office/helpers/pptx_theme.py": "ebb54c56e9c13807f5f98f0cae22d47cdd0162da8525eaa664e3f2c8c8d6bb03",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/dml-chart.xsd": "41b93bd8857cc68b1e43be2806a872d736a9bdd6566900062d8fdb57d7bbb354",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/dml-chartDrawing.xsd": "3fd0586f2637b98bb9886f0e0b67d89e1cc987c2d158cc7deb5f5b9890ced412",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/dml-diagram.xsd": "29b254ee0d10414a8504b5a08149c7baec35a60d5ff607d6b3f492aa36815f40",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/dml-lockedCanvas.xsd": "5cb76dabd8b97d1e9308a1700b90c20139be4d50792d21a7f09789f5cccd6026",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/dml-main.xsd": "5375417f0f5394b8dd1a7035b9679151f19a6b65df309dec10cfb4a420cb00e9",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/dml-picture.xsd": "5d389d42befbebd91945d620242347caecd3367f9a3a7cf8d97949507ae1f53c",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/dml-spreadsheetDrawing.xsd": "b4532b6d258832953fbb3ee4c711f4fe25d3faf46a10644b2505f17010d01e88",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/dml-wordprocessingDrawing.xsd": "bdad416b096b61d37b71603b2c949484f9070c830bdaeba93bf35e15c8900614",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/pml.xsd": "d173c3e5d61e42e2e3a97226c632fd2ab7cc481fc4e492365b87024ab546daff",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-additionalCharacteristics.xsd": "3c6709101c6aaa82888df5d8795c33f9e857196790eb320d9194e64be2b6bdd8",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-bibliography.xsd": "0b364451dc36a48dd6dae0f3b6ada05fd9b71e5208211f8ee5537d7e51a587e2",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-commonSimpleTypes.xsd": "e2abacbb9a55ce1365f8961bc1b1395bbc811e512b111000d8c333f98458dece",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlDataProperties.xsd": "0ef4bb354ff44b923564c4ddbdda5987919d220225129ec94614a618ceafc281",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlSchemaProperties.xsd": "0d103b99a4a8652f8871552a69d42d2a3760ac6a5e3ef02d979c4273257ff6a4",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesCustom.xsd": "9c085407751b9061c1f996f6c39ce58451be22a8d334f09175f0e89e42736285",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesExtended.xsd": "bc92e36ccd233722d4c5869bec71ddc7b12e2df56059942cce5a39065cc9c368",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesVariantTypes.xsd": "7b5b7413e2c895b1e148e82e292a117d53c7ec65b0696c992edca57b61b4a74b",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-math.xsd": "3213ef1631606250f5010b42cad7ef716f7c59426367798e33c374c0ec391d3a",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-relationshipReference.xsd": "12264f3c03d738311cd9237d212f1c07479e70f0cbe1ae725d29b36539aef637",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/sml.xsd": "beffeed56945c22a77440122c8bdc426f3fcbe7f3b12ea0976c770d1f8d54578",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/vml-main.xsd": "f5ee623b08b6a66935e5aced2f5d8ad0fc71bf9e8e833cd490150c0fa94b8763",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/vml-officeDrawing.xsd": "585bedc1313b40888dcc544cb74cd939a105ee674f3b1d3aa1cc6d34f70ff155",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/vml-presentationDrawing.xsd": "133c9f64a5c5d573b78d0a474122b22506d8eadb5e063f67cdbbb8fa2f161d0e",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/vml-spreadsheetDrawing.xsd": "6bdeb169c3717eb01108853bd9fc5a3750fb1fa5b82abbdd854d49855a40f519",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/vml-wordprocessingDrawing.xsd": "475dcae1e7d1ea46232db6f8481040c15e53a52a3c256831d3df204212b0e831",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/wml.xsd": "c2dd9f61f892deae6acd8d20771ea79b12018af25f3bf8d06639c8542d218cfd",
+        "scripts/office/schemas/ISO-IEC29500-4_2016/xml.xsd": "a539aa2fb154fa50e0f5cc97e6ad7cbc66f8ec3e3746f61ec6a8b0d5d15ecdf2",
+        "scripts/office/schemas/ecma/fouth-edition/opc-contentTypes.xsd": "9e0b7209fc69ab11987900404540969976000c5ebe4d4f58c43dc3842886bf3a",
+        "scripts/office/schemas/ecma/fouth-edition/opc-coreProperties.xsd": "451958454e8588dfc7cd945981ada142ca06ff3307937f5700df059c2b307fa8",
+        "scripts/office/schemas/ecma/fouth-edition/opc-digSig.xsd": "6de111e11403f7cd49027400755bae0ea1cabef2815f09bd40a24f0017613b24",
+        "scripts/office/schemas/ecma/fouth-edition/opc-relationships.xsd": "f565adfef5a502044abc3a9153e157edc25af78304d335994afb958874b15e26",
+        "scripts/office/schemas/mce/mc.xsd": "3a37e461ecf5a8670fdec34029703401f8728ab9c96ec1739a6ae58d55212413",
+        "scripts/office/schemas/microsoft/wml-2010.xsd": "568b26ee156cb9549aa439ca2158965f77b7c1602b7e0316f40ac6cf586e35f2",
+        "scripts/office/schemas/microsoft/wml-2012.xsd": "0fa75578a000439a7988ba0c59fdc69f774bbd416cbacc14d07125b3f686cb74",
+        "scripts/office/schemas/microsoft/wml-2018.xsd": "be0ff793a22dd31384650c3a4da14c2fa8062751c2e97b0e5ee852bda13c60ad",
+        "scripts/office/schemas/microsoft/wml-cex-2018.xsd": "fddc2b880cabb9005aebbc7e783e53c19fec1c03df7d0e2f2076a33a0fdfd081",
+        "scripts/office/schemas/microsoft/wml-cid-2016.xsd": "127ca209fa73d7cb708449cb355c871867948a96e4a74f7bf5811ef62d17991d",
+        "scripts/office/schemas/microsoft/wml-sdtdatahash-2020.xsd": "842e7163409c8d74f4d7088a8bc99500d80bc75332681a0980055b08f374a604",
+        "scripts/office/schemas/microsoft/wml-symex-2015.xsd": "16f6f8072249f431370723c2cd8974672e0d9c897e00e97dd918079df934871b",
+        "scripts/office/soffice.py": "df2c8d7249c132a4512d744482e4b5ed0ecbe885f0bcfb1295e7e6a7ced0432c",
+        "scripts/office/validate.py": "346a4c89d92fff55e610f11efda48c30228815b29bdb10b987e48f7af70acf1e",
+        "scripts/office/validators/__init__.py": "83e0f035c5abea238d3f2c3968afbd511ed022b527b7c9cb60a9434cc34ff987",
+        "scripts/office/validators/base.py": "f818ea28c793ba42960fa4498265e2632a62c86f7b5d6aff6fa89dacc02d59ea",
+        "scripts/office/validators/docx.py": "93d3444c0ef3f043d21a2285c46d2cda478426b930dc33dcf3b11265935517b5",
+        "scripts/office/validators/pptx.py": "17eadad2b7a8374ccbe4cda45693bcd6a36f9d61a7d60f9c9ceef9464dec8299",
+        "scripts/office/validators/redlining.py": "ed50d0885eee4b9c387f546b059bcaed64086815880a5167336244f93e305123",
+        "scripts/recalc.py": "66f6e726d5a53cfabea0b6471d6669deb95e54e96cb7913b687e4388da1bb3d9"
+      }
+    },
+    "huggingface/hf-cli": {
+      "name": "hf-cli",
+      "namespace": "huggingface",
+      "path": "lib/huggingface/hf-cli",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/huggingface/skills.git",
+      "owner": "huggingface",
+      "repo": "skills",
+      "skillPath": "skills/hf-cli/SKILL.md",
+      "pinnedRef": "cead19e10754e773bad24fecef83cb64be24094e",
+      "installedAt": "2026-08-28T07:32:45Z",
+      "files": {
+        "SKILL.md": "fa5635fabb83a97f2578970898400c35c50e0a8be4e33a26ffe9c59db55abb4c"
+      }
+    },
+    "mattpocock/grill-me": {
+      "name": "grill-me",
+      "namespace": "mattpocock",
+      "path": "lib/mattpocock/grill-me",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "owner": "mattpocock",
+      "repo": "skills",
+      "skillPath": "skills/productivity/grill-me/SKILL.md",
+      "pinnedRef": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
+      "installedAt": "2026-08-25T18:24:34Z",
+      "files": {
+        "SKILL.md": "caaf8b8de1684f96e26b28f3c29189db5c89cce4b73e1c93d86164f66ef88637",
+        "agents/openai.yaml": "c061e39c3e0f9d865fb1b97556d485704af2a8a58f4b8221a8917a5c2074a32b"
+      }
+    },
+    "openai/jupyter-notebook": {
+      "name": "jupyter-notebook",
+      "namespace": "openai",
+      "path": "lib/openai/jupyter-notebook",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/openai/skills.git",
+      "owner": "openai",
+      "repo": "skills",
+      "skillPath": "skills/.curated/jupyter-notebook/SKILL.md",
+      "pinnedRef": "49f948faa9258a0c61caceaf225e179651397431",
+      "installedAt": "2026-08-29T20:23:28Z",
+      "files": {
+        "LICENSE.txt": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+        "SKILL.md": "62f102e8554b25716dccef0ffab4572d4e3eaf05ccc76562d33a065bc9c521fb",
+        "agents/openai.yaml": "3a2d6a8f9ed10e18f6caa66aeb26a02305bc61f36fc4b333c904e02f9988fb9c",
+        "assets/experiment-template.ipynb": "25f85914103cd84244e20ef378f59097479c72481cd18d3a931354d107c3f300",
+        "assets/jupyter-small.svg": "a36bd27bef3775f111309241754b386db81e7d356f07672190e2fcb24478a250",
+        "assets/jupyter.png": "852fd5468885bb176d266d547e61684792332e44a88cfbc8cd07323937040ccb",
+        "assets/tutorial-template.ipynb": "704a809c09c7c9e6e5c437860df95524412b50c58571a14204610d73e0744765",
+        "references/experiment-patterns.md": "1ff9c04281c01e8e2209bde9f1fd910b8e4b620dd1f1f040e2101f1d88513a91",
+        "references/notebook-structure.md": "a85051a2e88fd3424bbed2636e952ec5f858e7efa4e076c28d62a8cc2cc9dc06",
+        "references/quality-checklist.md": "ed01afe6ff47714d85935d11053b64c414772f02250fdc604e3fca65e5139136",
+        "references/tutorial-patterns.md": "8c194bb640de2fb7747e3db87006ecec5219252d301f53670975dbb5310ff659",
+        "scripts/new_notebook.py": "a004e2ea3115edb24313928be0be6d1dc07e571d7ca6c1b24375f0569c616d2f"
+      }
+    },
+    "openai/pdf": {
+      "name": "pdf",
+      "namespace": "openai",
+      "path": "lib/openai/pdf",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/openai/skills.git",
+      "owner": "openai",
+      "repo": "skills",
+      "skillPath": "skills/.curated/pdf/SKILL.md",
+      "pinnedRef": "3b3fad96af16a10759d930941b4520ba0c40edae",
+      "installedAt": "2026-08-28T07:49:42Z",
+      "files": {
+        "LICENSE.txt": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+        "SKILL.md": "d108cf2b36355ab37eb5962933f4d09785ec002f3105c506129320209306b9d2",
+        "agents/openai.yaml": "f8b223e25343559f57e1839ccd849fd1494a9729da33da04bb5074b7f80f4887",
+        "assets/pdf.png": "17da356d195d4e3fa24f9becbee6b8d9e60e13005762b5ab0809c520c76da6ee"
+      }
+    },
+    "openai/security-best-practices": {
+      "name": "security-best-practices",
+      "namespace": "openai",
+      "path": "lib/openai/security-best-practices",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/openai/skills.git",
+      "owner": "openai",
+      "repo": "skills",
+      "skillPath": "skills/.curated/security-best-practices/SKILL.md",
+      "pinnedRef": "49f948faa9258a0c61caceaf225e179651397431",
+      "installedAt": "2026-08-28T07:50:33Z",
+      "files": {
+        "LICENSE.txt": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+        "SKILL.md": "7b3dae1ffc5434d890f3c65c8f552af52d0307fab3b35dec13013c9ca3844c4f",
+        "agents/openai.yaml": "6e9c6f2edce448eb2b589f81ad6e3f722665021785513bcbfd0bf7b86b529171",
+        "references/golang-general-backend-security.md": "a73c47c34497b120672d48411fe51dc90d426a571801a0b3f649e2ce4ec658b4",
+        "references/javascript-express-web-server-security.md": "427835cbb5be7ba96172ea6ca9af80ddd4419c833e9ebf870996740c80d8406c",
+        "references/javascript-general-web-frontend-security.md": "3a7bc7b3f6e7ff043db9dbaa8933894d7a19d987d0607e4ddae5d70184a63d63",
+        "references/javascript-jquery-web-frontend-security.md": "bcbad2fa6c2a02709e47e889e70102c76886bf36bc798624d27db570eccf40da",
+        "references/javascript-typescript-nextjs-web-server-security.md": "71c773f7a97ce60c853adfa100b3d88b3b7bc4c6b8acaef1432ffabd923ee182",
+        "references/javascript-typescript-react-web-frontend-security.md": "d3030c0f24bddb56b9bbb91bbec1ee49eb7778bce4d3e0297b2641b2fc6b0d9c",
+        "references/javascript-typescript-vue-web-frontend-security.md": "77c6a747f9f17e3df03aad0fcb20d99ac7898001b81aef8b80908e45ac14a688",
+        "references/python-django-web-server-security.md": "4fb69b5d45f10e588d1a8c35cdc5f59e18910f6b46a93e2d342d90f286f8dfd2",
+        "references/python-fastapi-web-server-security.md": "7383c7f4fc271190b05e562ada7e825982a2c76b6c79a9f95a1da7687b65a616",
+        "references/python-flask-web-server-security.md": "9606d69190c04c167fdeac57e61297547a57b0542fd89dede36f355970446929"
+      }
+    },
+    "trailofbits/address-sanitizer": {
+      "name": "address-sanitizer",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/address-sanitizer",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/testing-handbook-skills/skills/address-sanitizer/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "eb9ea8210fa55d50477fbe52993a704e320c88739c10d619864b6ce377ebce25",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
+      }
+    },
+    "trailofbits/aflpp": {
+      "name": "aflpp",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/aflpp",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/testing-handbook-skills/skills/aflpp/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "0a31023527808e68a53b81b89c7a6c10c6f84755a410df820facef44252e518d",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
+      }
+    },
+    "trailofbits/agentic-actions-auditor": {
+      "name": "agentic-actions-auditor",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/agentic-actions-auditor",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/agentic-actions-auditor/skills/agentic-actions-auditor/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "80e36ab06e3ee667ac45bab036ed395fc425c4d54fa72c4b4981a5b982a389aa",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/action-profiles.md": "ea75573060fe7e7a4e06d39c45487609d2ff5b583159a2b0d073d244ff5f81cb",
+        "references/cross-file-resolution.md": "c15a46bb0695ecc07512ac4007231169301001e5733a720c6ad75606ae5bee95",
+        "references/foundations.md": "9e0eb90b3bfb53e195251685b1291bdd1d75e07d6c60e634ecb28f72b1723bf3",
+        "references/vector-a-env-var-intermediary.md": "7903992f54409760aae64ddb45bb3c26032223443f746ac6e3d8fd281bda877d",
+        "references/vector-b-direct-expression-injection.md": "d074c95ee282d56e0174beae3d109ce088f6a8f032d9bd16e523ec2d1d7d94c7",
+        "references/vector-c-cli-data-fetch.md": "f11d2333f2b3800215311047c0b0ad35a1020c79dbb77614ff66a8c1fef16252",
+        "references/vector-d-pr-target-checkout.md": "fc029037bb219aed5e130708eb4911ad235e47f1394e2155b5e40175ddb2d187",
+        "references/vector-e-error-log-injection.md": "2c93623d96f49c4ab70bc2dd92e111b2cfca68ff70aaf579efd86812b0df15a9",
+        "references/vector-f-subshell-expansion.md": "a9345ace4af2dd167b4bcbeb1864c5883e6186752ded08bcefa9c0182f514dc3",
+        "references/vector-g-eval-of-ai-output.md": "b9a47a41dd1470cc469cc030cd6cd6059b35741c78ba9f494c1d18b2fd65b686",
+        "references/vector-h-dangerous-sandbox-configs.md": "278df9befc36f231dea2e4d2bf00311657056fa7b87a1a49b0e0e23a141d5935",
+        "references/vector-i-wildcard-allowlists.md": "68a4cd774ad829e535a8ec15ee492caefbae8e46f115f345b7f2bf2fecf88f86"
+      }
+    },
+    "trailofbits/algorand-vulnerability-scanner": {
+      "name": "algorand-vulnerability-scanner",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/algorand-vulnerability-scanner",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/building-secure-contracts/skills/algorand-vulnerability-scanner/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "55e5336040e0f24ac5b3d6258ac458cd7cbd9ae0f7db5541fe4ed95c10b58c58",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "resources/VULNERABILITY_PATTERNS.md": "847a801ca435c23ede46a547511598ea12fa453fe09874128ee612f21142188a"
+      }
+    },
+    "trailofbits/atheris": {
+      "name": "atheris",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/atheris",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/testing-handbook-skills/skills/atheris/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "133306875d88bb063636a9165c56141ac8b30d3b993db3740f166693dfeecbb5",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "examples.md": "e5ed1413286ca10ea238b9952a3ef19db13e2f4b24b2aaf18ec908bfaacfc815",
+        "structured-input.md": "0f33bf58db91eaabc2bbff2e4eec5c3811ab5a74866ce4698320dfa384d76f4b"
+      }
+    },
+    "trailofbits/audit-augmentation": {
+      "name": "audit-augmentation",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/audit-augmentation",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/trailmark/skills/audit-augmentation/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "164ab881bfc63e77c782cfc6b67b2bb6887695425d3654c6c4d498004392b1f7",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/formats.md": "6cd3a692beab075ecf8aff4a2f3b5bfb25372b16be2ac796eb23b9881667ab0d"
+      }
+    },
+    "trailofbits/audit-context-building": {
+      "name": "audit-context-building",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/audit-context-building",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/audit-context-building/skills/audit-context-building/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "222efa73743565a8fdb42e9bd08e9649c739fa0abc11129b35d267c9814b5916",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "resources/ANALYSIS_FORMAT.md": "029532945776fb0fcbc866f19cd6114fe4152cd3dea1c0f44b266ec13a2cc6e8",
+        "resources/DOMAIN_NOTES.md": "ca3090f7f8d18f7145b253b283f5d33c36b314cea231aae8466bf23f122e2ed1",
+        "resources/FUNCTION_MICRO_ANALYSIS_EXAMPLE.md": "3351010d83b61bfb34a0359498f153817fdfa6528cead54536b06e035ff2399c"
+      }
+    },
+    "trailofbits/audit-prep-assistant": {
+      "name": "audit-prep-assistant",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/audit-prep-assistant",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/building-secure-contracts/skills/audit-prep-assistant/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "d639b411a315ea9420e40afabe75bbf4b1bfed6ea5c8601a3e963343ac9924f2",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
+      }
+    },
+    "trailofbits/burpsuite-project-parser": {
+      "name": "burpsuite-project-parser",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/burpsuite-project-parser",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/burpsuite-project-parser/skills/burpsuite-project-parser/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "43bf45e43192229810b5dab47d1eff3380db9cc86ed89374db87f9a869f19543",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "scripts/burp-search.sh": "342adc2d2529ecd05f9e5109d4170fc7d1b6c12d68ccaf6ecb6e00148df5d37c"
+      }
+    },
+    "trailofbits/c-review": {
+      "name": "c-review",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/c-review",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/c-review/skills/c-review/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "3fc2fc7f3dba9decd2dd9e449150395cf62ee156c8dd1c48d09a233318f4dc69"
+      }
+    },
+    "trailofbits/cairo-vulnerability-scanner": {
+      "name": "cairo-vulnerability-scanner",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/cairo-vulnerability-scanner",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/building-secure-contracts/skills/cairo-vulnerability-scanner/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "3408b4d0ea2e618255e5715683626e7ebe0c10ae3c7929b19bb6af023a1d77f9",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "resources/VULNERABILITY_PATTERNS.md": "615bee673bd545579e6ce01f64e17e85417e698ac779354bb84eaf02ef82dfab"
+      }
+    },
+    "trailofbits/cargo-fuzz": {
+      "name": "cargo-fuzz",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/cargo-fuzz",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/testing-handbook-skills/skills/cargo-fuzz/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "8e8f882604f68c682afde3562ba1bd3828264fd226f427ff7d9ba50617268db1",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
+      }
+    },
+    "trailofbits/chrome-mcp-troubleshooting": {
+      "name": "chrome-mcp-troubleshooting",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/chrome-mcp-troubleshooting",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/claude-in-chrome-troubleshooting/skills/chrome-mcp-troubleshooting/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "1456ace18266e81691c6ba0e5f3ec11df4a51cfa3e50eb511a113f15ab080c68",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
+      }
+    },
+    "trailofbits/code-improver": {
+      "name": "code-improver",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/code-improver",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/code-improver/skills/code-improver/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "a4e33a24c853da3df13262da9bce1fd833dce694493b344e001f18df73692d2f"
+      }
+    },
+    "trailofbits/code-maturity-assessor": {
+      "name": "code-maturity-assessor",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/code-maturity-assessor",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/building-secure-contracts/skills/code-maturity-assessor/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "a5e1427ae04cb0ed32b003c332becc0c8adb8e382d8d1d489edc997148b57ab1",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "resources/ASSESSMENT_CRITERIA.md": "0ffe131842b209de7910cc2ac77fc1e2cdea1e16455bfba79505c8ba8179009f",
+        "resources/EXAMPLE_REPORT.md": "47f37a7460cf281cb4ca2aeb3abced762ce4b7dd4db21e7b12772b2202e4fc42",
+        "resources/REPORT_FORMAT.md": "28474cce17be996e839353978fc06a830ac3fbd1219efbacc914de567fcdd7dc"
+      }
+    },
+    "trailofbits/codeql": {
+      "name": "codeql",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/codeql",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/static-analysis/skills/codeql/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "1a6d919ff80f83b262daf650552af6eb6d2c32b19d0c529b70efe0c116b675cf",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/build-fixes.md": "e4af17ecbe5a6784e3c011fec1f093ce25e5c852cd92be97caaeaea0be10ca1a",
+        "references/diagnostic-query-templates.md": "c27a979094f8de6d1d341a838de52952a98385ff75c9439a7e76ba3bb3fbe662",
+        "references/extension-yaml-format.md": "c98903da4f21fd94816c520f6fdaba8d12e08b4bd55f85233c487e3baf39a1a6",
+        "references/important-only-suite.md": "9f2fbb57b0e02fe964ad268b11ad88c9598b38314fc008016caa615cf303b3a5",
+        "references/language-details.md": "f0857914eeabfb96929c2d1a8f086e92c0a3973cc2ac8460f371fedc2d023818",
+        "references/macos-arm64e-workaround.md": "72d7c9fc2be8368968516857fe4e32211473b92cc8bc3ef1d28530aaf744d1fe",
+        "references/performance-tuning.md": "536473b91e8574c18a3a943df2e4328615bbabbd899c76827d345ff7be986b7d",
+        "references/quality-assessment.md": "2acbb61d487211a0d6342ef86f774de3d4e05496185d337e09cb39810bcae08a",
+        "references/ruleset-catalog.md": "2b139ae593865548a596fb5b78694cb09d4a1959beb5225a5d8a914155a72165",
+        "references/run-all-suite.md": "bbac653d6e8ea115fa7df47307729745157bb60868939a71167c30cc18dcffb6",
+        "references/sarif-processing.md": "abde04ca479a372ed134150cd9cd1fd2b45cd7b4b45386034a2b3f4d415f6f9b",
+        "references/threat-models.md": "fd4252f0fc71734ab756ff51bead1b894397bf67382b2337cbe0b0de4672cefd",
+        "scripts/build_log.sh": "83c98d08c85a96b0b46246c14f3ffbe61370f5d184338455c6c288ddcf8df5de",
+        "scripts/check_db_quality.py": "fca99a149eb4689730b7d3a3314527a5716823fb5f19b6b79114f4949b726c36",
+        "scripts/find_databases.sh": "a56995c048b322bce45baf4482388a3cdf78dd59d562eca39e169c065f7f9b18",
+        "scripts/generate_suite.sh": "489516c52155c2061ec2a53d8190ebe474f4bdcb53ddc53b1216dc72ff7b1d9f",
+        "scripts/pyproject.toml": "c78fce8eeb7d91895dfc44296bdf547bcf77a156c8c057ae5238032883dfa41b",
+        "scripts/test_build_log.py": "3d58186d066d0ebf8117f89dfb03d49a8db8907e43cb013bd51b7669aa478f2d",
+        "scripts/test_build_mode_claims.py": "eeddedd49a2aa33790425f828c808a0504fab66a635c7902878cac2a292db89e",
+        "scripts/test_check_db_quality.py": "842c78079bb0a033f7e3ec0d2608ac5913906c87e96132e85fb38577eb170c29",
+        "scripts/test_find_databases.py": "eb9895c35f94ccb334997b296774dc36c5997ce520acb606bfd83b0934d4982a",
+        "scripts/test_generation_scripts.py": "9b092f2c0ebf630f21276214dc05b72b681a5c3e5e26816621e028d880cf2feb",
+        "scripts/test_script_flags.py": "7aa9ca403051f4bd7690ee4ce46b3d9e16050119a24b4eb2858653e489c7edeb",
+        "scripts/test_section_pointers.py": "46aa000803005d5e3328b4c028b3431f67c7105997bddd15aa361a3e2511695c",
+        "scripts/test_shell_blocks.py": "bf800714b9bee72292d74ac0c80acd47c00e6bb7e2624731e8b30a82c840358e",
+        "scripts/test_suite_templates.py": "94028929d16a3bbcdcc4b92b5f32bda396360cbbb34198c4f2405b3397957d5d",
+        "scripts/test_verify_query_suite.py": "21089b2b06407c6dcf43ff2bf44644b64ad4fd028713eadeafb92e8db8d5732d",
+        "scripts/verify_query_suite.py": "ad1bb120201c9af5ae199d3d36a727ba12d897162f817045e8a8006e691154f8",
+        "workflows/build-database.md": "06794bb67182303b0c81d30b3772531537d9f986b7b2cbe2a9ffa4b4f3e230ba",
+        "workflows/create-data-extensions.md": "f3643e4916e7586c7738c14f781e3919bce35129d75beb00812b963efbbc4673",
+        "workflows/run-analysis.md": "a85ee6df365445353e482e38c43c73e013a280268570284ac858798f47716626"
+      }
+    },
+    "trailofbits/constant-time-analysis": {
+      "name": "constant-time-analysis",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/constant-time-analysis",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/constant-time-analysis/skills/constant-time-analysis/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "README.md": "69353d95aac7751a89234f28c4f7a758af591e66a1eac32f07f098dc7b9b041c",
+        "SKILL.md": "4807f710a234e2520d7e163cc5a0e55785a495b2790dadcd7f0952dd6bff8d07",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/compiled.md": "7c6f69897fc9629c4f26011507685e6cb4b79f1e1881f6f3a23d8e136f1d42fb",
+        "references/javascript.md": "77cf536e1a123cf05927deb21a8da26e72308296370af314475c50f59eadd5ac",
+        "references/kotlin.md": "798bc4c6d9ba1195e93d8371780866b09bccf2e096ccfa8aeb20dcc9af0a8c9f",
+        "references/php.md": "59dcadfb56202fe6ecaeed933b968c44311adf51366e6cc2720342a880334d33",
+        "references/python.md": "6f89ca8a5e54a2aa50e1c39783d2bc0f8b1fdbd6e771700b4b8325069fdc565b",
+        "references/ruby.md": "51f08d9c9d74a1630866ed5b2867e39aa77b5f9f5a3a6153d215b98669b1b5f0",
+        "references/swift.md": "419f8a9a3fc0944a064b3d4a9e473a91bd38d907a37b234d819cd8de62441226",
+        "references/vm-compiled.md": "dc6b012f43e383ed30047642673e23d91b73cca49efdabcb940550d9edb30a0b"
+      }
+    },
+    "trailofbits/constant-time-testing": {
+      "name": "constant-time-testing",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/constant-time-testing",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/testing-handbook-skills/skills/constant-time-testing/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "d294126ee90dbb949261145fbf1fb05dbbeb1a986320ba597b746fa4068f0028",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
+      }
+    },
+    "trailofbits/cosmos-vulnerability-scanner": {
+      "name": "cosmos-vulnerability-scanner",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/cosmos-vulnerability-scanner",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/building-secure-contracts/skills/cosmos-vulnerability-scanner/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "CHANGELOG.md": "fd4ca29cf7a9c36c5ec22947c43974f38b44b99337b45f9b50255bead0f99b41",
+        "SKILL.md": "5f12f1ecdcf220726d32b391e5e646807d09d869d4cc92ae105236ecff4b9a42",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "resources/ADVANCED_VULNERABILITY_PATTERNS.md": "c5d8582061f30cae4c17953f8493a8c2e452a67cb3b9449664705fff9cc8e671",
+        "resources/COSMWASM_VULNERABILITY_PATTERNS.md": "9df45b35b92cb07bee7aafdd6f1a8742831dcdb9be413f9c353d21cc0c0f02a3",
+        "resources/DISCOVERY.md": "33f3d3c7ccc2816463f8bf60bbe29582ae5a10216e70bb16dae5829a775d847d",
+        "resources/EVM_VULNERABILITY_PATTERNS.md": "eb038859445add39e9b9332b38da99d4418fa249e5ca879140652fe031cfe426",
+        "resources/IBC_VULNERABILITY_PATTERNS.md": "3462dcadf15038c0e48a48d866c8db688497779f2fafbfe215abcdcd7e40f3c7",
+        "resources/STATE_VULNERABILITY_PATTERNS.md": "323863a7d6faae1a36a134d65bd000071606a719602262cca8d88e69e6b1edae",
+        "resources/VULNERABILITY_PATTERNS.md": "e8fa593eabe0ee4f7a7734dd50c67bd83ec87842c3ff87d4b735c88de4ae579c"
+      }
+    },
+    "trailofbits/coverage-analysis": {
+      "name": "coverage-analysis",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/coverage-analysis",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/testing-handbook-skills/skills/coverage-analysis/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "9f71cfaffec44f159aa333924a25cdbe3eebd221cc7c0b0175fb93794d3ecacc",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
+      }
+    },
+    "trailofbits/crypto-protocol-diagram": {
+      "name": "crypto-protocol-diagram",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/crypto-protocol-diagram",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/trailmark/skills/crypto-protocol-diagram/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "11e665a8180bfc5dcac16cb4baa01100f83d6875b2d38dcd54ad6866f9b04dbc",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "examples/simple-handshake/expected-output.md": "d1b782cf4181e6af43efa74b907a86d2cb3332842027160350518121979b06ed",
+        "examples/simple-handshake/protocol.py": "bb0cdf0534372bfb05ab078dd8d9b163dd3469c03b43caeaf96c121fc8a04318",
+        "examples/simple-proverif/expected-output.md": "1f8f409ac8c70600f771b24c58b76bd5cb80ab2458be4c08d9d2478536ed6933",
+        "examples/simple-proverif/model.pv": "ded2b83e2a6fc5b85db40f50d7932b66e397472aa3542ce24eabf6bd9be48b32",
+        "references/ascii-sequence-diagram.md": "3eebba0a3fbfe4205f7f165c5030e42b45d0277d4b33fa979469ead0565cd7b1",
+        "references/mermaid-sequence-syntax.md": "a7fad0d407bf498e5fed25fbf0e14431b3c0e178b9c788d9fd9e8cf56ed5c8d8",
+        "references/protocol-patterns.md": "73b20f76afc1f9e06028e821f1c49bc69ca279ce622a76294a9f7c438966fb96",
+        "references/spec-parsing-patterns.md": "0be275fc4015a21538985213531800827860c8a3cec8c303c60a5ec0a3a6088d"
+      }
+    },
+    "trailofbits/devcontainer-setup": {
+      "name": "devcontainer-setup",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/devcontainer-setup",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/devcontainer-setup/skills/devcontainer-setup/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "ef698feec8a76cf89f283c07632a2ce92378cb34e030f6c2ca13f312a7393e39",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/dockerfile-best-practices.md": "78b9bdb7a9596f849ae69fec3042d6c3e6b65e0f3aea953e7656b89b7efedb1c",
+        "references/features-vs-dockerfile.md": "999ac17d8f0172fce5fb00906190a97980b6a1c94d42b4046255992a9aa8c88d",
+        "resources/.zshrc": "0788e061b87afde6d0e7243e1aa2b93952c1fcdc82125278f5ac503142a5bec2",
+        "resources/Dockerfile": "86653908049df668d9dfaaeefc7b05b839c1df77a55166398c32d441e86c882d",
+        "resources/devcontainer.json": "0d3140742a2196b2f2eba1a756cb568c2732f9f09465dec2d9397aef7793e42f",
+        "resources/install.sh": "022c145aef7e3890203f362460d87159b04f0835866d4610f32f1627de426822",
+        "resources/post_install.py": "7d37aabd6a6421df6ab6448548e852e5b42d3b3d2b2aa39c9d17c4ea40543419"
+      }
+    },
+    "trailofbits/diagramming-code": {
+      "name": "diagramming-code",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/diagramming-code",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/trailmark/skills/diagramming-code/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "1d2397bd08607b686122078afe8d2742cca2a46f19c8e924e54f5886136d1053",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/diagram-types.md": "f87a59e21779510920fe3b76c1f4d17f0776a24fed0193f836e982b622394e73",
+        "references/mermaid-syntax.md": "5932e0ecb7cfa4d49e5fa54af723880eeecdf1a9419e87ff05ec7021270b53b4",
+        "scripts/diagram.py": "a619c23ecaaa73f3acf6205b088c70b22a92b065beb35ca0aa3308efa36a3682"
+      }
+    },
+    "trailofbits/differential-review": {
+      "name": "differential-review",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/differential-review",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/differential-review/skills/differential-review/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "f9af6a8193fc1a9f8ca3c54bb8d19095a5f20c9472ca6d014488bbde50b67da0",
+        "adversarial.md": "3cb823f38c6e551cbcf5f72325d2bb219dacdad774072519c31d50d92db19800",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "methodology.md": "16b335d24cf2145e3dc4a37f50056550d29db2efa20e6df78fec95ec1e6fb0b4",
+        "patterns.md": "52abb18abbc73502a3d3b2f36a7a035adc1db40fd812d1d5424cf065036a06e9",
+        "reporting.md": "0016876dc6f158e926448bff1b6f634796757c7afe09dff177cfe30250724fc4"
+      }
+    },
+    "trailofbits/dimensional-analysis": {
+      "name": "dimensional-analysis",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/dimensional-analysis",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/trailofbits/skills.git",
+      "owner": "trailofbits",
+      "repo": "skills",
+      "skillPath": "plugins/dimensional-analysis/skills/dimensional-analysis/SKILL.md",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
+      "installedAt": "2026-08-28T07:35:37Z",
+      "files": {
+        "SKILL.md": "0434b5ec95a0ae3037160e24d38d6579c3127ad86d0020e6f430d5f71c18c66b",
+        "agents/openai.yaml": "11a851b1841f3e828e7609045d91e0632cac07dfc008b2740f487cee83a5efd1",
+        "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05",
+        "references/annotate.md": "c7d1a0987d4da875067ee8523c1a0f40984eae4c6e6b344df59d2bbf3b7f0cd9",
+        "references/bug-patterns.md": "36818df67fc45815ce288412fac6d0bdd93da5e856d7cf8dcbe56b1d255dd526",
+        "references/common-dimensions.md": "5743496a380719fc601b592abbe357c0d2d95273ae38b019ff6da28cac77ee2d",
+        "references/dimension-algebra.md": "e60adc2108c89cb698626a8c62fe3ed65480e434c00b44a2bc9f2e43deb2bfd7"
+      }
+    },
+    "trailofbits/dwarf-expert": {
+      "name": "dwarf-expert",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/dwarf-expert",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -531,8 +942,11 @@
         "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
       }
     },
-    "entry-point-analyzer": {
-      "origin": "lock",
+    "trailofbits/entry-point-analyzer": {
+      "name": "entry-point-analyzer",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/entry-point-analyzer",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -552,20 +966,11 @@
         "references/vyper.md": "add8caef0f87a4d2d5f1ad76a31ffb434a62edbc34bdaa73e6a04cf34c9a4f2d"
       }
     },
-    "find-skills": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/vercel-labs/skills.git",
-      "owner": "vercel-labs",
-      "repo": "skills",
-      "skillPath": "skills/find-skills/SKILL.md",
-      "pinnedRef": "435076e78988e1e6ec40d00b0b1d76bdbbc5419a",
-      "installedAt": "2026-08-25T18:24:34Z",
-      "files": {
-        "SKILL.md": "c00eeea0e13e74fe4a9d84ba0a8542205a1b736d65f13134fe1a6647eb14976f"
-      }
-    },
-    "firebase-apk-scanner": {
-      "origin": "lock",
+    "trailofbits/firebase-apk-scanner": {
+      "name": "firebase-apk-scanner",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/firebase-apk-scanner",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -580,8 +985,11 @@
         "scanner.sh": "4126fb09c7887af26af20df5a1ed618022b1c292b1c1926781a7817de1dcd260"
       }
     },
-    "fp-check": {
-      "origin": "lock",
+    "trailofbits/fp-check": {
+      "name": "fp-check",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/fp-check",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -600,21 +1008,11 @@
         "references/standard-verification.md": "09032334d472b0fd796fc13f6d95cf6f0ae98cce34f1aa8dbd0c3fdce2854710"
       }
     },
-    "frontend-design": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/anthropics/skills.git",
-      "owner": "anthropics",
-      "repo": "skills",
-      "skillPath": "skills/frontend-design/SKILL.md",
-      "pinnedRef": "3b3fad96af16a10759d930941b4520ba0c40edae",
-      "installedAt": "2026-08-28T07:29:52Z",
-      "files": {
-        "LICENSE.txt": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
-        "SKILL.md": "1608ea77fbb6fc30d13a97d12cfa8ebf31358d40f0dd97beed24829d6b3f45dd"
-      }
-    },
-    "fuzzing-dictionary": {
-      "origin": "lock",
+    "trailofbits/fuzzing-dictionary": {
+      "name": "fuzzing-dictionary",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/fuzzing-dictionary",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -627,8 +1025,11 @@
         "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
       }
     },
-    "fuzzing-obstacles": {
-      "origin": "lock",
+    "trailofbits/fuzzing-obstacles": {
+      "name": "fuzzing-obstacles",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/fuzzing-obstacles",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -641,8 +1042,11 @@
         "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
       }
     },
-    "genotoxic": {
-      "origin": "lock",
+    "trailofbits/genotoxic": {
+      "name": "genotoxic",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/genotoxic",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -658,8 +1062,11 @@
         "references/triage-methodology.md": "f2e377f94794dce6e271c2c17b95cad9e3ac9cb5522654a57e1c664dab23408b"
       }
     },
-    "gh-cli": {
-      "origin": "lock",
+    "trailofbits/gh-cli": {
+      "name": "gh-cli",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/gh-cli",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -672,8 +1079,11 @@
         "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
       }
     },
-    "github-triage": {
-      "origin": "lock",
+    "trailofbits/github-triage": {
+      "name": "github-triage",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/github-triage",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -687,8 +1097,11 @@
         "references/reviewing-prs.md": "a3666d41acecebd4c9e63b482a8c54e4f4bc9db9795a33b311da9d4c6408b829"
       }
     },
-    "goal-prompt": {
-      "origin": "lock",
+    "trailofbits/goal-prompt": {
+      "name": "goal-prompt",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/goal-prompt",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -702,8 +1115,11 @@
         "scripts/test_format_goal_prompt.py": "d2a6a2d06656fe40c9a4d10677d4673c7dd9af82a5251229893916e31061122d"
       }
     },
-    "graph-evolution": {
-      "origin": "lock",
+    "trailofbits/graph-evolution": {
+      "name": "graph-evolution",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/graph-evolution",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -719,21 +1135,11 @@
         "scripts/graph_diff.py": "4cb00ee257d45e464e7679f654261791b3b21f2c92f7887e5b306b1de62faa55"
       }
     },
-    "grill-me": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/mattpocock/skills.git",
-      "owner": "mattpocock",
-      "repo": "skills",
-      "skillPath": "skills/productivity/grill-me/SKILL.md",
-      "pinnedRef": "6654f6b60cd9d5be8b54c6fafe44346dabeb3b76",
-      "installedAt": "2026-08-25T18:24:34Z",
-      "files": {
-        "SKILL.md": "caaf8b8de1684f96e26b28f3c29189db5c89cce4b73e1c93d86164f66ef88637",
-        "agents/openai.yaml": "c061e39c3e0f9d865fb1b97556d485704af2a8a58f4b8221a8917a5c2074a32b"
-      }
-    },
-    "guidelines-advisor": {
-      "origin": "lock",
+    "trailofbits/guidelines-advisor": {
+      "name": "guidelines-advisor",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/guidelines-advisor",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -749,8 +1155,11 @@
         "resources/EXAMPLE_REPORT.md": "4c31c1718afaece6c7ba2c3519373167ca5d81f937fb4356c8d9b45d280833f0"
       }
     },
-    "harness-writing": {
-      "origin": "lock",
+    "trailofbits/harness-writing": {
+      "name": "harness-writing",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/harness-writing",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -763,20 +1172,11 @@
         "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
       }
     },
-    "hf-cli": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/huggingface/skills.git",
-      "owner": "huggingface",
-      "repo": "skills",
-      "skillPath": "skills/hf-cli/SKILL.md",
-      "pinnedRef": "cead19e10754e773bad24fecef83cb64be24094e",
-      "installedAt": "2026-08-28T07:32:45Z",
-      "files": {
-        "SKILL.md": "fa5635fabb83a97f2578970898400c35c50e0a8be4e33a26ffe9c59db55abb4c"
-      }
-    },
-    "interpreting-culture-index": {
-      "origin": "lock",
+    "trailofbits/interpreting-culture-index": {
+      "name": "interpreting-culture-index",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/interpreting-culture-index",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -840,31 +1240,11 @@
         "workflows/predict-from-interview.md": "f689863698e37244e17f2c2cceb4477b9abcf6725964d0eaf706a0989c107965"
       }
     },
-    "jupyter-notebook": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/openai/skills.git",
-      "owner": "openai",
-      "repo": "skills",
-      "skillPath": "skills/.curated/jupyter-notebook/SKILL.md",
-      "pinnedRef": "49f948faa9258a0c61caceaf225e179651397431",
-      "installedAt": "2026-08-29T20:23:28Z",
-      "files": {
-        "LICENSE.txt": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
-        "SKILL.md": "62f102e8554b25716dccef0ffab4572d4e3eaf05ccc76562d33a065bc9c521fb",
-        "agents/openai.yaml": "3a2d6a8f9ed10e18f6caa66aeb26a02305bc61f36fc4b333c904e02f9988fb9c",
-        "assets/experiment-template.ipynb": "25f85914103cd84244e20ef378f59097479c72481cd18d3a931354d107c3f300",
-        "assets/jupyter-small.svg": "a36bd27bef3775f111309241754b386db81e7d356f07672190e2fcb24478a250",
-        "assets/jupyter.png": "852fd5468885bb176d266d547e61684792332e44a88cfbc8cd07323937040ccb",
-        "assets/tutorial-template.ipynb": "704a809c09c7c9e6e5c437860df95524412b50c58571a14204610d73e0744765",
-        "references/experiment-patterns.md": "1ff9c04281c01e8e2209bde9f1fd910b8e4b620dd1f1f040e2101f1d88513a91",
-        "references/notebook-structure.md": "a85051a2e88fd3424bbed2636e952ec5f858e7efa4e076c28d62a8cc2cc9dc06",
-        "references/quality-checklist.md": "ed01afe6ff47714d85935d11053b64c414772f02250fdc604e3fca65e5139136",
-        "references/tutorial-patterns.md": "8c194bb640de2fb7747e3db87006ecec5219252d301f53670975dbb5310ff659",
-        "scripts/new_notebook.py": "a004e2ea3115edb24313928be0be6d1dc07e571d7ca6c1b24375f0569c616d2f"
-      }
-    },
-    "let-fate-decide": {
-      "origin": "lock",
+    "trailofbits/let-fate-decide": {
+      "name": "let-fate-decide",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/let-fate-decide",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -972,8 +1352,11 @@
         "scripts/test_draw_cards.py": "0fa1854521682215a16240831dac4d84ac1909040f3bbdd198601703d1c9cb24"
       }
     },
-    "libafl": {
-      "origin": "lock",
+    "trailofbits/libafl": {
+      "name": "libafl",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/libafl",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -986,8 +1369,11 @@
         "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
       }
     },
-    "libfuzzer": {
-      "origin": "lock",
+    "trailofbits/libfuzzer": {
+      "name": "libfuzzer",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/libfuzzer",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1000,29 +1386,11 @@
         "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
       }
     },
-    "mcp-builder": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/anthropics/skills.git",
-      "owner": "anthropics",
-      "repo": "skills",
-      "skillPath": "skills/mcp-builder/SKILL.md",
-      "pinnedRef": "3b3fad96af16a10759d930941b4520ba0c40edae",
-      "installedAt": "2026-08-25T18:24:34Z",
-      "files": {
-        "LICENSE.txt": "bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362",
-        "SKILL.md": "0f4592dcb53cf2b5d6b7febee6b4152018b565551a1c29e3c612f57b218ab295",
-        "reference/evaluation.md": "8c99479f8a2d22a636c38e274537aac3610879e26f34e0709825077c4576f427",
-        "reference/mcp_best_practices.md": "80fb4369a349447cf18ecdd7494fe7938b6065377e9f08c077cec411093a3007",
-        "reference/node_mcp_server.md": "c3ba35a4f599dd53be9c6555ae72c19a7bf412cd5426576c2c08d42755482c66",
-        "reference/python_mcp_server.md": "2da52f77e675191014ca2e146a4b95aa04d0ca7dd7e2b100322df15ade685e80",
-        "scripts/connections.py": "9403668a2041568772082a8b334122c1f88daf0541fb393af4522d0094a47a6e",
-        "scripts/evaluation.py": "49ed1d17cdce5da101b210197740713f49b935c29d4f339542a14b132658e6f7",
-        "scripts/example_evaluation.xml": "9272b348ddcc4b06ba562367ccd0770e018158c0068ac5116d5e34aaeff8777a",
-        "scripts/requirements.txt": "d5d7558b2368ecea9dfeed7d1fbc71ee9e0750bebd1282faa527d528a344c3c7"
-      }
-    },
-    "mermaid-to-proverif": {
-      "origin": "lock",
+    "trailofbits/mermaid-to-proverif": {
+      "name": "mermaid-to-proverif",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/mermaid-to-proverif",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1040,8 +1408,11 @@
         "references/security-properties.md": "eb21e2f9be16a2ceaade726f7bd2c5ab6a096c4a33f3e5d6d27996eb4d435f8b"
       }
     },
-    "modern-cpp": {
-      "origin": "lock",
+    "trailofbits/modern-cpp": {
+      "name": "modern-cpp",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/modern-cpp",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1058,8 +1429,11 @@
         "references/safe-idioms.md": "9c46fd20cfc0ea24ce49dfec13cd9f463528a4b4c691b78eb90df84c1682ed9a"
       }
     },
-    "modern-python": {
-      "origin": "lock",
+    "trailofbits/modern-python": {
+      "name": "modern-python",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/modern-python",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1083,8 +1457,11 @@
         "templates/pre-commit-config.yaml": "18efd067e75cba5fc71705c2f90c548a03c3cded4cd2a7f9b4a1d617e115db0d"
       }
     },
-    "mutation-testing": {
-      "origin": "lock",
+    "trailofbits/mutation-testing": {
+      "name": "mutation-testing",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/mutation-testing",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1099,8 +1476,11 @@
         "workflows/configuration.md": "28b44999e50d08b4bd6cc0382a970b088ecb40ae065388620ab441c11d1f4e19"
       }
     },
-    "open-sourcing": {
-      "origin": "lock",
+    "trailofbits/open-sourcing": {
+      "name": "open-sourcing",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/open-sourcing",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1121,8 +1501,11 @@
         "scripts/detect_org.sh": "79d4de769a6f6422be017b7978d95c274fff131d929d74ec0524f2bd971e9bcf"
       }
     },
-    "ossfuzz": {
-      "origin": "lock",
+    "trailofbits/ossfuzz": {
+      "name": "ossfuzz",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/ossfuzz",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1135,90 +1518,11 @@
         "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
       }
     },
-    "pdf": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/openai/skills.git",
-      "owner": "openai",
-      "repo": "skills",
-      "skillPath": "skills/.curated/pdf/SKILL.md",
-      "pinnedRef": "3b3fad96af16a10759d930941b4520ba0c40edae",
-      "installedAt": "2026-08-28T07:49:42Z",
-      "files": {
-        "LICENSE.txt": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
-        "SKILL.md": "d108cf2b36355ab37eb5962933f4d09785ec002f3105c506129320209306b9d2",
-        "agents/openai.yaml": "f8b223e25343559f57e1839ccd849fd1494a9729da33da04bb5074b7f80f4887",
-        "assets/pdf.png": "17da356d195d4e3fa24f9becbee6b8d9e60e13005762b5ab0809c520c76da6ee"
-      }
-    },
-    "pptx": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/anthropics/skills.git",
-      "owner": "anthropics",
-      "repo": "skills",
-      "skillPath": "skills/pptx/SKILL.md",
-      "pinnedRef": "3b3fad96af16a10759d930941b4520ba0c40edae",
-      "installedAt": "2026-08-25T18:24:34Z",
-      "files": {
-        "LICENSE.txt": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
-        "SKILL.md": "a7ff03e2c85b636f55232a6b1555f5dd90216b7a1a359ab289d8364e6acbc6a0",
-        "scripts/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "scripts/add_slide.py": "3922f819ee1f6b8bdc6aa146d1a86de70640f5f919321fe3f01a764482ff69c9",
-        "scripts/clean.py": "5c808cd4dff7e02661ef3c68b5917f4e25097cc6610c92a3a7df4a6366a5c3c1",
-        "scripts/office/helpers/__init__.py": "678e42456d9e10923c8b9a93691cdd993de3433448a184fa72a0c31f4ae086d5",
-        "scripts/office/helpers/pptx_chart.py": "47ac266f7d39d11ede6bb0d1f3a19d801394fd2964636f1b48beb701f1832964",
-        "scripts/office/helpers/pptx_slide.py": "7b9f69b4a5bd6a2d9eabf9e0e3e796d7a421373145f6a8cd11f60b7ba2d6a5d0",
-        "scripts/office/helpers/pptx_theme.py": "ebb54c56e9c13807f5f98f0cae22d47cdd0162da8525eaa664e3f2c8c8d6bb03",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/dml-chart.xsd": "41b93bd8857cc68b1e43be2806a872d736a9bdd6566900062d8fdb57d7bbb354",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/dml-chartDrawing.xsd": "3fd0586f2637b98bb9886f0e0b67d89e1cc987c2d158cc7deb5f5b9890ced412",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/dml-diagram.xsd": "29b254ee0d10414a8504b5a08149c7baec35a60d5ff607d6b3f492aa36815f40",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/dml-lockedCanvas.xsd": "5cb76dabd8b97d1e9308a1700b90c20139be4d50792d21a7f09789f5cccd6026",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/dml-main.xsd": "5375417f0f5394b8dd1a7035b9679151f19a6b65df309dec10cfb4a420cb00e9",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/dml-picture.xsd": "5d389d42befbebd91945d620242347caecd3367f9a3a7cf8d97949507ae1f53c",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/dml-spreadsheetDrawing.xsd": "b4532b6d258832953fbb3ee4c711f4fe25d3faf46a10644b2505f17010d01e88",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/dml-wordprocessingDrawing.xsd": "bdad416b096b61d37b71603b2c949484f9070c830bdaeba93bf35e15c8900614",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/pml.xsd": "d173c3e5d61e42e2e3a97226c632fd2ab7cc481fc4e492365b87024ab546daff",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-additionalCharacteristics.xsd": "3c6709101c6aaa82888df5d8795c33f9e857196790eb320d9194e64be2b6bdd8",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-bibliography.xsd": "0b364451dc36a48dd6dae0f3b6ada05fd9b71e5208211f8ee5537d7e51a587e2",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-commonSimpleTypes.xsd": "e2abacbb9a55ce1365f8961bc1b1395bbc811e512b111000d8c333f98458dece",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlDataProperties.xsd": "0ef4bb354ff44b923564c4ddbdda5987919d220225129ec94614a618ceafc281",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlSchemaProperties.xsd": "0d103b99a4a8652f8871552a69d42d2a3760ac6a5e3ef02d979c4273257ff6a4",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesCustom.xsd": "9c085407751b9061c1f996f6c39ce58451be22a8d334f09175f0e89e42736285",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesExtended.xsd": "bc92e36ccd233722d4c5869bec71ddc7b12e2df56059942cce5a39065cc9c368",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesVariantTypes.xsd": "7b5b7413e2c895b1e148e82e292a117d53c7ec65b0696c992edca57b61b4a74b",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-math.xsd": "3213ef1631606250f5010b42cad7ef716f7c59426367798e33c374c0ec391d3a",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-relationshipReference.xsd": "12264f3c03d738311cd9237d212f1c07479e70f0cbe1ae725d29b36539aef637",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/sml.xsd": "beffeed56945c22a77440122c8bdc426f3fcbe7f3b12ea0976c770d1f8d54578",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/vml-main.xsd": "f5ee623b08b6a66935e5aced2f5d8ad0fc71bf9e8e833cd490150c0fa94b8763",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/vml-officeDrawing.xsd": "585bedc1313b40888dcc544cb74cd939a105ee674f3b1d3aa1cc6d34f70ff155",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/vml-presentationDrawing.xsd": "133c9f64a5c5d573b78d0a474122b22506d8eadb5e063f67cdbbb8fa2f161d0e",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/vml-spreadsheetDrawing.xsd": "6bdeb169c3717eb01108853bd9fc5a3750fb1fa5b82abbdd854d49855a40f519",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/vml-wordprocessingDrawing.xsd": "475dcae1e7d1ea46232db6f8481040c15e53a52a3c256831d3df204212b0e831",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/wml.xsd": "c2dd9f61f892deae6acd8d20771ea79b12018af25f3bf8d06639c8542d218cfd",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/xml.xsd": "a539aa2fb154fa50e0f5cc97e6ad7cbc66f8ec3e3746f61ec6a8b0d5d15ecdf2",
-        "scripts/office/schemas/ecma/fouth-edition/opc-contentTypes.xsd": "9e0b7209fc69ab11987900404540969976000c5ebe4d4f58c43dc3842886bf3a",
-        "scripts/office/schemas/ecma/fouth-edition/opc-coreProperties.xsd": "451958454e8588dfc7cd945981ada142ca06ff3307937f5700df059c2b307fa8",
-        "scripts/office/schemas/ecma/fouth-edition/opc-digSig.xsd": "6de111e11403f7cd49027400755bae0ea1cabef2815f09bd40a24f0017613b24",
-        "scripts/office/schemas/ecma/fouth-edition/opc-relationships.xsd": "f565adfef5a502044abc3a9153e157edc25af78304d335994afb958874b15e26",
-        "scripts/office/schemas/mce/mc.xsd": "3a37e461ecf5a8670fdec34029703401f8728ab9c96ec1739a6ae58d55212413",
-        "scripts/office/schemas/microsoft/wml-2010.xsd": "568b26ee156cb9549aa439ca2158965f77b7c1602b7e0316f40ac6cf586e35f2",
-        "scripts/office/schemas/microsoft/wml-2012.xsd": "0fa75578a000439a7988ba0c59fdc69f774bbd416cbacc14d07125b3f686cb74",
-        "scripts/office/schemas/microsoft/wml-2018.xsd": "be0ff793a22dd31384650c3a4da14c2fa8062751c2e97b0e5ee852bda13c60ad",
-        "scripts/office/schemas/microsoft/wml-cex-2018.xsd": "fddc2b880cabb9005aebbc7e783e53c19fec1c03df7d0e2f2076a33a0fdfd081",
-        "scripts/office/schemas/microsoft/wml-cid-2016.xsd": "127ca209fa73d7cb708449cb355c871867948a96e4a74f7bf5811ef62d17991d",
-        "scripts/office/schemas/microsoft/wml-sdtdatahash-2020.xsd": "842e7163409c8d74f4d7088a8bc99500d80bc75332681a0980055b08f374a604",
-        "scripts/office/schemas/microsoft/wml-symex-2015.xsd": "16f6f8072249f431370723c2cd8974672e0d9c897e00e97dd918079df934871b",
-        "scripts/office/soffice.py": "df2c8d7249c132a4512d744482e4b5ed0ecbe885f0bcfb1295e7e6a7ced0432c",
-        "scripts/office/validate.py": "346a4c89d92fff55e610f11efda48c30228815b29bdb10b987e48f7af70acf1e",
-        "scripts/office/validators/__init__.py": "83e0f035c5abea238d3f2c3968afbd511ed022b527b7c9cb60a9434cc34ff987",
-        "scripts/office/validators/base.py": "f818ea28c793ba42960fa4498265e2632a62c86f7b5d6aff6fa89dacc02d59ea",
-        "scripts/office/validators/docx.py": "93d3444c0ef3f043d21a2285c46d2cda478426b930dc33dcf3b11265935517b5",
-        "scripts/office/validators/pptx.py": "17eadad2b7a8374ccbe4cda45693bcd6a36f9d61a7d60f9c9ceef9464dec8299",
-        "scripts/office/validators/redlining.py": "ed50d0885eee4b9c387f546b059bcaed64086815880a5167336244f93e305123",
-        "scripts/thumbnail.py": "94ef83a84346aa2d63913de0d42bb2fe902ccdc17bfac6130096ca758381793c"
-      }
-    },
-    "pr-improver": {
-      "origin": "lock",
+    "trailofbits/pr-improver": {
+      "name": "pr-improver",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/pr-improver",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1229,8 +1533,11 @@
         "SKILL.md": "8bb6055905f95d4e0bbd6dbbab2be930a3d3e09cd22a18afbd306abcf9e0828f"
       }
     },
-    "property-based-testing": {
-      "origin": "lock",
+    "trailofbits/property-based-testing": {
+      "name": "property-based-testing",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/property-based-testing",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1249,8 +1556,11 @@
         "references/reviewing.md": "110b08118a1e7b1a2566def6e9d2a0bf43fc2deefce857d2ce3b4382b07bc774"
       }
     },
-    "rust-review": {
-      "origin": "lock",
+    "trailofbits/rust-review": {
+      "name": "rust-review",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/rust-review",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1261,8 +1571,11 @@
         "SKILL.md": "52ee8b08876b0ad90ecdf4a58de8d41fb2d8627f1e4d259a806a35a6e187ae91"
       }
     },
-    "ruzzy": {
-      "origin": "lock",
+    "trailofbits/ruzzy": {
+      "name": "ruzzy",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/ruzzy",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1275,8 +1588,11 @@
         "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
       }
     },
-    "sarif-parsing": {
-      "origin": "lock",
+    "trailofbits/sarif-parsing": {
+      "name": "sarif-parsing",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/sarif-parsing",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1294,8 +1610,11 @@
         "resources/test_sarif_helpers.py": "5efc4e50f3dbd81ea223049b1892653a46bce0c273904d0b04e43e449343fe17"
       }
     },
-    "second-opinion": {
-      "origin": "lock",
+    "trailofbits/second-opinion": {
+      "name": "second-opinion",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/second-opinion",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1311,8 +1630,11 @@
         "references/gemini-invocation.md": "e9fd259e1d3ce6a7bbc1ec71cabb77636ccf00b99d112787025991d522c7dc9c"
       }
     },
-    "secure-workflow-guide": {
-      "origin": "lock",
+    "trailofbits/secure-workflow-guide": {
+      "name": "secure-workflow-guide",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/secure-workflow-guide",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1327,32 +1649,11 @@
         "resources/WORKFLOW_STEPS.md": "8b048011407a9a123a01ba4548b62a944f8cd5f271e4e0cdfe58b09583bd9291"
       }
     },
-    "security-best-practices": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/openai/skills.git",
-      "owner": "openai",
-      "repo": "skills",
-      "skillPath": "skills/.curated/security-best-practices/SKILL.md",
-      "pinnedRef": "49f948faa9258a0c61caceaf225e179651397431",
-      "installedAt": "2026-08-28T07:50:33Z",
-      "files": {
-        "LICENSE.txt": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
-        "SKILL.md": "7b3dae1ffc5434d890f3c65c8f552af52d0307fab3b35dec13013c9ca3844c4f",
-        "agents/openai.yaml": "6e9c6f2edce448eb2b589f81ad6e3f722665021785513bcbfd0bf7b86b529171",
-        "references/golang-general-backend-security.md": "a73c47c34497b120672d48411fe51dc90d426a571801a0b3f649e2ce4ec658b4",
-        "references/javascript-express-web-server-security.md": "427835cbb5be7ba96172ea6ca9af80ddd4419c833e9ebf870996740c80d8406c",
-        "references/javascript-general-web-frontend-security.md": "3a7bc7b3f6e7ff043db9dbaa8933894d7a19d987d0607e4ddae5d70184a63d63",
-        "references/javascript-jquery-web-frontend-security.md": "bcbad2fa6c2a02709e47e889e70102c76886bf36bc798624d27db570eccf40da",
-        "references/javascript-typescript-nextjs-web-server-security.md": "71c773f7a97ce60c853adfa100b3d88b3b7bc4c6b8acaef1432ffabd923ee182",
-        "references/javascript-typescript-react-web-frontend-security.md": "d3030c0f24bddb56b9bbb91bbec1ee49eb7778bce4d3e0297b2641b2fc6b0d9c",
-        "references/javascript-typescript-vue-web-frontend-security.md": "77c6a747f9f17e3df03aad0fcb20d99ac7898001b81aef8b80908e45ac14a688",
-        "references/python-django-web-server-security.md": "4fb69b5d45f10e588d1a8c35cdc5f59e18910f6b46a93e2d342d90f286f8dfd2",
-        "references/python-fastapi-web-server-security.md": "7383c7f4fc271190b05e562ada7e825982a2c76b6c79a9f95a1da7687b65a616",
-        "references/python-flask-web-server-security.md": "9606d69190c04c167fdeac57e61297547a57b0542fd89dede36f355970446929"
-      }
-    },
-    "semgrep": {
-      "origin": "lock",
+    "trailofbits/semgrep": {
+      "name": "semgrep",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/semgrep",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1371,8 +1672,11 @@
         "workflows/scan-workflow.md": "09acbc5b4b0c24881662eff1256bc57dd7ad0dc8b7ebe1e7f94cee93010e32a1"
       }
     },
-    "semgrep-rule-creator": {
-      "origin": "lock",
+    "trailofbits/semgrep-rule-creator": {
+      "name": "semgrep-rule-creator",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/semgrep-rule-creator",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1387,8 +1691,11 @@
         "references/workflow.md": "3dab347aa2e2c78b5a7a94ebb0d73d92dcb5c7df87d60ea9ee8f2671eba1c7b9"
       }
     },
-    "semgrep-rule-variant-creator": {
-      "origin": "lock",
+    "trailofbits/semgrep-rule-variant-creator": {
+      "name": "semgrep-rule-variant-creator",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/semgrep-rule-variant-creator",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1404,8 +1711,11 @@
         "references/workflow.md": "dcf5cf90e3d4a31e6f83c0f07871d08777b64c17533f30307361577813b30071"
       }
     },
-    "sharp-edges": {
-      "origin": "lock",
+    "trailofbits/sharp-edges": {
+      "name": "sharp-edges",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/sharp-edges",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1434,37 +1744,11 @@
         "references/language-specific.md": "4522b4a37cfd7d3aa689209dfd4569f3b39074bd1f5987a36a6e819f501141b6"
       }
     },
-    "skill-creator": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/anthropics/skills.git",
-      "owner": "anthropics",
-      "repo": "skills",
-      "skillPath": "skills/skill-creator/SKILL.md",
-      "pinnedRef": "3b3fad96af16a10759d930941b4520ba0c40edae",
-      "installedAt": "2026-08-25T18:24:34Z",
-      "files": {
-        "LICENSE.txt": "bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362",
-        "SKILL.md": "dcd4803e61e913e6fc27294184cd3a71f09f5e924ff20c8a9a20173e7b3c2bcf",
-        "agents/analyzer.md": "bf68f4cac5a56c673a928c2e6d619586c5b93ea364026ab37547772cb45a663a",
-        "agents/comparator.md": "fe1fc9787c495d864c5d6eada47396478572325fde1b33a96d78bf4b849b7a3e",
-        "agents/grader.md": "57134da0c1a4eea33fbd74a1c9c44aa814f07d6bc64de303edb586f941e5d21a",
-        "assets/eval_review.html": "ce477dcc74dc1c0d1d3352646a79167b5a63634e936b1019160025065974e452",
-        "eval-viewer/generate_review.py": "fc9d1b9243fe5ab6012ebd579bd76d0035de1b79fd3b969de114defab26478fb",
-        "eval-viewer/viewer.html": "a53213426ee1100441d701a3a0d49cda7a842f992d2c36463f4d3cc0258575fa",
-        "references/schemas.md": "8e8876180a8989b406a4d3edddf875b04cdfd5805cc8616686d552b11ce4455f",
-        "scripts/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "scripts/aggregate_benchmark.py": "123ef128ea5ccc01a4b1ac212ef5567f21e9c13d3d240609780beeb3200c49aa",
-        "scripts/generate_report.py": "13df7118a3c50c83c4c3250a606d5f2b20b25a3d44cbc392b3d669ec75281453",
-        "scripts/improve_description.py": "87d864570220b699fac52da309d2d6efdb060647bfebc74f768128e646accf80",
-        "scripts/package_skill.py": "1a33059b0db1ef73375d46d513e5ea81369d2e8838c970597b0d52ddef8d1c0f",
-        "scripts/quick_validate.py": "67cf5703402013936c8fb75ad6a1afecd8841d45cc5e606b634eb05825fde365",
-        "scripts/run_eval.py": "43e3b8f80dbf69c343967ba77e268fae991d9fa3ed68b32a0ff02532cd48657f",
-        "scripts/run_loop.py": "7bd6f674203168520517eec94c55f493c0d154339b061b4d7c0f0dad187d0f21",
-        "scripts/utils.py": "3af8ae62c40c73ab712207436a0d9a981e845f25c5a7040229eb189cc8e45bb1"
-      }
-    },
-    "skill-improver": {
-      "origin": "lock",
+    "trailofbits/skill-improver": {
+      "name": "skill-improver",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/skill-improver",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1475,8 +1759,11 @@
         "SKILL.md": "5764d6f51c5cd2e9dccb650b2a8f04282e44aa6d118abbfd051c0eebfaa86fe3"
       }
     },
-    "slicing-code-context": {
-      "origin": "lock",
+    "trailofbits/slicing-code-context": {
+      "name": "slicing-code-context",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/slicing-code-context",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1494,8 +1781,11 @@
         "scripts/uv.lock": "0bf8deb22fbae512087dd6a1f6a03ae253b698ad6fb16ac4e46bc47e9def8194"
       }
     },
-    "solana-vulnerability-scanner": {
-      "origin": "lock",
+    "trailofbits/solana-vulnerability-scanner": {
+      "name": "solana-vulnerability-scanner",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/solana-vulnerability-scanner",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1509,8 +1799,11 @@
         "resources/VULNERABILITY_PATTERNS.md": "15e16aaf36eb2d8edad7586dd59968723327798848ee966baa6fef5edb2abb7e"
       }
     },
-    "spec-to-code-compliance": {
-      "origin": "lock",
+    "trailofbits/spec-to-code-compliance": {
+      "name": "spec-to-code-compliance",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/spec-to-code-compliance",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1527,8 +1820,11 @@
         "resources/WORKED_EXAMPLE.md": "7b9ff43b20ba83e1ce934bc9161b14ce58617b65a9ae9c4583026dbf0299e927"
       }
     },
-    "substrate-vulnerability-scanner": {
-      "origin": "lock",
+    "trailofbits/substrate-vulnerability-scanner": {
+      "name": "substrate-vulnerability-scanner",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/substrate-vulnerability-scanner",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1542,8 +1838,11 @@
         "resources/VULNERABILITY_PATTERNS.md": "680d9d93f9cc11731469489ca3579b844e0d0d1ffec6f73520dffdc1c3a8a9b7"
       }
     },
-    "supply-chain-risk-auditor": {
-      "origin": "lock",
+    "trailofbits/supply-chain-risk-auditor": {
+      "name": "supply-chain-risk-auditor",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/supply-chain-risk-auditor",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1566,8 +1865,11 @@
         "scripts/uv.lock": "99598cc397a42c945abbc9d839d1c61f1852f414660ce41e2e68bd9cdf664100"
       }
     },
-    "testing-handbook-generator": {
-      "origin": "lock",
+    "trailofbits/testing-handbook-generator": {
+      "name": "testing-handbook-generator",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/testing-handbook-generator",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1587,8 +1889,11 @@
         "testing.md": "3f7b53df6bb98679a7da30420d9e85b1f5fbb728faa425d1b176753870935c64"
       }
     },
-    "token-integration-analyzer": {
-      "origin": "lock",
+    "trailofbits/token-integration-analyzer": {
+      "name": "token-integration-analyzer",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/token-integration-analyzer",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1603,8 +1908,11 @@
         "resources/REPORT_TEMPLATES.md": "77dc2195901cbca8f0a04687e6ac51347520b6320cfe2ca7c39d9725ffae1177"
       }
     },
-    "ton-vulnerability-scanner": {
-      "origin": "lock",
+    "trailofbits/ton-vulnerability-scanner": {
+      "name": "ton-vulnerability-scanner",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/ton-vulnerability-scanner",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1618,8 +1926,11 @@
         "resources/VULNERABILITY_PATTERNS.md": "98e03c8c86113058c4f56bee0b661fe8345b3dcaf583ba4247774e8301f30936"
       }
     },
-    "trailmark": {
-      "origin": "lock",
+    "trailofbits/trailmark": {
+      "name": "trailmark",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/trailmark",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1634,8 +1945,11 @@
         "references/query-patterns.md": "e8e651e753960804e1426b1bc73c0680e594a9905561eca5436e05d609cd4050"
       }
     },
-    "trailmark-finding-triage": {
-      "origin": "lock",
+    "trailofbits/trailmark-finding-triage": {
+      "name": "trailmark-finding-triage",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/trailmark-finding-triage",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1651,8 +1965,11 @@
         "references/query-recipes.md": "d0c948a22af7015f6716f853b9be8e7b38c13b31ae3f3a2813ae8d86b032f9cc"
       }
     },
-    "trailmark-review-gate": {
-      "origin": "lock",
+    "trailofbits/trailmark-review-gate": {
+      "name": "trailmark-review-gate",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/trailmark-review-gate",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1668,8 +1985,11 @@
         "references/review-integration.md": "13d13913029ec06fa489b294a932ba4e9900929ed4455649756a82e6ed80e146"
       }
     },
-    "trailmark-structural": {
-      "origin": "lock",
+    "trailofbits/trailmark-structural": {
+      "name": "trailmark-structural",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/trailmark-structural",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1682,8 +2002,11 @@
         "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
       }
     },
-    "trailmark-summary": {
-      "origin": "lock",
+    "trailofbits/trailmark-summary": {
+      "name": "trailmark-summary",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/trailmark-summary",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1696,8 +2019,11 @@
         "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
       }
     },
-    "trailmark-variant-neighborhood": {
-      "origin": "lock",
+    "trailofbits/trailmark-variant-neighborhood": {
+      "name": "trailmark-variant-neighborhood",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/trailmark-variant-neighborhood",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1713,8 +2039,11 @@
         "references/ranking.md": "ed0a957618e25cb77e6003a44351884ba73351b9eb2bab2b0ff5ff6b1661a57f"
       }
     },
-    "variant-analysis": {
-      "origin": "lock",
+    "trailofbits/variant-analysis": {
+      "name": "variant-analysis",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/variant-analysis",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1742,8 +2071,11 @@
         "resources/variant-report-template.md": "03333c762318a89dd819784a62695f7660713479a5009a15189314400836202f"
       }
     },
-    "vector-forge": {
-      "origin": "lock",
+    "trailofbits/vector-forge": {
+      "name": "vector-forge",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/vector-forge",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1761,8 +2093,11 @@
         "references/vector-patterns.md": "641edba466cfdf0ae8cd93b5009b6861b1f6aaa593b84fd5abcd5b468a8b91b1"
       }
     },
-    "vulnerability-triage-brocards": {
-      "origin": "lock",
+    "trailofbits/vulnerability-triage-brocards": {
+      "name": "vulnerability-triage-brocards",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/vulnerability-triage-brocards",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1774,24 +2109,11 @@
         "references/brocards-detail.md": "f7684195c04041cad159cc0cc0bc9520c81ff23e0ec8b5fb33db3d2aa15cb116"
       }
     },
-    "web-artifacts-builder": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/anthropics/skills.git",
-      "owner": "anthropics",
-      "repo": "skills",
-      "skillPath": "skills/web-artifacts-builder/SKILL.md",
-      "pinnedRef": "3b3fad96af16a10759d930941b4520ba0c40edae",
-      "installedAt": "2026-08-25T18:24:34Z",
-      "files": {
-        "LICENSE.txt": "bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362",
-        "SKILL.md": "81c5002c6643b0de7b8710b00e7a9038daa6fb9b68d59870ee6adb12da8d10f8",
-        "scripts/bundle-artifact.sh": "abf0e480bf6585b56fab8526a407dfb7dc740812bddd70c636e1e8f3df5f9618",
-        "scripts/init-artifact.sh": "355e5dd4382aaaee91f01f1627eaeab30b2676ffa8d9b3ec328a1ae450ebccaa",
-        "scripts/shadcn-components.tar.gz": "1296f069e825de7933de7e8ac63672495cacce3f88f2dc45554dbcddbcbca60f"
-      }
-    },
-    "writing-lean-proofs": {
-      "origin": "lock",
+    "trailofbits/writing-lean-proofs": {
+      "name": "writing-lean-proofs",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/writing-lean-proofs",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1810,8 +2132,11 @@
         "references/tactics.md": "68786c8dc7dc4ad0f0743717c72472efb6179d3f78cbbfc16a980e96a6d8db0e"
       }
     },
-    "wycheproof": {
-      "origin": "lock",
+    "trailofbits/wycheproof": {
+      "name": "wycheproof",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/wycheproof",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1824,72 +2149,11 @@
         "assets/trail-of-bits-mark.svg": "4bf74c789b38dcf6ad762c136b6832363d27ae19fbaa9a18ec18d66ecce6ca05"
       }
     },
-    "xlsx": {
-      "origin": "lock",
-      "sourceUrl": "https://github.com/anthropics/skills.git",
-      "owner": "anthropics",
-      "repo": "skills",
-      "skillPath": "skills/xlsx/SKILL.md",
-      "pinnedRef": "3b3fad96af16a10759d930941b4520ba0c40edae",
-      "installedAt": "2026-08-25T18:24:34Z",
-      "files": {
-        "LICENSE.txt": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
-        "SKILL.md": "6712b39718fe815054abca9c3ee72f989613e6f771c8a5c58f30a65a6c905622",
-        "scripts/office/helpers/__init__.py": "678e42456d9e10923c8b9a93691cdd993de3433448a184fa72a0c31f4ae086d5",
-        "scripts/office/helpers/pptx_chart.py": "47ac266f7d39d11ede6bb0d1f3a19d801394fd2964636f1b48beb701f1832964",
-        "scripts/office/helpers/pptx_slide.py": "7b9f69b4a5bd6a2d9eabf9e0e3e796d7a421373145f6a8cd11f60b7ba2d6a5d0",
-        "scripts/office/helpers/pptx_theme.py": "ebb54c56e9c13807f5f98f0cae22d47cdd0162da8525eaa664e3f2c8c8d6bb03",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/dml-chart.xsd": "41b93bd8857cc68b1e43be2806a872d736a9bdd6566900062d8fdb57d7bbb354",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/dml-chartDrawing.xsd": "3fd0586f2637b98bb9886f0e0b67d89e1cc987c2d158cc7deb5f5b9890ced412",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/dml-diagram.xsd": "29b254ee0d10414a8504b5a08149c7baec35a60d5ff607d6b3f492aa36815f40",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/dml-lockedCanvas.xsd": "5cb76dabd8b97d1e9308a1700b90c20139be4d50792d21a7f09789f5cccd6026",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/dml-main.xsd": "5375417f0f5394b8dd1a7035b9679151f19a6b65df309dec10cfb4a420cb00e9",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/dml-picture.xsd": "5d389d42befbebd91945d620242347caecd3367f9a3a7cf8d97949507ae1f53c",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/dml-spreadsheetDrawing.xsd": "b4532b6d258832953fbb3ee4c711f4fe25d3faf46a10644b2505f17010d01e88",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/dml-wordprocessingDrawing.xsd": "bdad416b096b61d37b71603b2c949484f9070c830bdaeba93bf35e15c8900614",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/pml.xsd": "d173c3e5d61e42e2e3a97226c632fd2ab7cc481fc4e492365b87024ab546daff",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-additionalCharacteristics.xsd": "3c6709101c6aaa82888df5d8795c33f9e857196790eb320d9194e64be2b6bdd8",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-bibliography.xsd": "0b364451dc36a48dd6dae0f3b6ada05fd9b71e5208211f8ee5537d7e51a587e2",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-commonSimpleTypes.xsd": "e2abacbb9a55ce1365f8961bc1b1395bbc811e512b111000d8c333f98458dece",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlDataProperties.xsd": "0ef4bb354ff44b923564c4ddbdda5987919d220225129ec94614a618ceafc281",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlSchemaProperties.xsd": "0d103b99a4a8652f8871552a69d42d2a3760ac6a5e3ef02d979c4273257ff6a4",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesCustom.xsd": "9c085407751b9061c1f996f6c39ce58451be22a8d334f09175f0e89e42736285",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesExtended.xsd": "bc92e36ccd233722d4c5869bec71ddc7b12e2df56059942cce5a39065cc9c368",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesVariantTypes.xsd": "7b5b7413e2c895b1e148e82e292a117d53c7ec65b0696c992edca57b61b4a74b",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-math.xsd": "3213ef1631606250f5010b42cad7ef716f7c59426367798e33c374c0ec391d3a",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/shared-relationshipReference.xsd": "12264f3c03d738311cd9237d212f1c07479e70f0cbe1ae725d29b36539aef637",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/sml.xsd": "beffeed56945c22a77440122c8bdc426f3fcbe7f3b12ea0976c770d1f8d54578",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/vml-main.xsd": "f5ee623b08b6a66935e5aced2f5d8ad0fc71bf9e8e833cd490150c0fa94b8763",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/vml-officeDrawing.xsd": "585bedc1313b40888dcc544cb74cd939a105ee674f3b1d3aa1cc6d34f70ff155",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/vml-presentationDrawing.xsd": "133c9f64a5c5d573b78d0a474122b22506d8eadb5e063f67cdbbb8fa2f161d0e",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/vml-spreadsheetDrawing.xsd": "6bdeb169c3717eb01108853bd9fc5a3750fb1fa5b82abbdd854d49855a40f519",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/vml-wordprocessingDrawing.xsd": "475dcae1e7d1ea46232db6f8481040c15e53a52a3c256831d3df204212b0e831",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/wml.xsd": "c2dd9f61f892deae6acd8d20771ea79b12018af25f3bf8d06639c8542d218cfd",
-        "scripts/office/schemas/ISO-IEC29500-4_2016/xml.xsd": "a539aa2fb154fa50e0f5cc97e6ad7cbc66f8ec3e3746f61ec6a8b0d5d15ecdf2",
-        "scripts/office/schemas/ecma/fouth-edition/opc-contentTypes.xsd": "9e0b7209fc69ab11987900404540969976000c5ebe4d4f58c43dc3842886bf3a",
-        "scripts/office/schemas/ecma/fouth-edition/opc-coreProperties.xsd": "451958454e8588dfc7cd945981ada142ca06ff3307937f5700df059c2b307fa8",
-        "scripts/office/schemas/ecma/fouth-edition/opc-digSig.xsd": "6de111e11403f7cd49027400755bae0ea1cabef2815f09bd40a24f0017613b24",
-        "scripts/office/schemas/ecma/fouth-edition/opc-relationships.xsd": "f565adfef5a502044abc3a9153e157edc25af78304d335994afb958874b15e26",
-        "scripts/office/schemas/mce/mc.xsd": "3a37e461ecf5a8670fdec34029703401f8728ab9c96ec1739a6ae58d55212413",
-        "scripts/office/schemas/microsoft/wml-2010.xsd": "568b26ee156cb9549aa439ca2158965f77b7c1602b7e0316f40ac6cf586e35f2",
-        "scripts/office/schemas/microsoft/wml-2012.xsd": "0fa75578a000439a7988ba0c59fdc69f774bbd416cbacc14d07125b3f686cb74",
-        "scripts/office/schemas/microsoft/wml-2018.xsd": "be0ff793a22dd31384650c3a4da14c2fa8062751c2e97b0e5ee852bda13c60ad",
-        "scripts/office/schemas/microsoft/wml-cex-2018.xsd": "fddc2b880cabb9005aebbc7e783e53c19fec1c03df7d0e2f2076a33a0fdfd081",
-        "scripts/office/schemas/microsoft/wml-cid-2016.xsd": "127ca209fa73d7cb708449cb355c871867948a96e4a74f7bf5811ef62d17991d",
-        "scripts/office/schemas/microsoft/wml-sdtdatahash-2020.xsd": "842e7163409c8d74f4d7088a8bc99500d80bc75332681a0980055b08f374a604",
-        "scripts/office/schemas/microsoft/wml-symex-2015.xsd": "16f6f8072249f431370723c2cd8974672e0d9c897e00e97dd918079df934871b",
-        "scripts/office/soffice.py": "df2c8d7249c132a4512d744482e4b5ed0ecbe885f0bcfb1295e7e6a7ced0432c",
-        "scripts/office/validate.py": "346a4c89d92fff55e610f11efda48c30228815b29bdb10b987e48f7af70acf1e",
-        "scripts/office/validators/__init__.py": "83e0f035c5abea238d3f2c3968afbd511ed022b527b7c9cb60a9434cc34ff987",
-        "scripts/office/validators/base.py": "f818ea28c793ba42960fa4498265e2632a62c86f7b5d6aff6fa89dacc02d59ea",
-        "scripts/office/validators/docx.py": "93d3444c0ef3f043d21a2285c46d2cda478426b930dc33dcf3b11265935517b5",
-        "scripts/office/validators/pptx.py": "17eadad2b7a8374ccbe4cda45693bcd6a36f9d61a7d60f9c9ceef9464dec8299",
-        "scripts/office/validators/redlining.py": "ed50d0885eee4b9c387f546b059bcaed64086815880a5167336244f93e305123",
-        "scripts/recalc.py": "66f6e726d5a53cfabea0b6471d6669deb95e54e96cb7913b687e4388da1bb3d9"
-      }
-    },
-    "yara-rule-authoring": {
-      "origin": "lock",
+    "trailofbits/yara-rule-authoring": {
+      "name": "yara-rule-authoring",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/yara-rule-authoring",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1920,8 +2184,11 @@
         "workflows/rule-development.md": "190c221ff1349dca1afca095020cba5d4a98436b4a337fb87e8be01ab6c12be1"
       }
     },
-    "zeroize-audit": {
-      "origin": "lock",
+    "trailofbits/zeroize-audit": {
+      "name": "zeroize-audit",
+      "namespace": "trailofbits",
+      "path": "lib/trailofbits/zeroize-audit",
+      "origin": "npx-lock",
       "sourceUrl": "https://github.com/trailofbits/skills.git",
       "owner": "trailofbits",
       "repo": "skills",
@@ -1979,6 +2246,21 @@
         "workflows/phase-5-poc-validation.md": "6a2d030c1dc25b8317fa173c6ef855b7145ae8148f3c86e9691f8b7b669a4c44",
         "workflows/phase-6-final-report.md": "44b7d099223839bf8016692cd6ec6b86f203e0a34d91861db9218cce4dfa06df",
         "workflows/phase-7-test-generation.md": "3f1476672e8a301c7b125c81f2b4332ff97ff2a8cb65c6749b2cbe367598173b"
+      }
+    },
+    "vercel-labs/find-skills": {
+      "name": "find-skills",
+      "namespace": "vercel-labs",
+      "path": "lib/vercel-labs/find-skills",
+      "origin": "npx-lock",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "owner": "vercel-labs",
+      "repo": "skills",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "pinnedRef": "435076e78988e1e6ec40d00b0b1d76bdbbc5419a",
+      "installedAt": "2026-08-25T18:24:34Z",
+      "files": {
+        "SKILL.md": "c00eeea0e13e74fe4a9d84ba0a8542205a1b736d65f13134fe1a6647eb14976f"
       }
     }
   }
