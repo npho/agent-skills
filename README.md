@@ -27,7 +27,7 @@ gofmt -w *.go
 go test ./...
 go vet ./...
 make                         # writes ~/.agents/bin/skl
-~/.agents/bin/skl migrate    # safe and idempotent legacy migration
+~/.agents/bin/skl migrate [--pi-skills DIR]    # safe and idempotent legacy migration
 ~/.agents/bin/skl check
 ```
 
@@ -42,21 +42,21 @@ enabled.
 ## User-library commands
 
 ```sh
-skl add owner/repo                  # npx discovers skills; skl adopts into lib
-skl add /path/to/a/skill            # installs as lib/local/<skill>
-skl add --global owner/repo         # also explicitly expose newly added skills
+skl add [--global] [--force] <source>          # npx discovers skills; skl adopts into lib
+skl add /path/to/a/skill                       # installs as lib/local/<skill>
+skl add --global owner/repo                   # also explicitly expose newly added skills
 skl list
 skl global list
 skl global enable owner/skill
 skl global disable owner/skill
-skl sync                            # restore missing copies at recorded pins
-skl update [owner/skill ...]        # advance directly from original sources
+skl sync [--force] [--cache DIR]               # restore missing copies at recorded pins
+skl update [--force] [owner/skill ...]         # advance directly from original sources
 skl check
 ```
 
 Unqualified names are accepted only when unique. GitHub pins are immutable
 40-character commit SHAs; resolution failures stop the operation. `sync` and
-`update` refuse to overwrite library drift; use `--force` deliberately. `--dry-run`/`-n` can appear
+`update` refuse to overwrite library drift; use `--force` deliberately. `skl sync --cache DIR` stages downloads and extraction under DIR to avoid using home quota. `--dry-run`/`-n` can appear
 anywhere and does not write state, payloads, links, manifests, or locks. Output
 that `npx skills` temporarily places under `skills/` is adopted into `lib/` and
 never interpreted as global exposure.
@@ -89,11 +89,11 @@ A project contains committed, human-authored intent and generated exact state:
 
 ```sh
 cd /path/to/project
-skl project init --profile security local/team-conventions
-skl project add trailofbits/codeql
-skl project refresh                 # explicit profile re-resolution
-skl project sync                    # reproduce the existing lock exactly
-skl project update [skill ...]      # advance directly from original sources
+skl project init [--profile NAME] [skills...]
+skl project add [--force] <skills...>
+skl project refresh [--force]                 # explicit profile re-resolution
+skl project sync [--force]                    # reproduce the existing lock exactly
+skl project update [--force] [skill ...]      # advance directly from recorded sources
 ```
 
 `init`, `add`, and `refresh` seed from a clean canonical library copy when it is
