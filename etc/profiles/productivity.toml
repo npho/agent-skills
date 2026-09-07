@@ -1,0 +1,13 @@
+extends = ["base"]
+
+skills = [
+  "anthropics/docx",
+  "anthropics/pptx",
+  "anthropics/xlsx",
+  "anthropics/frontend-design",
+  "anthropics/web-artifacts-builder",
+  "openai/pdf",
+  "huggingface/hf-cli",
+  "mattpocock/grill-me",
+  "vercel-labs/find-skills",
+]

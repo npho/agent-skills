@@ -1,0 +1,16 @@
+extends = ["base"]
+
+skills = [
+  "trailofbits/constant-time-analysis",
+  "trailofbits/constant-time-testing",
+  "trailofbits/crypto-protocol-diagram",
+  "trailofbits/mermaid-to-proverif",
+  "trailofbits/wycheproof",
+  "trailofbits/zeroize-audit",
+  "trailofbits/algorand-vulnerability-scanner",
+  "trailofbits/cairo-vulnerability-scanner",
+  "trailofbits/cosmos-vulnerability-scanner",
+  "trailofbits/solana-vulnerability-scanner",
+  "trailofbits/substrate-vulnerability-scanner",
+  "trailofbits/ton-vulnerability-scanner",
+]

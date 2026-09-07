@@ -1,0 +1,27 @@
+extends = ["base"]
+
+skills = [
+  "trailofbits/audit-prep-assistant",
+  "trailofbits/audit-context-building",
+  "trailofbits/audit-augmentation",
+  "trailofbits/entry-point-analyzer",
+  "trailofbits/supply-chain-risk-auditor",
+  "trailofbits/fp-check",
+  "trailofbits/second-opinion",
+  "trailofbits/differential-review",
+  "trailofbits/variant-analysis",
+  "trailofbits/trailmark",
+  "trailofbits/trailmark-finding-triage",
+  "trailofbits/trailmark-review-gate",
+  "trailofbits/trailmark-structural",
+  "trailofbits/trailmark-summary",
+  "trailofbits/trailmark-variant-neighborhood",
+  "trailofbits/spec-to-code-compliance",
+  "trailofbits/token-integration-analyzer",
+  "trailofbits/guidelines-advisor",
+  "trailofbits/code-maturity-assessor",
+  "trailofbits/secure-workflow-guide",
+  "trailofbits/sharp-edges",
+  "trailofbits/slicing-code-context",
+  "trailofbits/vulnerability-triage-brocards",
+]

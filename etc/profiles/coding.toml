@@ -1,0 +1,21 @@
+extends = ["base"]
+
+skills = [
+  "trailofbits/c-review",
+  "trailofbits/rust-review",
+  "trailofbits/modern-cpp",
+  "trailofbits/modern-python",
+  "trailofbits/property-based-testing",
+  "trailofbits/devcontainer-setup",
+  "trailofbits/open-sourcing",
+  "trailofbits/dwarf-expert",
+  "trailofbits/goal-prompt",
+  "trailofbits/pr-improver",
+  "trailofbits/code-improver",
+  "trailofbits/skill-improver",
+  "trailofbits/diagramming-code",
+  "trailofbits/graph-evolution",
+  "anthropics/mcp-builder",
+  "anthropics/skill-creator",
+  "openai/jupyter-notebook",
+]

@@ -1,0 +1,8 @@
+skills = [
+  "trailofbits/gh-cli",
+  "trailofbits/github-triage",
+  "trailofbits/codeql",
+  "trailofbits/semgrep",
+  "trailofbits/sarif-parsing",
+  "openai/security-best-practices",
+]
