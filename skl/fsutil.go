@@ -16,20 +16,20 @@ import (
 )
 
 func dirExists(p string) bool {
-	info, err := os.Stat(p)
-	return err == nil && info.IsDir()
+	info, err := os.Lstat(p)
+	return err == nil && info.IsDir() && info.Mode()&os.ModeSymlink == 0
 }
-
 func fileExists(p string) bool {
-	info, err := os.Stat(p)
-	return err == nil && !info.IsDir()
+	info, err := os.Lstat(p)
+	return err == nil && info.Mode().IsRegular()
 }
-
-// copyDir copies src into dst, merging (files in dst that are absent from src are kept).
 func copyDir(src, dst string) error {
 	return filepath.WalkDir(src, func(p string, d os.DirEntry, err error) error {
 		if err != nil {
 			return err
+		}
+		if d.Type()&os.ModeSymlink != 0 {
+			return fmt.Errorf("refusing symlink in skill payload: %s", p)
 		}
 		rel, err := filepath.Rel(src, p)
 		if err != nil {
@@ -37,27 +37,41 @@ func copyDir(src, dst string) error {
 		}
 		target := filepath.Join(dst, rel)
 		if d.IsDir() {
-			return os.MkdirAll(target, d.Type().Perm()|0700)
+			return os.MkdirAll(target, 0755)
+		}
+		if !d.Type().IsRegular() {
+			return fmt.Errorf("refusing non-regular payload entry: %s", p)
 		}
 		info, err := d.Info()
 		if err != nil {
 			return err
 		}
-		data, err := os.ReadFile(p) // follows symlinks; skills are plain files
+		in, err := os.Open(p)
 		if err != nil {
 			return err
 		}
-		return os.WriteFile(target, data, info.Mode().Perm())
+		defer in.Close()
+		if err := os.MkdirAll(filepath.Dir(target), 0755); err != nil {
+			return err
+		}
+		out, err := os.OpenFile(target, os.O_CREATE|os.O_TRUNC|os.O_WRONLY, info.Mode().Perm())
+		if err != nil {
+			return err
+		}
+		_, copyErr := io.Copy(out, in)
+		closeErr := out.Close()
+		if copyErr != nil {
+			return copyErr
+		}
+		return closeErr
 	})
 }
-
 func removeDir(p string) error {
 	if _, err := os.Lstat(p); os.IsNotExist(err) {
 		return nil
 	}
 	return os.RemoveAll(p)
 }
-
 func sha256File(p string) (string, error) {
 	f, err := os.Open(p)
 	if err != nil {
@@ -70,18 +84,32 @@ func sha256File(p string) (string, error) {
 	}
 	return hex.EncodeToString(h.Sum(nil)), nil
 }
-
-// hashFolder returns slash-separated relative path -> sha256 of contents.
 func hashFolder(dir string) (map[string]string, error) {
+	info, err := os.Lstat(dir)
+	if err != nil {
+		return nil, err
+	}
+	if !info.IsDir() || info.Mode()&os.ModeSymlink != 0 {
+		return nil, fmt.Errorf("%s is not a real directory", dir)
+	}
 	res := map[string]string{}
-	err := filepath.WalkDir(dir, func(p string, d os.DirEntry, err error) error {
+	err = filepath.WalkDir(dir, func(p string, d os.DirEntry, err error) error {
 		if err != nil {
 			return err
+		}
+		if d.Type()&os.ModeSymlink != 0 {
+			return fmt.Errorf("symlink is not allowed in payload: %s", p)
 		}
 		if d.IsDir() {
 			return nil
 		}
-		rel, _ := filepath.Rel(dir, p)
+		if !d.Type().IsRegular() {
+			return fmt.Errorf("non-regular payload entry: %s", p)
+		}
+		rel, err := filepath.Rel(dir, p)
+		if err != nil {
+			return err
+		}
 		h, err := sha256File(p)
 		if err != nil {
 			return err
@@ -89,38 +117,8 @@ func hashFolder(dir string) (map[string]string, error) {
 		res[filepath.ToSlash(rel)] = h
 		return nil
 	})
-	if err != nil {
-		return nil, err
-	}
-	return res, nil
+	return res, err
 }
-
-// ensureSymlink makes link point to target (a relative path). Returns a status string.
-func ensureSymlink(link, target string) (string, error) {
-	if _, err := os.Lstat(link); err == nil {
-		if tgt, e := os.Readlink(link); e == nil {
-			if tgt == target {
-				return "ok", nil
-			}
-			if err := os.Remove(link); err != nil {
-				return "", err
-			}
-			if err := os.Symlink(target, link); err != nil {
-				return "", err
-			}
-			return "repointed", nil
-		}
-		return "conflict (exists as real directory)", nil
-	}
-	if err := os.MkdirAll(filepath.Dir(link), 0755); err != nil {
-		return "", err
-	}
-	if err := os.Symlink(target, link); err != nil {
-		return "", err
-	}
-	return "created", nil
-}
-
 func parseGitHubURL(u string) (owner, repo string, ok bool) {
 	u = strings.TrimSuffix(strings.TrimSuffix(u, ".git"), "/")
 	const marker = "github.com/"
@@ -129,12 +127,11 @@ func parseGitHubURL(u string) (owner, repo string, ok bool) {
 		return "", "", false
 	}
 	parts := strings.Split(u[idx+len(marker):], "/")
-	if len(parts) < 2 || parts[0] == "" || parts[1] == "" {
+	if len(parts) < 2 || validatePart("owner", parts[0]) != nil || validatePart("repo", parts[1]) != nil {
 		return "", "", false
 	}
 	return parts[0], parts[1], true
 }
-
 func latestCommit(owner, repo string) (string, error) {
 	client := &http.Client{Timeout: 15 * time.Second}
 	url := fmt.Sprintf("https://api.github.com/repos/%s/%s/commits/HEAD", owner, repo)
@@ -152,18 +149,20 @@ func latestCommit(owner, repo string) (string, error) {
 	if err := json.NewDecoder(resp.Body).Decode(&j); err != nil {
 		return "", err
 	}
-	return j.SHA, nil
+	if !isCommitSHA(j.SHA) {
+		return "", fmt.Errorf("GitHub returned non-commit revision %q", j.SHA)
+	}
+	return strings.ToLower(j.SHA), nil
 }
 
-// downloadTarball downloads github.com/owner/repo@ref as a tarball into destDir,
-// extracts it, and returns the path of the extracted top-level directory.
+var httpClient = &http.Client{Timeout: 60 * time.Second}
+
 func downloadTarball(owner, repo, ref, destDir string) (string, error) {
-	if ref == "" {
-		ref = "HEAD"
+	if !isCommitSHA(ref) {
+		return "", fmt.Errorf("ref %q is not an immutable commit SHA", ref)
 	}
 	url := fmt.Sprintf("https://github.com/%s/%s/archive/%s.tar.gz", owner, repo, ref)
-	tmpGz := filepath.Join(destDir, "dl.tar.gz")
-	resp, err := http.Get(url)
+	resp, err := httpClient.Get(url)
 	if err != nil {
 		return "", err
 	}
@@ -171,27 +170,22 @@ func downloadTarball(owner, repo, ref, destDir string) (string, error) {
 	if resp.StatusCode != 200 {
 		return "", fmt.Errorf("download %s: status %d", url, resp.StatusCode)
 	}
-	f, err := os.Create(tmpGz)
-	if err != nil {
-		return "", err
+	if err := extractTarGz(resp.Body, destDir); err != nil {
+		return "", fmt.Errorf("extract %s: %w", url, err)
 	}
-	if _, err := io.Copy(f, resp.Body); err != nil {
-		f.Close()
-		return "", err
-	}
-	f.Close()
-
-	fIn, err := os.Open(tmpGz)
+	return destDir, nil
+}
+func extractTarGz(r io.Reader, dest string) error {
+	gz, err := gzip.NewReader(r)
 	if err != nil {
-		return "", err
-	}
-	defer fIn.Close()
-	gz, err := gzip.NewReader(fIn)
-	if err != nil {
-		return "", err
+		return err
 	}
 	defer gz.Close()
 	tr := tar.NewReader(gz)
+	root, err := filepath.Abs(dest)
+	if err != nil {
+		return err
+	}
 	top := ""
 	for {
 		hdr, err := tr.Next()
@@ -199,59 +193,74 @@ func downloadTarball(owner, repo, ref, destDir string) (string, error) {
 			break
 		}
 		if err != nil {
-			return "", err
+			return err
 		}
-		name := strings.TrimPrefix(hdr.Name, "/")
-		switch hdr.Typeflag {
-		case tar.TypeXGlobalHeader, tar.TypeXHeader, 'L', 'K': // pax headers, GNU long name/link
+		if hdr.Typeflag == tar.TypeXGlobalHeader || hdr.Typeflag == tar.TypeXHeader {
 			continue
 		}
-		parts := strings.SplitN(name, "/", 2)
+		name := filepath.ToSlash(hdr.Name)
+		if strings.HasPrefix(name, "/") {
+			return fmt.Errorf("absolute archive path %q", hdr.Name)
+		}
+		clean := filepath.Clean(filepath.FromSlash(name))
+		if clean == "." || clean == ".." || strings.HasPrefix(clean, ".."+string(filepath.Separator)) {
+			return fmt.Errorf("archive path traversal %q", hdr.Name)
+		}
+		parts := strings.SplitN(filepath.ToSlash(clean), "/", 2)
 		if top == "" {
 			top = parts[0]
+		} else if parts[0] != top {
+			return fmt.Errorf("archive has multiple top-level directories")
 		}
 		if len(parts) == 1 {
+			if hdr.Typeflag != tar.TypeDir {
+				return fmt.Errorf("invalid top-level archive entry %q", hdr.Name)
+			}
 			continue
 		}
-		target := filepath.Join(destDir, parts[1])
+		rel := filepath.FromSlash(parts[1])
+		target := filepath.Join(root, rel)
+		abs, err := filepath.Abs(target)
+		if err != nil {
+			return err
+		}
+		if abs != root && !strings.HasPrefix(abs, root+string(filepath.Separator)) {
+			return fmt.Errorf("archive entry escapes destination: %q", hdr.Name)
+		}
 		switch hdr.Typeflag {
 		case tar.TypeDir:
-			if err := os.MkdirAll(target, 0755); err != nil {
-				return "", err
+			if err := os.MkdirAll(abs, 0755); err != nil {
+				return err
 			}
-		case tar.TypeReg:
-			if err := os.MkdirAll(filepath.Dir(target), 0755); err != nil {
-				return "", err
+		case tar.TypeReg, tar.TypeRegA:
+			if err := os.MkdirAll(filepath.Dir(abs), 0755); err != nil {
+				return err
 			}
-			out, err := os.Create(target)
+			out, err := os.OpenFile(abs, os.O_CREATE|os.O_EXCL|os.O_WRONLY, os.FileMode(hdr.Mode)&0777)
 			if err != nil {
-				return "", err
+				return err
 			}
-			if _, err := io.Copy(out, tr); err != nil {
-				out.Close()
-				return "", err
+			_, copyErr := io.Copy(out, tr)
+			closeErr := out.Close()
+			if copyErr != nil {
+				return copyErr
 			}
-			out.Close()
-			if err := os.Chmod(target, os.FileMode(hdr.Mode)&0777); err != nil {
-				return "", err
+			if closeErr != nil {
+				return closeErr
 			}
-		case tar.TypeSymlink:
-			if err := os.MkdirAll(filepath.Dir(target), 0755); err != nil {
-				return "", err
-			}
-			_ = os.Symlink(hdr.Linkname, target)
+		case tar.TypeXGlobalHeader, tar.TypeXHeader:
+			continue
+		case tar.TypeSymlink, tar.TypeLink:
+			return fmt.Errorf("archive links are not allowed: %q", hdr.Name)
+		default:
+			return fmt.Errorf("unsupported archive entry type %d for %q", hdr.Typeflag, hdr.Name)
 		}
 	}
-	os.Remove(tmpGz)
 	if top == "" {
-		return "", fmt.Errorf("empty tarball")
+		return fmt.Errorf("empty tarball")
 	}
-	// entries are extracted with the top-level prefix stripped, so destDir is the root
-	return destDir, nil
+	return nil
 }
-
-// folderOfSkillPath turns a lock skillPath like "skills/docx/SKILL.md"
-// into the repo-relative folder "skills/docx".
 func folderOfSkillPath(skillPath string) string {
 	parts := strings.Split(strings.Trim(skillPath, "/"), "/")
 	if len(parts) > 1 && parts[len(parts)-1] == "SKILL.md" {

@@ -10,7 +10,7 @@ materialize reproducible real copies inside projects.
 |---|---:|---|
 | `lib/<namespace>/<skill>/` | no | Canonical installed payload. GitHub uses the owner as namespace; filesystem installs use `local`. |
 | `skills/` | no | Harness-visible global exposure. Empty by default; enabled entries are relative symlinks into `lib/`. |
-| `etc/profiles/*.toml` | yes | Named, composable skill selections. |
+| `etc/profiles/` | yes | Optional named, composable TOML selections; its README is the inactive template. |
 | `var/state.json` | yes | `skl` v2 state: canonical path, provenance, revision, timestamps, hashes, and global exposure. |
 | `.skill-lock.json` | yes | Metadata owned by `npx skills`; `skl` reads it but never writes it. |
 | `skl/` | yes | Go source and tests. |
@@ -54,8 +54,9 @@ skl update [owner/skill ...]        # advance directly from original sources
 skl check
 ```
 
-Unqualified names are accepted only when unique. `sync` and `update` refuse to
-overwrite library drift; use `--force` deliberately. `--dry-run`/`-n` can appear
+Unqualified names are accepted only when unique. GitHub pins are immutable
+40-character commit SHAs; resolution failures stop the operation. `sync` and
+`update` refuse to overwrite library drift; use `--force` deliberately. `--dry-run`/`-n` can appear
 anywhere and does not write state, payloads, links, manifests, or locks. Output
 that `npx skills` temporarily places under `skills/` is adopted into `lib/` and
 never interpreted as global exposure.
@@ -100,8 +101,10 @@ available. Profile changes do not affect an existing project until `refresh`.
 `project sync` does not resolve profiles or depend on `lib`; when restoration is
 needed it fetches the source and revision recorded in the project lock directly.
 `project update` likewise fetches the recorded original source, advances GitHub
-revisions, and rewrites copies and hashes. Both refuse to overwrite local edits
-unless `--force` is explicit. Local filesystem provenance remains local in the
+revisions, and rewrites copies and hashes. Project changes are fully staged and
+validated before the payload tree and metadata are swapped with rollback. Sync
+also rejects unmanaged entries. Both refuse to overwrite local edits or remove
+unmanaged entries unless `--force` is explicit. Local filesystem provenance remains local in the
 lock; GitHub records retain owner, repository, in-repository skill path, and
 revision.
 

@@ -6,9 +6,9 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
+	"reflect"
 	"sort"
 	"strings"
-	"time"
 )
 
 type commonFlags struct {
@@ -41,7 +41,7 @@ func parseFlags(args []string) (commonFlags, error) {
 	return f, nil
 }
 
-func run(name string, args ...string) error {
+func runExternal(name string, args ...string) error {
 	if dryRun {
 		fmt.Printf("  [dry-run] exec %s %s\n", name, strings.Join(args, " "))
 		return nil
@@ -56,7 +56,7 @@ func run(name string, args ...string) error {
 	return nil
 }
 
-func sourceToStage(s SkillState, ref string) (string, func(), error) {
+func sourceToStageImpl(s SkillState, ref string) (string, func(), error) {
 	if dryRun {
 		return "", func() {}, nil
 	}
@@ -74,13 +74,19 @@ func sourceToStage(s SkillState, ref string) (string, func(), error) {
 		err = copyDir(s.LocalDir, payload)
 	} else {
 		var top string
-		top, err = downloadTarball(s.Owner, s.Repo, ref, stage)
+		top, err = downloadTarballFunc(s.Owner, s.Repo, ref, stage)
 		if err == nil {
-			src := filepath.Join(top, filepath.FromSlash(folderOfSkillPath(s.SkillPath)))
-			if !fileExists(filepath.Join(src, "SKILL.md")) {
-				err = fmt.Errorf("skill path %q not found in %s/%s@%s", s.SkillPath, s.Owner, s.Repo, ref)
-			} else {
-				err = copyDir(src, payload)
+			folder := filepath.Clean(filepath.FromSlash(folderOfSkillPath(s.SkillPath)))
+			if folder == "." || folder == ".." || filepath.IsAbs(folder) || strings.HasPrefix(folder, ".."+string(filepath.Separator)) {
+				err = fmt.Errorf("unsafe skill path %q", s.SkillPath)
+			}
+			src := filepath.Join(top, folder)
+			if err == nil {
+				if !fileExists(filepath.Join(src, "SKILL.md")) {
+					err = fmt.Errorf("skill path %q not found in %s/%s@%s", s.SkillPath, s.Owner, s.Repo, ref)
+				} else {
+					err = copyDir(src, payload)
+				}
 			}
 		}
 	}
@@ -89,63 +95,6 @@ func sourceToStage(s SkillState, ref string) (string, func(), error) {
 		return "", func() {}, err
 	}
 	return payload, cleanup, nil
-}
-
-func installStaged(payload, dest string) error {
-	backup := dest + ".skl-backup"
-	_ = os.RemoveAll(backup)
-	if _, err := os.Lstat(dest); err == nil {
-		if err := os.Rename(dest, backup); err != nil {
-			return err
-		}
-	}
-	if err := os.MkdirAll(filepath.Dir(dest), 0755); err != nil {
-		return err
-	}
-	if err := os.Rename(payload, dest); err != nil {
-		_ = os.Rename(backup, dest)
-		return err
-	}
-	return os.RemoveAll(backup)
-}
-
-func replaceFromSource(s SkillState, ref string) error {
-	dest := canonicalPath(s)
-	if dryRun {
-		fmt.Printf("  [dry-run] install %s at %s\n", canonicalID(s.Namespace, s.Name), dest)
-		return nil
-	}
-	if err := os.MkdirAll(cfg.root, 0755); err != nil {
-		return err
-	}
-	payload, cleanup, err := sourceToStage(s, ref)
-	if err != nil {
-		return err
-	}
-	defer cleanup()
-	return installStaged(payload, dest)
-}
-
-// restoreFromSource verifies the staged source before replacing anything. Sync
-// reproduces recorded state; it never silently turns changed source into a new lock.
-func restoreFromSource(s SkillState, ref string, expected map[string]string) error {
-	if dryRun {
-		fmt.Printf("  [dry-run] restore %s from recorded source\n", canonicalID(s.Namespace, s.Name))
-		return nil
-	}
-	payload, cleanup, err := sourceToStage(s, ref)
-	if err != nil {
-		return err
-	}
-	defer cleanup()
-	files, err := hashFolder(payload)
-	if err != nil {
-		return err
-	}
-	if !equalHashes(files, expected) {
-		return fmt.Errorf("recorded source for %s does not reproduce its locked hashes", canonicalID(s.Namespace, s.Name))
-	}
-	return installStaged(payload, canonicalPath(s))
 }
 
 func hasDrift(s SkillState, path string) (bool, error) {
@@ -166,25 +115,7 @@ func equalHashes(a, b map[string]string) bool {
 	}
 	return true
 }
-func recordInstalled(st *State, id string, s SkillState) error {
-	if dryRun {
-		return nil
-	}
-	files, err := hashFolder(canonicalPath(s))
-	if err != nil {
-		return err
-	}
-	if old, ok := st.Skills[id]; !ok || !equalHashes(old.Files, files) {
-		s.InstalledAt = time.Now().UTC().Format(time.RFC3339)
-	} else {
-		s.InstalledAt = old.InstalledAt
-	}
-	s.Files = files
-	st.Skills[id] = s
-	return nil
-}
-
-func cmdAdd(args []string) error {
+func cmdAdd(args []string) (retErr error) {
 	f, err := parseFlags(args)
 	if err != nil {
 		return err
@@ -209,92 +140,290 @@ func cmdAdd(args []string) error {
 		}
 		s := SkillState{Name: name, Namespace: "local", Path: canonicalRel("local", name), Origin: "local", LocalDir: source}
 		id := canonicalID("local", name)
-		if old, ok := st.Skills[id]; ok && dirExists(canonicalPath(old)) && !f.force {
+		if err := validateCanonicalNamespace(s.Namespace); err != nil {
+			return fmt.Errorf("add %s: %w", id, err)
+		}
+		dest := canonicalPath(s)
+		if _, statErr := os.Lstat(dest); statErr == nil && !f.force {
 			return fmt.Errorf("%s already exists; use --force to replace it", id)
+		} else if statErr != nil && !os.IsNotExist(statErr) {
+			return statErr
 		}
-		if err := replaceFromSource(s, ""); err != nil {
-			return err
-		}
-		if err := recordInstalled(st, id, s); err != nil {
-			return err
+		if prior, ok := st.Skills[id]; ok {
+			s.Global = prior.Global
 		}
 		if f.global {
-			if err := enableGlobal(st, id); err != nil {
-				return err
-			}
+			s.Global = true
 		}
-		return saveState(st)
+		next, e := cloneState(st)
+		if e != nil {
+			return e
+		}
+		item := stagedLibrarySkill{ID: id, State: s}
+		if dryRun {
+			next.Skills[id] = s
+			return commitLibraryTransaction(st, next, []stagedLibrarySkill{item})
+		}
+		payload, cleanup, e := sourceToStage(s, "")
+		if e != nil {
+			return e
+		}
+		defer cleanup()
+		item.Payload = payload
+		if err := recordStaged(next, st, item); err != nil {
+			return err
+		}
+		return commitLibraryTransaction(st, next, []stagedLibrarySkill{item})
 	}
-	before := map[string]bool{}
-	for id := range st.Skills {
-		before[id] = true
+	// npx writes temporary payloads below the global skills path, so reject an
+	// unsafe root before invoking it rather than relying only on commit preflight.
+	if err := validateGlobalRoot(); err != nil {
+		return err
+	}
+	// Pin the npx output directory before the subprocess runs. A replacement
+	// with a real directory is external data: cleanup must fail rather than
+	// interpreting its children as npx output.
+	var npxGlobal *rootedFS
+	if !dryRun {
+		if err := ensureGlobalRoot(); err != nil {
+			return err
+		}
+		var pinErr error
+		npxGlobal, pinErr = openRootedFS(cfg.global)
+		if pinErr != nil {
+			return fmt.Errorf("pin npx global root: %w", pinErr)
+		}
+		defer npxGlobal.Close()
+	}
+	beforeLock := &NpxLock{Skills: map[string]LockSkill{}}
+	if old, lockErr := loadNpxLock(); lockErr == nil {
+		beforeLock = old
+	} else if !os.IsNotExist(lockErr) {
+		return lockErr
 	}
 	beforeGlobal := map[string]bool{}
-	if entries, readErr := os.ReadDir(cfg.global); readErr == nil {
-		for _, entry := range entries {
-			beforeGlobal[entry.Name()] = true
+	beforeOutput := map[string]string{}
+	initialLinks := map[string]string{}
+	initialEnabled := map[string]SkillState{}
+	for _, s := range st.Skills {
+		if s.Global {
+			initialEnabled[s.Name] = s
 		}
 	}
-	// npx remains sole owner of .skill-lock.json. Any output it puts in skills/
-	// is immediately adopted or removed and is never implicit global exposure.
-	if err := run("npx", "skills", "add", source); err != nil {
+	addSucceeded := false
+	if !dryRun {
+		entries, readErr := npxGlobal.ReadDir(".")
+		if readErr != nil {
+			return fmt.Errorf("snapshot npx global output: %w", readErr)
+		}
+		for _, entry := range entries {
+			name := entry.Name()
+			beforeGlobal[name] = true
+			beforeOutput[name] = rootedPathSignature(npxGlobal, name)
+			if s, ok := initialEnabled[name]; ok {
+				if target, err := npxGlobal.Readlink(name); err == nil && rootedLinkPointsTo(npxGlobal, target, canonicalPath(s)) {
+					initialLinks[name] = target
+				}
+			}
+		}
+	}
+	// Install the restoration guard before npx runs: npx may leave output even
+	// when it exits nonzero. Cleanup errors are joined with the command error so
+	// callers are never told a failed invocation was safely restored when it was not.
+	if !dryRun {
+		defer func() {
+			// A real-directory replacement belongs to somebody else and is never
+			// inspected or modified. A symlink node itself can be unlinked, then a
+			// new real root is pinned before restoration resumes.
+			if pinErr := npxGlobal.check(); pinErr != nil {
+				info, statErr := os.Lstat(cfg.global)
+				if statErr != nil || info.Mode()&os.ModeSymlink == 0 {
+					retErr = errors.Join(retErr, fmt.Errorf("restore npx global output: %w", pinErr))
+					return
+				}
+				_ = npxGlobal.Close()
+				if err := recoverGlobalRoot(); err != nil {
+					retErr = errors.Join(retErr, fmt.Errorf("restore npx global output: %w", err))
+					return
+				}
+				var openErr error
+				npxGlobal, openErr = openRootedFS(cfg.global)
+				if openErr != nil {
+					retErr = errors.Join(retErr, fmt.Errorf("repin recovered npx global root: %w", openErr))
+					return
+				}
+			}
+			desired := map[string]string{}
+			if addSucceeded {
+				for _, s := range st.Skills {
+					if s.Global {
+						target, err := filepath.Rel(cfg.global, canonicalPath(s))
+						if err != nil {
+							retErr = errors.Join(retErr, err)
+							continue
+						}
+						desired[s.Name] = target
+					}
+				}
+			} else {
+				for name, target := range initialLinks {
+					desired[name] = target
+				}
+			}
+			entries, err := npxGlobal.ReadDir(".")
+			if err != nil {
+				retErr = errors.Join(retErr, fmt.Errorf("inspect npx output: %w", err))
+			} else {
+				for _, entry := range entries {
+					name := entry.Name()
+					if beforeGlobal[name] {
+						continue
+					}
+					if target, keep := desired[name]; keep {
+						if current, err := npxGlobal.Readlink(name); err == nil && current == target {
+							continue
+						}
+					}
+					if err := npxGlobal.RemoveAll(name); err != nil {
+						retErr = errors.Join(retErr, fmt.Errorf("remove npx output %s: %w", name, err))
+					}
+				}
+			}
+			for name, target := range desired {
+				if current, err := npxGlobal.Readlink(name); err == nil && current == target {
+					continue
+				}
+				if err := npxGlobal.RemoveAll(name); err != nil && !os.IsNotExist(err) {
+					retErr = errors.Join(retErr, fmt.Errorf("restore global link %s: %w", name, err))
+					continue
+				}
+				if err := npxGlobal.Symlink(target, name); err != nil {
+					retErr = errors.Join(retErr, fmt.Errorf("restore global link %s: %w", name, err))
+				}
+			}
+		}()
+	}
+
+	if err := runCommand("npx", "skills", "add", source); err != nil {
 		return err
+	}
+	if !dryRun {
+		if err := npxGlobal.check(); err != nil {
+			return fmt.Errorf("npx global root changed: %w", err)
+		}
 	}
 	lock, err := loadNpxLock()
 	if err != nil {
 		return fmt.Errorf("read npx lock after add: %w", err)
 	}
-	added := 0
+	candidates := map[string]LockSkill{}
 	for name, ls := range lock.Skills {
+		old, existed := beforeLock.Skills[name]
+		if !existed || !reflect.DeepEqual(old, ls) {
+			candidates[name] = ls
+		}
+	}
+	if f.force && !dryRun { // unchanged lock entries count only when npx selected/output them
+		entries, e := npxGlobal.ReadDir(".")
+		if e != nil {
+			return fmt.Errorf("inspect npx output: %w", e)
+		}
+		for _, entry := range entries {
+			name := entry.Name()
+			if beforeOutput[name] != rootedPathSignature(npxGlobal, name) {
+				if ls, ok := lock.Skills[name]; ok {
+					candidates[name] = ls
+				}
+			}
+		}
+	}
+	if len(candidates) == 0 {
+		if dryRun {
+			return nil
+		}
+		return fmt.Errorf("npx lock did not add or change any skills")
+	}
+	cache := map[string]string{}
+	next, err := cloneState(st)
+	if err != nil {
+		return err
+	}
+	var staged []stagedLibrarySkill
+	var cleanups []func()
+	defer func() {
+		for _, cleanup := range cleanups {
+			cleanup()
+		}
+	}()
+	candidateNames := make([]string, 0, len(candidates))
+	for name := range candidates {
+		candidateNames = append(candidateNames, name)
+	}
+	sort.Strings(candidateNames)
+	for _, name := range candidateNames {
+		if err := validatePart("skill name", name); err != nil {
+			return fmt.Errorf("npx lock: %w", err)
+		}
+		ls := candidates[name]
 		owner, repo, ok := parseGitHubURL(ls.SourceURL)
 		if !ok {
-			continue
+			return fmt.Errorf("npx skill %s has unsupported source %q", name, ls.SourceURL)
 		}
 		id := canonicalID(owner, name)
-		tmpOutput := filepath.Join(cfg.global, name)
-		generatedOutput := !beforeGlobal[name]
-		if before[id] {
-			if generatedOutput && !dryRun {
-				if err := os.RemoveAll(tmpOutput); err != nil {
-					return err
-				}
-			}
-			continue
+		if err := validateCanonicalNamespace(owner); err != nil {
+			return fmt.Errorf("add %s: %w", id, err)
 		}
-		ref := resolveLatest(owner, repo)
+		_, exists := st.Skills[id]
+		if exists && !f.force {
+			return fmt.Errorf("%s already exists; use --force to replace it", id)
+		}
+		ref, e := resolveLatestCached(owner, repo, cache)
+		if e != nil {
+			return e
+		}
 		s := SkillState{Name: name, Namespace: owner, Path: canonicalRel(owner, name), Origin: "npx-lock", SourceURL: ls.SourceURL, Owner: owner, Repo: repo, SkillPath: ls.SkillPath, PinnedRef: ref}
-		info, statErr := os.Lstat(tmpOutput)
-		if statErr == nil && info.IsDir() && info.Mode()&os.ModeSymlink == 0 && !dryRun {
-			if err := os.MkdirAll(filepath.Dir(canonicalPath(s)), 0755); err != nil {
-				return err
-			}
-			if err := os.Rename(tmpOutput, canonicalPath(s)); err != nil {
-				return err
-			}
-		} else {
-			if generatedOutput && statErr == nil && !dryRun {
-				if err := os.RemoveAll(tmpOutput); err != nil {
-					return err
-				}
-			}
-			if err := replaceFromSource(s, ref); err != nil {
-				return err
-			}
+		if _, statErr := os.Lstat(canonicalPath(s)); statErr == nil && !f.force {
+			return fmt.Errorf("%s destination already exists; use --force", id)
+		} else if statErr != nil && !os.IsNotExist(statErr) {
+			return statErr
 		}
-		if err := recordInstalled(st, id, s); err != nil {
-			return err
+		if prior, ok := st.Skills[id]; ok {
+			s.Global = prior.Global
 		}
 		if f.global {
-			if err := enableGlobal(st, id); err != nil {
-				return err
+			s.Global = true
+		}
+		if dryRun {
+			staged = append(staged, stagedLibrarySkill{ID: id, State: s})
+			continue
+		}
+		// Fetch every candidate before any canonical payload is replaced.
+		payload, cleanup, e := sourceToStage(s, ref)
+		if e != nil {
+			return e
+		}
+		cleanups = append(cleanups, cleanup)
+		item := stagedLibrarySkill{ID: id, State: s, Payload: payload}
+		if err := recordStaged(next, st, item); err != nil {
+			return err
+		}
+		staged = append(staged, item)
+	}
+	if !dryRun {
+		for _, name := range candidateNames {
+			if !beforeGlobal[name] {
+				if err := npxGlobal.RemoveAll(name); err != nil && !os.IsNotExist(err) {
+					return fmt.Errorf("remove npx output %s: %w", name, err)
+				}
 			}
 		}
-		added++
 	}
-	if added == 0 && !dryRun {
-		return fmt.Errorf("npx did not add any new GitHub skills")
+	err = commitLibraryTransaction(st, next, staged)
+	if err == nil {
+		st = next
+		addSucceeded = true
 	}
-	return saveState(st)
+	return err
 }
 
 func cmdSync(args []string) error {
@@ -312,31 +441,69 @@ func cmdSync(args []string) error {
 	if migrated {
 		return fmt.Errorf("legacy layout detected; run `skl migrate` first")
 	}
+	next, err := cloneState(st)
+	if err != nil {
+		return err
+	}
+	var staged []stagedLibrarySkill
+	var cleanups []func()
+	defer func() {
+		for _, cleanup := range cleanups {
+			cleanup()
+		}
+	}()
 	for _, id := range sortedIDs(st) {
 		s := st.Skills[id]
+		if err := validateCanonicalNamespace(s.Namespace); err != nil {
+			return fmt.Errorf("sync %s: %w", id, err)
+		}
 		dest := canonicalPath(s)
-		if dirExists(dest) {
-			drift, e := hasDrift(s, dest)
-			if e != nil {
-				return e
+		if info, statErr := os.Lstat(dest); statErr == nil {
+			if !info.IsDir() || info.Mode()&os.ModeSymlink != 0 {
+				if !f.force {
+					return fmt.Errorf("%s destination is not a real directory; use --force", id)
+				}
+			} else {
+				drift, e := hasDrift(s, dest)
+				if e != nil {
+					return e
+				}
+				if drift && !f.force {
+					return fmt.Errorf("%s has library drift; refusing to overwrite (use --force)", id)
+				}
+				if !drift {
+					continue
+				}
 			}
-			if drift && !f.force {
-				return fmt.Errorf("%s has library drift; refusing to overwrite (use --force)", id)
-			}
-			if !drift {
-				continue
-			}
+		} else if !os.IsNotExist(statErr) {
+			return statErr
 		}
 		ref := s.PinnedRef
 		if s.LocalDir == "" && ref == "" {
 			return fmt.Errorf("%s has no pinned revision", id)
 		}
-		if err := restoreFromSource(s, ref, s.Files); err != nil {
-			return err
+		item := stagedLibrarySkill{ID: id, State: s}
+		if !dryRun {
+			payload, cleanup, err := sourceToStage(s, ref)
+			if err != nil {
+				return err
+			}
+			cleanups = append(cleanups, cleanup)
+			files, err := hashFolder(payload)
+			if err != nil {
+				return err
+			}
+			if !equalHashes(files, s.Files) {
+				return fmt.Errorf("recorded source for %s does not reproduce its locked hashes", id)
+			}
+			item.Payload = payload
 		}
+		staged = append(staged, item)
 	}
-	// Sync reproduces state and therefore has no state changes to save.
-	return nil
+	if len(staged) == 0 {
+		return nil
+	}
+	return commitLibraryTransaction(st, next, staged)
 }
 
 func cmdUpdate(args []string) error {
@@ -355,36 +522,67 @@ func cmdUpdate(args []string) error {
 	if err != nil {
 		return err
 	}
+	cache := map[string]string{}
+	next, err := cloneState(st)
+	if err != nil {
+		return err
+	}
+	var staged []stagedLibrarySkill
+	var cleanups []func()
+	defer func() {
+		for _, cleanup := range cleanups {
+			cleanup()
+		}
+	}()
 	for _, id := range ids {
 		s := st.Skills[id]
+		if err := validateCanonicalNamespace(s.Namespace); err != nil {
+			return fmt.Errorf("update %s: %w", id, err)
+		}
 		dest := canonicalPath(s)
-		if dirExists(dest) {
-			drift, e := hasDrift(s, dest)
-			if e != nil {
-				return e
+		if info, statErr := os.Lstat(dest); statErr == nil {
+			if !info.IsDir() || info.Mode()&os.ModeSymlink != 0 {
+				if !f.force {
+					return fmt.Errorf("%s destination is not a real directory; use --force", id)
+				}
+			} else {
+				drift, e := hasDrift(s, dest)
+				if e != nil {
+					return e
+				}
+				if drift && !f.force {
+					return fmt.Errorf("%s has library drift; refusing update (use --force)", id)
+				}
 			}
-			if drift && !f.force {
-				return fmt.Errorf("%s has library drift; refusing update (use --force)", id)
-			}
+		} else if !os.IsNotExist(statErr) {
+			return statErr
 		}
 		ref := ""
 		if s.LocalDir == "" {
-			ref = resolveLatest(s.Owner, s.Repo)
-			if ref == "" {
-				return fmt.Errorf("%s has no fetchable source", id)
+			ref, err = resolveLatestCached(s.Owner, s.Repo, cache)
+			if err != nil {
+				return err
 			}
-		}
-		if err := replaceFromSource(s, ref); err != nil {
-			return err
 		}
 		if ref != "" {
 			s.PinnedRef = ref
 		}
-		if err := recordInstalled(st, id, s); err != nil {
+		if dryRun {
+			staged = append(staged, stagedLibrarySkill{ID: id, State: s})
+			continue
+		}
+		payload, cleanup, e := sourceToStage(s, ref)
+		if e != nil {
+			return e
+		}
+		cleanups = append(cleanups, cleanup)
+		item := stagedLibrarySkill{ID: id, State: s, Payload: payload}
+		if err := recordStaged(next, st, item); err != nil {
 			return err
 		}
+		staged = append(staged, item)
 	}
-	return saveState(st)
+	return commitLibraryTransaction(st, next, staged)
 }
 
 func cmdCheck() error {
@@ -399,8 +597,18 @@ func cmdCheck() error {
 	for _, id := range sortedIDs(st) {
 		s := st.Skills[id]
 		dest := canonicalPath(s)
-		if !dirExists(dest) {
+		if s.LocalDir == "" && !isCommitSHA(s.PinnedRef) {
+			fmt.Printf("SYMBOLIC %s has non-immutable pin %q (run skl migrate)\n", id, s.PinnedRef)
+			problems++
+		}
+		info, statErr := os.Lstat(dest)
+		if os.IsNotExist(statErr) {
 			fmt.Printf("MISSING  %s\n", id)
+			problems++
+			continue
+		}
+		if statErr != nil || !info.IsDir() || info.Mode()&os.ModeSymlink != 0 {
+			fmt.Printf("INVALID  %s canonical destination is not a real directory\n", id)
 			problems++
 			continue
 		}
@@ -458,50 +666,6 @@ func cmdList() error {
 	return nil
 }
 
-func enableGlobal(st *State, id string) error {
-	s := st.Skills[id]
-	for oid, other := range st.Skills {
-		if oid != id && other.Name == s.Name && other.Global {
-			return fmt.Errorf("global name %q already exposes %s", s.Name, oid)
-		}
-	}
-	link := filepath.Join(cfg.global, s.Name)
-	rel, err := filepath.Rel(cfg.global, canonicalPath(s))
-	if err != nil {
-		return err
-	}
-	if dryRun {
-		fmt.Printf("  [dry-run] link %s -> %s\n", link, rel)
-	} else {
-		status, e := ensureSymlink(link, rel)
-		if e != nil {
-			return e
-		}
-		if status == "conflict (exists as real directory)" {
-			return fmt.Errorf("%s exists and is not a managed symlink", link)
-		}
-	}
-	s.Global = true
-	st.Skills[id] = s
-	return nil
-}
-func disableGlobal(st *State, id string) error {
-	s := st.Skills[id]
-	link := filepath.Join(cfg.global, s.Name)
-	if _, err := os.Lstat(link); err == nil {
-		if !linkPointsTo(link, canonicalPath(s)) {
-			return fmt.Errorf("refusing to remove unmanaged global path %s", link)
-		}
-		if dryRun {
-			fmt.Printf("  [dry-run] remove %s\n", link)
-		} else if err := os.Remove(link); err != nil {
-			return err
-		}
-	}
-	s.Global = false
-	st.Skills[id] = s
-	return nil
-}
 func linkPointsTo(link, dest string) bool {
 	target, err := os.Readlink(link)
 	if err != nil {
@@ -534,46 +698,189 @@ func cmdGlobal(args []string) error {
 		}
 		return nil
 	case "enable", "disable":
+		if len(args) == 1 {
+			return fmt.Errorf("%s requires at least one skill", args[0])
+		}
 		ids, e := resolveSelectors(st, args[1:])
 		if e != nil {
 			return e
 		}
-		if len(args) == 1 {
-			return fmt.Errorf("%s requires at least one skill", args[0])
+		next, e := cloneState(st)
+		if e != nil {
+			return e
 		}
+		requestedNames := make([]string, 0, len(ids))
 		for _, id := range ids {
-			if args[0] == "enable" {
-				e = enableGlobal(st, id)
-			} else {
-				e = disableGlobal(st, id)
-			}
-			if e != nil {
-				return e
-			}
+			s := next.Skills[id]
+			s.Global = args[0] == "enable"
+			next.Skills[id] = s
+			requestedNames = append(requestedNames, s.Name)
 		}
-		return saveState(st)
+		return commitLibraryTransaction(st, next, nil, requestedNames...)
 	default:
 		return fmt.Errorf("unknown global command %q", args[0])
 	}
 }
 
-func resolveLatest(owner, repo string) string {
-	if dryRun {
-		return "HEAD"
+func fileIdentity(info os.FileInfo) string {
+	value := reflect.ValueOf(info.Sys())
+	if value.IsValid() && value.Kind() == reflect.Pointer {
+		value = value.Elem()
 	}
-	sha, err := latestCommit(owner, repo)
-	if err != nil {
-		fmt.Printf("warning: cannot resolve %s/%s: %v; using HEAD\n", owner, repo, err)
-		return "HEAD"
+	if !value.IsValid() || value.Kind() != reflect.Struct {
+		return ""
 	}
-	return sha
+	var parts []string
+	for _, name := range []string{"Dev", "Ino"} {
+		field := value.FieldByName(name)
+		if field.IsValid() && field.CanInterface() {
+			parts = append(parts, fmt.Sprint(field.Interface()))
+		}
+	}
+	return strings.Join(parts, ":")
 }
+
+// rootedLinkPointsTo resolves a link target lexically from a pinned root; it
+// deliberately does not follow the link through the mutable global pathname.
+func rootedLinkPointsTo(root *rootedFS, target, dest string) bool {
+	if filepath.IsAbs(target) {
+		return filepath.Clean(target) == filepath.Clean(dest)
+	}
+	return filepath.Clean(filepath.Join(root.path, target)) == filepath.Clean(dest)
+}
+
+// rootedPathSignature is used only for npx output selection. All child reads
+// are descriptor-relative so a replaced global root cannot influence it.
+func rootedPathSignature(root *rootedFS, name string) string {
+	info, err := root.Lstat(name)
+	if os.IsNotExist(err) {
+		return "missing"
+	}
+	if err != nil {
+		return "error:" + err.Error()
+	}
+	if info.Mode()&os.ModeSymlink != 0 {
+		target, err := root.Readlink(name)
+		if err != nil {
+			return "error:" + err.Error()
+		}
+		return "link:" + target
+	}
+	if !info.IsDir() {
+		return fmt.Sprintf("mode:%s:size:%d:mtime:%d:identity:%s", info.Mode(), info.Size(), info.ModTime().UnixNano(), fileIdentity(info))
+	}
+	files, err := hashRootFolder(root, name)
+	if err != nil {
+		return "error:" + err.Error()
+	}
+	keys := make([]string, 0, len(files))
+	for k := range files {
+		keys = append(keys, k)
+	}
+	sort.Strings(keys)
+	var b strings.Builder
+	fmt.Fprintf(&b, "dir:%s:%d:%d:", fileIdentity(info), info.ModTime().UnixNano(), len(files))
+	for _, k := range keys {
+		b.WriteString(k)
+		b.WriteByte(0)
+		b.WriteString(files[k])
+	}
+	return b.String()
+}
+
+func pathSignature(path string) string {
+	info, err := os.Lstat(path)
+	if os.IsNotExist(err) {
+		return "missing"
+	}
+	if err != nil {
+		return "error:" + err.Error()
+	}
+	if info.Mode()&os.ModeSymlink != 0 {
+		target, _ := os.Readlink(path)
+		return "link:" + target
+	}
+	if !info.IsDir() {
+		return fmt.Sprintf("mode:%s:size:%d:mtime:%d:identity:%s", info.Mode(), info.Size(), info.ModTime().UnixNano(), fileIdentity(info))
+	}
+	var metadata strings.Builder
+	if err := filepath.WalkDir(path, func(entryPath string, d os.DirEntry, walkErr error) error {
+		if walkErr != nil {
+			return walkErr
+		}
+		entryInfo, err := d.Info()
+		if err != nil {
+			return err
+		}
+		rel, err := filepath.Rel(path, entryPath)
+		if err != nil {
+			return err
+		}
+		fmt.Fprintf(&metadata, "%s:%s:%d:%d:%s\x00", filepath.ToSlash(rel), entryInfo.Mode(), entryInfo.Size(), entryInfo.ModTime().UnixNano(), fileIdentity(entryInfo))
+		return nil
+	}); err != nil {
+		return "error:" + err.Error()
+	}
+	files, err := hashFolder(path)
+	if err != nil {
+		return "error:" + err.Error()
+	}
+	keys := make([]string, 0, len(files))
+	for k := range files {
+		keys = append(keys, k)
+	}
+	sort.Strings(keys)
+	var b strings.Builder
+	b.WriteString(metadata.String())
+	for _, k := range keys {
+		b.WriteString(k)
+		b.WriteByte(0)
+		b.WriteString(files[k])
+	}
+	return b.String()
+}
+
+func parseGitHubSource(source string) (string, string, bool) {
+	if owner, repo, ok := parseGitHubURL(source); ok {
+		return owner, repo, true
+	}
+	parts := strings.Split(strings.Trim(source, "/"), "/")
+	if len(parts) == 2 {
+		repo := strings.TrimSuffix(parts[1], ".git")
+		if validatePart("owner", parts[0]) == nil && validatePart("repo", repo) == nil {
+			return parts[0], repo, true
+		}
+	}
+	return "", "", false
+}
+
+var runCommand = runExternal
+var sourceToStage = sourceToStageImpl
+var latestCommitFunc = latestCommit
+var downloadTarballFunc = downloadTarball
+
+func resolveLatestCached(owner, repo string, cache map[string]string) (string, error) {
+	key := owner + "/" + repo
+	if ref := cache[key]; ref != "" {
+		return ref, nil
+	}
+	if dryRun {
+		return strings.Repeat("0", 40), nil
+	}
+	sha, err := latestCommitFunc(owner, repo)
+	if err != nil {
+		return "", fmt.Errorf("resolve immutable revision for %s: %w", key, err)
+	}
+	if !isCommitSHA(sha) {
+		return "", fmt.Errorf("resolved non-immutable revision %q for %s", sha, key)
+	}
+	cache[key] = strings.ToLower(sha)
+	return cache[key], nil
+}
+
 func shortRef(ref string) string {
 	if len(ref) > 12 {
 		return ref[:12]
 	}
 	return ref
 }
-
-var _ = errors.Is
-var _ = sort.Strings

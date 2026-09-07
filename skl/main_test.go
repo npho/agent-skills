@@ -93,22 +93,26 @@ func TestProfileResolutionCycleMissingAndCollision(t *testing.T) {
 
 func TestGlobalRelativeSymlinkEnableDisable(t *testing.T) {
 	root := testRoot(t)
-	st := localState(t, root, "owner", "thing")
-	if err := enableGlobal(st, "owner/thing"); err != nil {
+	localState(t, root, "local", "thing")
+	if err := cmdGlobal([]string{"enable", "local/thing"}); err != nil {
 		t.Fatal(err)
 	}
 	target, err := os.Readlink(filepath.Join(root, "skills", "thing"))
 	if err != nil {
 		t.Fatal(err)
 	}
-	if filepath.IsAbs(target) || target != filepath.Join("..", "lib", "owner", "thing") {
+	if filepath.IsAbs(target) || target != filepath.Join("..", "lib", "local", "thing") {
 		t.Fatalf("target=%q", target)
 	}
-	if err := disableGlobal(st, "owner/thing"); err != nil {
+	if err := cmdGlobal([]string{"disable", "local/thing"}); err != nil {
 		t.Fatal(err)
 	}
 	if _, err := os.Lstat(filepath.Join(root, "skills", "thing")); !os.IsNotExist(err) {
 		t.Fatalf("link remains: %v", err)
+	}
+	saved, _, err := loadState()
+	if err != nil || saved.Skills["local/thing"].Global {
+		t.Fatalf("global state was not disabled: %+v, %v", saved, err)
 	}
 }
 
@@ -178,7 +182,7 @@ func TestSafeLegacyMigration(t *testing.T) {
 	legacyDir := filepath.Join(root, "skills", "old")
 	writeSkill(t, legacyDir, "exact")
 	files, _ := hashFolder(legacyDir)
-	legacy := map[string]any{"version": 1, "skills": map[string]any{"old": map[string]any{"origin": "lock", "sourceUrl": "https://github.com/acme/repo.git", "owner": "acme", "repo": "repo", "skillPath": "skills/old/SKILL.md", "pinnedRef": "abc", "installedAt": "2024-01-01T00:00:00Z", "files": files}}}
+	legacy := map[string]any{"version": 1, "skills": map[string]any{"old": map[string]any{"origin": "lock", "sourceUrl": "https://github.com/acme/repo.git", "owner": "acme", "repo": "repo", "skillPath": "skills/old/SKILL.md", "pinnedRef": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "installedAt": "2024-01-01T00:00:00Z", "files": files}}}
 	data, _ := json.Marshal(legacy)
 	if err := os.WriteFile(filepath.Join(root, ".sync-state.json"), data, 0644); err != nil {
 		t.Fatal(err)
@@ -205,7 +209,7 @@ func TestSafeLegacyMigration(t *testing.T) {
 		t.Fatal("real Pi directory removed")
 	}
 	st, wasLegacy, err := loadState()
-	if err != nil || wasLegacy || st.Skills["acme/old"].PinnedRef != "abc" {
+	if err != nil || wasLegacy || st.Skills["acme/old"].PinnedRef != "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" {
 		t.Fatalf("state migration failed: legacy=%v err=%v state=%+v", wasLegacy, err, st)
 	}
 	if err := cmdMigrate([]string{"--pi-skills", pi}); err != nil {

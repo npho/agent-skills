@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"regexp"
 	"sort"
 	"strings"
 )
@@ -63,8 +64,13 @@ func canonicalRel(namespace, name string) string {
 }
 func canonicalPath(s SkillState) string { return filepath.Join(cfg.root, filepath.FromSlash(s.Path)) }
 
+var commitSHA = regexp.MustCompile(`^[0-9a-fA-F]{40}$`)
+var safePart = regexp.MustCompile(`^[A-Za-z0-9][A-Za-z0-9._-]*$`)
+
+func isCommitSHA(value string) bool { return commitSHA.MatchString(value) }
+
 func validatePart(kind, value string) error {
-	if value == "" || value == "." || value == ".." || strings.ContainsAny(value, `/\\`) {
+	if value == "" || value == "." || value == ".." || strings.ContainsAny(value, `/\\`) || strings.ContainsRune(value, 0) || !safePart.MatchString(value) {
 		return fmt.Errorf("invalid %s %q", kind, value)
 	}
 	return nil
@@ -164,10 +170,72 @@ func validateState(st *State) error {
 		if s.Path != canonicalRel(s.Namespace, s.Name) {
 			return fmt.Errorf("state %s has noncanonical path %q", id, s.Path)
 		}
+		if s.LocalDir != "" {
+			if s.Namespace != "local" {
+				return fmt.Errorf("state %s local source has namespace %q", id, s.Namespace)
+			}
+		} else {
+			if s.Namespace != s.Owner || validatePart("owner", s.Owner) != nil || validatePart("repo", s.Repo) != nil {
+				return fmt.Errorf("state %s has incoherent GitHub provenance", id)
+			}
+			if s.SourceURL != "" {
+				owner, repo, ok := parseGitHubURL(s.SourceURL)
+				if !ok || owner != s.Owner || repo != s.Repo {
+					return fmt.Errorf("state %s sourceUrl disagrees with owner/repo", id)
+				}
+			}
+		}
 	}
 	return nil
 }
-func saveState(st *State) error { st.Version = stateVersion; return writeJSON(cfg.state, st) }
+func saveState(st *State) error {
+	st.Version = stateVersion
+	if dryRun {
+		fmt.Printf("  [dry-run] write %s\n", cfg.state)
+		return nil
+	}
+	data, err := json.MarshalIndent(st, "", "  ")
+	if err != nil {
+		return err
+	}
+	agent, err := openRootedFS(cfg.root)
+	if err != nil {
+		return fmt.Errorf("pin state root: %w", err)
+	}
+	defer agent.Close()
+	if err := agent.MkdirAll("var", 0755); err != nil {
+		return err
+	}
+	parent, err := openChildRoot(agent, "var")
+	if err != nil {
+		return fmt.Errorf("pin state parent: %w", err)
+	}
+	defer parent.Close()
+	tmp := ".state-save"
+	f, err := parent.OpenFile(tmp, os.O_CREATE|os.O_EXCL|os.O_WRONLY, 0600)
+	if err != nil {
+		return err
+	}
+	if _, err = f.Write(append(data, '\n')); err == nil {
+		err = f.Chmod(0644)
+	}
+	closeErr := f.Close()
+	if err == nil {
+		err = closeErr
+	}
+	if err != nil {
+		_ = parent.Remove(tmp)
+		return err
+	}
+	defer parent.Remove(tmp)
+	if err := agent.check(); err != nil {
+		return err
+	}
+	if err := parent.check(); err != nil {
+		return err
+	}
+	return parent.Rename(tmp, "state.json")
+}
 func loadNpxLock() (*NpxLock, error) {
 	var l NpxLock
 	if err := readJSON(cfg.npxLock, &l); err != nil {

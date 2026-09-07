@@ -1181,7 +1181,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/culture-index/skills/interpreting-culture-index/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "4ebafac15db6bdbeb5bc5ebd8d2bc2dc3242a26549492390e1eb868ba704a35d",
@@ -1249,7 +1249,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/let-fate-decide/skills/let-fate-decide/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "ef51258f594553a28c44cf0e6feef89d0c89f4d2aad2dc7ab606f4e1568c251e",
@@ -1361,7 +1361,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/testing-handbook-skills/skills/libafl/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "2f7f261439c2d87a15ddbb8a04a387fb8c211b9f20b00baf28b1466e036fc0d5",
@@ -1378,7 +1378,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/testing-handbook-skills/skills/libfuzzer/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "56b2c68b193f7fed4ae00ade6c6395196d44612d140ad51de43d150404dde2eb",
@@ -1395,7 +1395,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/trailmark/skills/mermaid-to-proverif/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "2f096151ad7fb5de2d74556bfa85322510a6e71710f4aa0ff963e5ce6ec3fa25",
@@ -1417,7 +1417,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/modern-cpp/skills/modern-cpp/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "a3a886fc425c591202b18165aa587111fafdd9250c37a71bbc48f7285fcd3c3e",
@@ -1438,7 +1438,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/modern-python/skills/modern-python/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "ef774b925eb1d1fc12e4f5ddc3f5ad925ecd795315827447228c70cc44c6170c",
@@ -1466,7 +1466,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/mutation-testing/skills/mutation-testing/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "1bb6b5ddaf79d489047b2c3b8b319df4897c06221c12209dd1dfa7bce4b87f04",
@@ -1485,7 +1485,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/open-sourcing/skills/open-sourcing/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "da8d876edfc13f234cb88a2531da86a5e37d417d63d5c4b174ad18b6a20e0c53",
@@ -1510,7 +1510,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/testing-handbook-skills/skills/ossfuzz/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "aeb1abbcac5ae5e4a73be4bb923fc9cca20d8d1073630c2e0a1ff37fccbec598",
@@ -1527,7 +1527,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/code-improver/skills/pr-improver/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "8bb6055905f95d4e0bbd6dbbab2be930a3d3e09cd22a18afbd306abcf9e0828f"
@@ -1542,7 +1542,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/property-based-testing/skills/property-based-testing/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "README.md": "ffbe30eec09cc64fb1eae836b07ca1d82939bda3f1e6f0dceadcdd78793a3112",
@@ -1565,7 +1565,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/rust-review/skills/rust-review/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "52ee8b08876b0ad90ecdf4a58de8d41fb2d8627f1e4d259a806a35a6e187ae91"
@@ -1580,7 +1580,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/testing-handbook-skills/skills/ruzzy/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "46374463b7ff99b028692ed8d30f1c9f488597597e5a2af4ad3919e2a47d6ce9",
@@ -1597,7 +1597,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/static-analysis/skills/sarif-parsing/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "cc5f008f40ffb8a1ae03ebd32d7234de43e828293955a0bc251b76ba249554fa",
@@ -1619,7 +1619,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/second-opinion/skills/second-opinion/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "cdab9c8269c5198bfbde3f2db96a91af5a78ede8ab63a9c37778e9591090c0fc",
@@ -1639,7 +1639,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/building-secure-contracts/skills/secure-workflow-guide/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "7c0e7fb45f97c073ec9599cbe0b2acf44f31bbece38636bc5c3fcc9bc7703015",
@@ -1658,7 +1658,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/static-analysis/skills/semgrep/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "8a7215f55d14eaffd4022a6b14331950c1af40d31e0d45845e046c28458fc1b6",
@@ -1681,7 +1681,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/semgrep-rule-creator/skills/semgrep-rule-creator/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "6ca2e3b8520ed20af1b0879b7cab318832fcbe89c19c17a9fa347a45a9f28913",
@@ -1700,7 +1700,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/semgrep-rule-variant-creator/skills/semgrep-rule-variant-creator/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "a456a7897a8042b1e2be81e10a7ac78f85cedeb22358b3ef9166a4faa058d0de",
@@ -1720,7 +1720,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/sharp-edges/skills/sharp-edges/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "3b69a709c2f8f0cfcf57d40a3186e166f307865cc8ed924be4098e549a121e9c",
@@ -1753,7 +1753,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/code-improver/skills/skill-improver/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "5764d6f51c5cd2e9dccb650b2a8f04282e44aa6d118abbfd051c0eebfaa86fe3"
@@ -1768,7 +1768,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/trailmark/skills/slicing-code-context/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "72ea4b2adc22f0c9d64b1f7846517fb285d8601e30a693126a4d3e133d0e97fe",
@@ -1790,7 +1790,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/building-secure-contracts/skills/solana-vulnerability-scanner/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "81c6882b9c369ca4a5ce9cffaa55aaae28f2b41fc3c0198c750cc46026232363",
@@ -1808,7 +1808,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/spec-to-code-compliance/skills/spec-to-code-compliance/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "eb0d91b50a9c06f50baf8763d1e23566897b9fa3e7ffcf13134eee4e1ccaefe5",
@@ -1829,7 +1829,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/building-secure-contracts/skills/substrate-vulnerability-scanner/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "611f69b419740b8f972eabc03b5cd88a38f0b07aeed755eae413629cabebb178",
@@ -1847,7 +1847,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/supply-chain-risk-auditor/skills/supply-chain-risk-auditor/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "a1254b7f8d3a1731a9a7e1f9cd6c67b59cf84ed6ef7c7fb455db9a14c528ceb4",
@@ -1874,7 +1874,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/testing-handbook-skills/skills/testing-handbook-generator/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "84d2022bff1675f77f71a219aa3999b01dc3fcfeff1666965177195ecf808aaa",
@@ -1898,7 +1898,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/building-secure-contracts/skills/token-integration-analyzer/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "4b7f5cb3c52f9b45e2216963a49458e1f23f5a279a0296e702fd9d8df268b301",
@@ -1917,7 +1917,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/building-secure-contracts/skills/ton-vulnerability-scanner/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "568286188e4d1c193f560ea08ba48def46bf9ddb3f415185bbc054436b47537e",
@@ -1935,7 +1935,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/trailmark/skills/trailmark/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "113af24db2830394ca7a42078a3172d3a693c1080acdc9e3f66209eaeaa36876",
@@ -1954,7 +1954,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/trailmark/skills/trailmark-finding-triage/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "9f76e25b1ef98076e462dcac78afb488825bdab4d4d9fd5ffb74decc419c6989",
@@ -1974,7 +1974,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/trailmark/skills/trailmark-review-gate/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "fad45861eca1e8fe7c44d20a178816e5fcfc2c00f01835ca8a1991dbd7241a9f",
@@ -1994,7 +1994,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/trailmark/skills/trailmark-structural/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "7716c9069a3f216f26c69d2324953824b9578b59e0f746accd66c236ebd0b50a",
@@ -2011,7 +2011,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/trailmark/skills/trailmark-summary/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "c6a6b5feb7bc3eda3b45140be8aa01f5a5c5c8cc2454918ad1da98080815bf48",
@@ -2028,7 +2028,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/trailmark/skills/trailmark-variant-neighborhood/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "e49b232b46dce59ea2fd68a1c1dda25d83cee6717cb2921346184665bf7ecb4c",
@@ -2048,7 +2048,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/variant-analysis/skills/variant-analysis/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "7b6b78e499bcb88d05c68254ffc91ebc28edabf4e9808adcc40e2628ebb9407e",
@@ -2080,7 +2080,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/trailmark/skills/vector-forge/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "aca07e846ce5615031e9df0faca3537f4796f72997dcece53c9e389cf9d9d132",
@@ -2102,7 +2102,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/vulnerability-triage-brocards/skills/vulnerability-triage-brocards/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "32c1a8fc233435f04ded12c3c9d4fcf0fa586b000b19b0ea71f72485f63c80ee",
@@ -2118,7 +2118,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/writing-lean-proofs/skills/writing-lean-proofs/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "fb2ad9c463ac5185a014892ce33202460b3423d64405024b95b534f0d3b4d3e0",
@@ -2141,7 +2141,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/testing-handbook-skills/skills/wycheproof/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "d092dc70fbd0f86d1f755857bf57172a6593cae0bff5d052443fc60b8d675a33",
@@ -2158,7 +2158,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/yara-authoring/skills/yara-rule-authoring/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "c23ee1aeabf26318e25e00903ef8f31c2de294d796c230081ce8bcf95a668f7c",
@@ -2193,7 +2193,7 @@
       "owner": "trailofbits",
       "repo": "skills",
       "skillPath": "plugins/zeroize-audit/skills/zeroize-audit/SKILL.md",
-      "pinnedRef": "HEAD",
+      "pinnedRef": "7dee682744c44a5a466c3280644b8439272eed2e",
       "installedAt": "2026-08-28T07:35:37Z",
       "files": {
         "SKILL.md": "b0a6c227817f9702d5168105c85977bb32ec077c6e90fd1ae094aa07b69a47cc",
