@@ -38,7 +38,7 @@ func usage() {
 Usage:
   skl migrate [--pi-skills DIR]                 migrate the legacy layout safely
   skl add [--global] [--force] <source>         add GitHub repo/URL or local skill directory
-  skl sync [--force]                            restore missing library skills at recorded pins
+  skl sync [--force] [--cache DIR]              restore missing library skills at recorded pins
   skl update [--force] [selectors...]           advance library skills from original sources
   skl check                                     verify library hashes and global links
   skl list                                      list canonical library skills

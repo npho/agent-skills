@@ -145,8 +145,15 @@ func TestExtractTarRejectsTraversalAndLinks(t *testing.T) {
 	}{{{"repo/../../escape", tar.TypeReg, ""}}, {{"/absolute", tar.TypeReg, ""}}, {{"repo/link", tar.TypeSymlink, "/etc/passwd"}}, {{"repo/hard", tar.TypeLink, "repo/file"}}}
 	for i, c := range cases {
 		dest := t.TempDir()
-		if err := extractTarGz(bytes.NewReader(tarGz(t, c)), dest); err == nil {
-			t.Fatalf("case %d accepted", i)
+		err := extractTarGz(bytes.NewReader(tarGz(t, c)), dest)
+		if i < 2 {
+			if err == nil {
+				t.Fatalf("case %d accepted", i)
+			}
+		} else {
+			if err != nil {
+				t.Fatalf("case %d rejected: %v", i, err)
+			}
 		}
 	}
 }

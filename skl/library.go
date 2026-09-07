@@ -12,9 +12,12 @@ import (
 	"time"
 )
 
+var stageRootOverride string
+
 type commonFlags struct {
 	force, global bool
 	project       string
+	cache         string
 	args          []string
 }
 
@@ -32,6 +35,12 @@ func parseFlags(args []string) (commonFlags, error) {
 			}
 			i++
 			f.project = args[i]
+		case "--cache":
+			if i+1 == len(args) {
+				return f, fmt.Errorf("--cache requires a directory")
+			}
+			i++
+			f.cache = args[i]
 		default:
 			if strings.HasPrefix(args[i], "-") {
 				return f, fmt.Errorf("unknown option %s", args[i])
@@ -61,22 +70,65 @@ func sourceToStageImpl(s SkillState, ref string) (string, func(), error) {
 	if dryRun {
 		return "", func() {}, nil
 	}
-	root, err := openRootedFS(cfg.root)
-	if err != nil {
-		return "", func() {}, fmt.Errorf("pin root for stage: %w", err)
+	base := cfg.root
+	if stageRootOverride != "" {
+		base = stageRootOverride
 	}
-	name := fmt.Sprintf(".skl-stage-%d-%d", time.Now().UnixNano(), os.Getpid())
-	if err := root.MkdirAll(name, 0755); err != nil {
+	if base == cfg.root {
+		root, err := openRootedFS(cfg.root)
+		if err != nil {
+			return "", func() {}, fmt.Errorf("pin root for stage: %w", err)
+		}
+		name := fmt.Sprintf(".skl-stage-%d-%d", time.Now().UnixNano(), os.Getpid())
+		if err := root.MkdirAll(name, 0755); err != nil {
+			root.Close()
+			return "", func() {}, err
+		}
 		root.Close()
+		stage := filepath.Join(cfg.root, name)
+		cleanup := func() {
+			if r, err := openRootedFS(cfg.root); err == nil {
+				_ = r.RemoveAll(name)
+				r.Close()
+			}
+		}
+		payload := filepath.Join(stage, "payload")
+		if s.LocalDir != "" {
+			if !fileExists(filepath.Join(s.LocalDir, "SKILL.md")) {
+				cleanup()
+				return "", func() {}, fmt.Errorf("local source %s has no SKILL.md", s.LocalDir)
+			}
+			err = copyDir(s.LocalDir, payload)
+		} else {
+			var top string
+			top, err = downloadTarballFunc(s.Owner, s.Repo, ref, stage)
+			if err == nil {
+				folder := filepath.Clean(filepath.FromSlash(folderOfSkillPath(s.SkillPath)))
+				if folder == "." || folder == ".." || filepath.IsAbs(folder) || strings.HasPrefix(folder, ".."+string(filepath.Separator)) {
+					err = fmt.Errorf("unsafe skill path %q", s.SkillPath)
+				}
+				src := filepath.Join(top, folder)
+				if err == nil {
+					if !fileExists(filepath.Join(src, "SKILL.md")) {
+						err = fmt.Errorf("skill path %q not found in %s/%s@%s", s.SkillPath, s.Owner, s.Repo, ref)
+					} else {
+						err = copyDir(src, payload)
+					}
+				}
+			}
+		}
+		if err != nil {
+			cleanup()
+			return "", func() {}, err
+		}
+		return payload, cleanup, nil
+	}
+	stage, err := os.MkdirTemp(base, ".skl-stage-*")
+	if err != nil {
 		return "", func() {}, err
 	}
-	root.Close()
-	stage := filepath.Join(cfg.root, name)
 	cleanup := func() {
-		if r, err := openRootedFS(cfg.root); err == nil {
-			_ = r.RemoveAll(name)
-			r.Close()
-		}
+		_ = os.RemoveAll(stage)
 	}
 	payload := filepath.Join(stage, "payload")
 	if s.LocalDir != "" {
@@ -447,6 +499,15 @@ func cmdSync(args []string) error {
 	if len(f.args) > 0 {
 		return fmt.Errorf("usage: skl sync [--force]")
 	}
+	if f.cache != "" {
+		if info, err := os.Stat(f.cache); err != nil || !info.IsDir() {
+			return fmt.Errorf("--cache directory %q does not exist or is not a directory", f.cache)
+		}
+		stageRootOverride = f.cache
+	} else {
+		stageRootOverride = ""
+	}
+	defer func() { stageRootOverride = "" }()
 	st, migrated, err := loadState()
 	if err != nil {
 		return err

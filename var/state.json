@@ -370,7 +370,7 @@
       "owner": "openai",
       "repo": "skills",
       "skillPath": "skills/.curated/pdf/SKILL.md",
-      "pinnedRef": "3b3fad96af16a10759d930941b4520ba0c40edae",
+      "pinnedRef": "49f948faa9258a0c61caceaf225e179651397431",
       "installedAt": "2026-08-28T07:49:42Z",
       "files": {
         "LICENSE.txt": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",

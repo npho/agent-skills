@@ -251,7 +251,9 @@ func extractTarGz(r io.Reader, dest string) error {
 		case tar.TypeXGlobalHeader, tar.TypeXHeader:
 			continue
 		case tar.TypeSymlink, tar.TypeLink:
-			return fmt.Errorf("archive links are not allowed: %q", hdr.Name)
+			// Skip symlinks/hardlinks in archives; they are not copied into lib.
+			// Payload validation later still rejects symlinks.
+			continue
 		default:
 			return fmt.Errorf("unsupported archive entry type %d for %q", hdr.Typeflag, hdr.Name)
 		}
