@@ -5,6 +5,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"time"
 )
 
 func cmdMigrate(args []string) error {
@@ -35,8 +36,10 @@ func cmdMigrate(args []string) error {
 			return fmt.Errorf("migrate %s: %w", id, err)
 		}
 	}
-	if err := ensureGlobalRoot(); err != nil {
-		return err
+	if !dryRun {
+		if err := ensureGlobalRoot(); err != nil {
+			return err
+		}
 	}
 	global, err := openRootedFS(cfg.global)
 	if err != nil {
@@ -58,8 +61,10 @@ func cmdMigrate(args []string) error {
 			if !equalHashes(cur, s.Files) {
 				return fmt.Errorf("%s has drift in legacy skills directory; migration stopped without overwriting it", id)
 			}
-			if _, _, err := ensureCanonicalNamespace(s.Namespace); err != nil {
-				return err
+			if !dryRun {
+				if _, _, err := ensureCanonicalNamespace(s.Namespace); err != nil {
+					return err
+				}
 			}
 			ns, err := openCanonicalNamespace(s.Namespace)
 			if err != nil {
@@ -255,11 +260,23 @@ func repairSymbolicPins(st *State) (int, error) {
 		}
 		return count, nil
 	}
-	stage, err := os.MkdirTemp(cfg.root, ".skl-pin-repair-")
+	root, err := openRootedFS(cfg.root)
 	if err != nil {
+		return 0, fmt.Errorf("pin root for pin repair: %w", err)
+	}
+	name := fmt.Sprintf(".skl-pin-repair-%d-%d", time.Now().UnixNano(), os.Getpid())
+	if err := root.MkdirAll(name, 0755); err != nil {
+		root.Close()
 		return 0, err
 	}
-	defer os.RemoveAll(stage)
+	root.Close()
+	stage := filepath.Join(cfg.root, name)
+	defer func() {
+		if r, err := openRootedFS(cfg.root); err == nil {
+			_ = r.RemoveAll(name)
+			r.Close()
+		}
+	}()
 	roots := map[string]string{}
 	resolved := map[string]string{}
 	repaired := 0

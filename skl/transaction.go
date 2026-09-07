@@ -417,25 +417,41 @@ func ensureCanonicalNamespace(namespace string) (createdLib, createdNamespace bo
 	if err = validateCanonicalNamespace(namespace); err != nil {
 		return false, false, err
 	}
-	if _, err = os.Lstat(cfg.lib); os.IsNotExist(err) {
-		if err = os.Mkdir(cfg.lib, 0755); err != nil && !os.IsExist(err) {
+	root, err := openRootedFS(cfg.root)
+	if err != nil {
+		return false, false, fmt.Errorf("pin root for canonical namespace: %w", err)
+	}
+	defer root.Close()
+	if err := root.check(); err != nil {
+		return false, false, err
+	}
+	// Ensure lib directory exists via pinned root
+	if _, lerr := root.Lstat("lib"); os.IsNotExist(lerr) {
+		if err := root.MkdirAll("lib", 0755); err != nil && !os.IsExist(err) {
 			return false, false, err
 		}
-		createdLib = err == nil
-	} else if err != nil {
-		return false, false, err
+		createdLib = true
+	} else if lerr != nil {
+		return false, false, lerr
+	}
+	if err := root.check(); err != nil {
+		return createdLib, false, err
 	}
 	if err = validateCanonicalNamespace(namespace); err != nil {
 		return createdLib, false, err
 	}
-	namespacePath := filepath.Join(cfg.lib, namespace)
-	if _, err = os.Lstat(namespacePath); os.IsNotExist(err) {
-		if err = os.Mkdir(namespacePath, 0755); err != nil && !os.IsExist(err) {
+	// Ensure namespace directory exists via pinned root
+	nsPath := filepath.Join("lib", namespace)
+	if _, lerr := root.Lstat(nsPath); os.IsNotExist(lerr) {
+		if err := root.MkdirAll(nsPath, 0755); err != nil && !os.IsExist(err) {
 			return createdLib, false, err
 		}
-		createdNamespace = err == nil
-	} else if err != nil {
-		return createdLib, false, err
+		createdNamespace = true
+	} else if lerr != nil {
+		return createdLib, false, lerr
+	}
+	if err := root.check(); err != nil {
+		return createdLib, createdNamespace, err
 	}
 	if err = validateCanonicalNamespace(namespace); err != nil {
 		return createdLib, createdNamespace, err
@@ -461,11 +477,22 @@ func ensureGlobalRoot() error {
 	if err := validateGlobalRoot(); err != nil {
 		return err
 	}
-	if _, err := os.Lstat(cfg.global); os.IsNotExist(err) {
-		if err := os.Mkdir(cfg.global, 0755); err != nil && !os.IsExist(err) {
+	root, err := openRootedFS(cfg.root)
+	if err != nil {
+		return fmt.Errorf("pin root for global: %w", err)
+	}
+	defer root.Close()
+	if err := root.check(); err != nil {
+		return err
+	}
+	if _, lerr := root.Lstat("skills"); os.IsNotExist(lerr) {
+		if err := root.MkdirAll("skills", 0755); err != nil && !os.IsExist(err) {
 			return err
 		}
-	} else if err != nil {
+	} else if lerr != nil {
+		return lerr
+	}
+	if err := root.check(); err != nil {
 		return err
 	}
 	return validateGlobalRoot()
@@ -474,13 +501,21 @@ func ensureGlobalRoot() error {
 // recoverGlobalRoot removes only an unsafe root entry itself (never its target),
 // recreates the root one component at a time, and verifies it before child I/O.
 func recoverGlobalRoot() error {
-	info, err := os.Lstat(cfg.global)
+	root, err := openRootedFS(cfg.root)
+	if err != nil {
+		return fmt.Errorf("pin root for recover global: %w", err)
+	}
+	defer root.Close()
+	info, err := root.Lstat("skills")
 	if err == nil && (!info.IsDir() || info.Mode()&os.ModeSymlink != 0) {
-		if err := os.Remove(cfg.global); err != nil {
+		if err := root.Remove("skills"); err != nil {
 			return fmt.Errorf("remove redirected global root: %w", err)
 		}
 	} else if err != nil && !os.IsNotExist(err) {
 		return fmt.Errorf("inspect redirected global root: %w", err)
+	}
+	if err := root.check(); err != nil {
+		return err
 	}
 	if err := ensureGlobalRoot(); err != nil {
 		return fmt.Errorf("recreate global root: %w", err)

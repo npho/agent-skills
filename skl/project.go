@@ -70,7 +70,7 @@ func saveManifest(path string, m ProjectManifest) error {
 	return os.WriteFile(path, data, 0644)
 }
 func loadManifest(path string) (ProjectManifest, error) {
-	m := ProjectManifest{Version: projectVersion}
+	m := ProjectManifest{}
 	if info, err := os.Lstat(path); err != nil {
 		return m, err
 	} else if !info.Mode().IsRegular() {
@@ -82,6 +82,9 @@ func loadManifest(path string) (ProjectManifest, error) {
 	}
 	if err := rejectUnknownTOML(path, md.Undecoded()); err != nil {
 		return m, err
+	}
+	if m.Version == 0 {
+		return m, fmt.Errorf("%s missing version", path)
 	}
 	if m.Version != projectVersion {
 		return m, fmt.Errorf("unsupported project manifest version %d", m.Version)

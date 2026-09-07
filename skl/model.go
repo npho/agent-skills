@@ -184,6 +184,9 @@ func validateState(st *State) error {
 					return fmt.Errorf("state %s sourceUrl disagrees with owner/repo", id)
 				}
 			}
+			if !isCommitSHA(s.PinnedRef) {
+				return fmt.Errorf("state %s has non-immutable pinned ref %q", id, s.PinnedRef)
+			}
 		}
 	}
 	return nil

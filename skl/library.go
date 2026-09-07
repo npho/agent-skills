@@ -9,6 +9,7 @@ import (
 	"reflect"
 	"sort"
 	"strings"
+	"time"
 )
 
 type commonFlags struct {
@@ -60,11 +61,23 @@ func sourceToStageImpl(s SkillState, ref string) (string, func(), error) {
 	if dryRun {
 		return "", func() {}, nil
 	}
-	stage, err := os.MkdirTemp(cfg.root, ".skl-stage-")
+	root, err := openRootedFS(cfg.root)
 	if err != nil {
+		return "", func() {}, fmt.Errorf("pin root for stage: %w", err)
+	}
+	name := fmt.Sprintf(".skl-stage-%d-%d", time.Now().UnixNano(), os.Getpid())
+	if err := root.MkdirAll(name, 0755); err != nil {
+		root.Close()
 		return "", func() {}, err
 	}
-	cleanup := func() { _ = os.RemoveAll(stage) }
+	root.Close()
+	stage := filepath.Join(cfg.root, name)
+	cleanup := func() {
+		if r, err := openRootedFS(cfg.root); err == nil {
+			_ = r.RemoveAll(name)
+			r.Close()
+		}
+	}
 	payload := filepath.Join(stage, "payload")
 	if s.LocalDir != "" {
 		if !fileExists(filepath.Join(s.LocalDir, "SKILL.md")) {
